@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="MazurC.MazurC" android:versionCode="1" android:versionName="10.1910.1" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="28" />
+	<application android:label="Dynamizm Charakteru" android:icon="@drawable/Icon"></application>
+</manifest>

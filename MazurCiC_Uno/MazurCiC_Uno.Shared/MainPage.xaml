@@ -1,0 +1,131 @@
+﻿<Page
+    x:Class="MazurCiC.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MazurCiC"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:win="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Name="uiGrid" Loaded="Strona_Loaded">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="grEgzoDyn" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" x:Uid="uiEgzodynamik" Text="egzodynamik" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="2" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="grEgzoStat" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" x:Uid="uiEzgostatyk" Text="egzostatyk" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="3" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="grStatyk" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" x:Uid="uiStatyk" Text="statyk" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="4" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="grEndoStat" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" x:Uid="uiEndostatyk" Text="endostatyk" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="5" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="grEndoDyn" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" x:Uid="uiEndodynamik" Text="endodynamik" VerticalAlignment="Bottom"/>
+            </Grid>
+
+        </Grid>
+        <ScrollViewer Height="Auto" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top" >
+
+            <Grid Name="ankieta" Grid.Row="3" Height="Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <RadioButton Name="cbEgzoDyn" MinWidth="0" Content = "" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Visibility="Collapsed" Tapped="uiAnswer_Tapped"/>
+                <RadioButton Name="cbEgzoStat" MinWidth="0" Content = "" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Visibility="Collapsed" Tapped="uiAnswer_Tapped"/>
+                <RadioButton Name="cbStatyk" MinWidth="0" Content = "" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Visibility="Collapsed" Tapped="uiAnswer_Tapped"/>
+                <RadioButton Name="cbEndoStat" MinWidth="0" Content = "" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Visibility="Collapsed" Tapped="uiAnswer_Tapped"/>
+                <RadioButton Name="cbEndoDyn" MinWidth="0" Content = "" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Visibility="Collapsed" Tapped="uiAnswer_Tapped"/>
+
+                <TextBlock Name="tbTeza" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,10,10" TextWrapping="Wrap" x:Uid="tbTeza" Text="Sprawdź dynamizm swojego charakteru" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBlock Name="tbRemark" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Grid.Row="1" TextWrapping="Wrap" x:Uid="tbTeza" Text=" " VerticalAlignment="Top" FontSize="10"/>
+                <TextBlock Name="tbEgzoDyn" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Grid.Row="2" TextWrapping="Wrap" x:Uid="tbEgzoDyn" Text="Na podstawie Mazura" VerticalAlignment="Top"/>
+                <TextBlock Name="tbEgzoStat" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Grid.Row="3" TextWrapping="Wrap" x:Uid="tbEgzoStat" Text="Charakter się będzie zmieniał od egzodynamizmu do endodynamizmu" VerticalAlignment="Top"/>
+                <TextBlock Name="tbStatyk" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Grid.Row="4" TextWrapping="Wrap" x:Uid="tbStatyk" Text="Z tego wynika np. przyszłość związków" VerticalAlignment="Top"/>
+                <TextBlock Name="tbEndoStat" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Grid.Row="5" TextWrapping="Wrap" x:Uid="tbEndoStat" Text="Link do książki" VerticalAlignment="Top"/>
+                <TextBlock Name="tbEndoDyn" Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,10,10" Grid.Row="6" TextWrapping="Wrap" x:Uid="tbEndoDyn"  Text="I może jeszcze coś" VerticalAlignment="Top"/>
+            </Grid>
+        </ScrollViewer>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Button Name="bDalej" x:Uid="bDalej" Content="Dalej&gt;" Grid.Column="2" Margin="20,10,10,5" Click="bDalej_Click"/>
+            <ProgressBar Name="uiProgress" Minimum="0" Maximum="35" Grid.Column="1" IsEnabled="False" />
+            <Button Name="bWstecz" x:Uid="bWstecz" Content="&lt;Wstecz" Grid.Column="0" Margin="10,10,20,5" IsEnabled="False" Click="bWstecz_Click"/>
+        </Grid>
+    </Grid>
+    <win:Page.BottomAppBar>
+        <CommandBar Name="uiMenu" ClosedDisplayMode="Compact"   >
+            <AppBarButton Icon="People" Label="Komparator" x:Uid="uiKomparator" Click="uiKomparator_Click" />
+        </CommandBar>
+    </win:Page.BottomAppBar>
+</Page>

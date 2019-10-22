@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="t1t" xml:space="preserve">
+    <value> (o ukierunkowaniu życia). Lower dynamism mean smaller dissipation and greater accumulation.</value>
+  </data>
+  <data name="t1r" xml:space="preserve">
+    <value> If you didn't read Mazur's book, and don't know what is this question about, choose Static.</value>
+  </data>
+  <data name="t1a1" xml:space="preserve">
+    <value> Exodynamic dissipate everything, nothing accumulate.</value>
+  </data>
+  <data name="t1a2" xml:space="preserve">
+    <value> Exostatic dissipate more than accumulate..</value>
+  </data>
+  <data name="t1a3" xml:space="preserve">
+    <value> Static dissipate as much as accumulate.</value>
+  </data>
+  <data name="t1a4" xml:space="preserve">
+    <value> Endostatic dissipate less than accumulate.</value>
+  </data>
+  <data name="t1a5" xml:space="preserve">
+    <value> Endodynamik dissipate nothing, everything accumulate.</value>
+  </data>
+  <data name="t2t" xml:space="preserve">
+    <value> (o intensywności życia). Smaller dynamism mean Im mniejszy jest współczynnik dynamizmu, tym mniejszą role w zachowaniu odgrywają atrakcje, a tym większą awersje.</value>
+  </data>
+  <data name="t2a1" xml:space="preserve">
+    <value>Exodynamic is looking for pleasure, regardless of the possible distress ("at any price"), is lively ("live intensively, we will live more").</value>
+  </data>
+  <data name="t2a2" xml:space="preserve">
+    <value>Exostatic is looking for pleasure, even if it will cause great unpleasantness, as long as it is not too big ("not too expensive"), likes a varied life.</value>
+  </data>
+  <data name="t2a3" xml:space="preserve">
+    <value>Static for pleasure is ready for moderate distress ("as much as it is worth").</value>
+  </data>
+  <data name="t2a4" xml:space="preserve">
+    <value>Endostatic, for experiencing pleasure is ready to expose only to slight unpleasantness ("cheap"), likes to live comfortably.</value>
+  </data>
+  <data name="t2a5" xml:space="preserve">
+    <value>Endodynamics for experiencing pleasure do not want to expose yourself to any unpleasantness ("at any price"), want to live peacefully, safely ("let us live long, we will live more").</value>
+  </data>
+  <data name="t3t" xml:space="preserve">
+    <value> (o stosunku do zasad). The greater the dynamism, the less attachment to rules.</value>
+  </data>
+  <data name="t3a1" xml:space="preserve">
+    <value>The great diversity and changeability of ideas makes exodynamic capricious, has no attachment to any rules, does not bend his behavior to anyone's requirements.</value>
+  </data>
+  <data name="t3a2" xml:space="preserve">
+    <value>Exostatic is characterized by individualism, he recognizes general principles with deviations depending on his personal tastes.</value>
+  </data>
+  <data name="t3a3" xml:space="preserve">
+    <value>Static is principled, it adheres to certain rules of conduct. The attachment of Static to the rules results from the organism's control over the equivalence of consumed power and spent power, and, consequently, the equivalence of unloading and overloading, stress relieving and compressing, attractions and aversion, approvals and disapproval - for the effort suffered, pleasure must be worked out, the dimension of guilt should be punished, merit deserved reward, etc.</value>
+  </data>
+  <data name="t3a4" xml:space="preserve">
+    <value>Endostatic is flexible, recognizes general principles with waivers based on needs.</value>
+  </data>
+  <data name="t3a5" xml:space="preserve">
+    <value>Endodynamic is arbitrary, does not recognize any rules. Even when he impose rules on others for his own benefit, he don't stick to them.</value>
+  </data>
+  <data name="t4t" xml:space="preserve">
+    <value> (o pragnieniach). The lower the coefficient of dynamism, the stronger the desire for pressure on the environment.</value>
+  </data>
+  <data name="t4a1" xml:space="preserve">
+    <value>For exodynamic, there is no pressure on the surroundings, he only wants attractive experiences and imagination. If exodynamic influences the environment, it is only through their very existence that others want to experience its influence. The prophets were not looking for listeners, but listeners focused on them, curious about their vision of the future. Not the creators (writers, painters, composers, etc.) are looking for the audience, but the audience is looking for the creators, awaiting their new works.</value>
+  </data>
+  <data name="t4a2" xml:space="preserve">
+    <value>Exostatic wants to arouse admiration with personal qualities, pay attention to its appearance, skills, wit, etc., and exerts pressure on others only to allow them to demonstrate before them. For example, artists (actors, singers, virtuosos, etc.) have this desire.</value>
+  </data>
+  <data name="t4a3" xml:space="preserve">
+    <value>Static wants justice, reliability, regularity, etc. and requires it from others.</value>
+  </data>
+  <data name="t4a4" xml:space="preserve">
+    <value>Endostatic wants the effectiveness of actions to the goal indicated and presses on others to comply with its requirements. This is the desire of the managers of the enterprises entrusted to them.</value>
+  </data>
+  <data name="t4a5" xml:space="preserve">
+    <value>Endodynamics want their own advantage, power, and exert pressure on others to deprive them of sociological power (wealth, power). This is the desire of entrepreneurs trying to bankrupt their competitors, politicians preparing a coup d'etat, partitioning someone else's territory, etc.</value>
+  </data>
+  <data name="t5t" xml:space="preserve">
+    <value> (o upodobaniach). The lower the dynamism coefficient, the less the preference for publishing information, and the greater the gaining of sociological power.</value>
+  </data>
+  <data name="t5a1" xml:space="preserve">
+    <value>Exodynamic has a penchant for publishing information, expressing himself, presenting his ideas ("internal experiences"), but he does not like to deal with gaining sociological power. In history, a typical phenomenon are artists who gave their masterpieces for next to nothing and lived in poverty, unless someone who took care of their interests was found. For a mug of beer or a piece of meat for dinner, he found many a painting that was later applied for by famous galleries. Brilliant poems were printed for pennies or none.</value>
+  </data>
+  <data name="t5a2" xml:space="preserve">
+    <value>Exostatic has a penchant for showing off its individuality. He only seeks sociological power (e.g. royalties) insofar as it makes it easier for him to show off (e.g. with an elegant outfit).</value>
+  </data>
+  <data name="t5a3" xml:space="preserve">
+    <value>Static has a penchant for order, resulting from attachment to rules, so it is a penchant for order itself (unlike exostatic, which gives up order that causes monotony, and from endostatic, which gives up order, reducing usability). As a result of attachment to the rules, static likes, for example, that the books should be arranged according to the same formats or according to the same binding colors, etc. - which is unacceptable for exostatic, for it causes boredom, or for endostatic, for it makes difficult to find the needed book (endodynamics and exodynamics don't care about order at all). Maintaining order is related to both publishing information in the form of ordering rules and gaining sociological power in order to force others to comply with this principle.</value>
+  </data>
+  <data name="t5a4" xml:space="preserve">
+    <value>Endostatic has a penchant for action. Issuing information occurs here by determining what actions are to be carried out, first of all, sociological power is needed in the form of the authority to order these actions and to use repression to refuse them.</value>
+  </data>
+  <data name="t5a5" xml:space="preserve">
+    <value>Endodynamics have a penchant for gaining sociological power, and he does not mean the activities of gaining (they are an activity and are the object of preference of endostatics), but benefits. What actions led to this is indifferent to endodynamic. He keeps the acquired information only for himself. It issues scanty information in the form of orders.</value>
+  </data>
+  <data name="t6t" xml:space="preserve">
+    <value> (o działalności). The lower the dynamism factor, activity is less creation, and more executing power.</value>
+  </data>
+  <data name="t6a1" xml:space="preserve">
+    <value>Exodynamic's activity is only creating, presenting his own ideas. Creation is, for example, confessing of dreams, love confessions, writing poems, painting pictures, etc.</value>
+  </data>
+  <data name="t6a2" xml:space="preserve">
+    <value>Exostatic's activities are interpreting. It is creation to the extent that exostatic complements other people's imaginations with their own imaginations ("creating from someone else's inspiration"). Such activities are carried out by an actor or virtuoso who gives the played song his personal mark, a critic supplying a peer-reviewed work of art with comments presenting his own feelings, a director or arranger subjecting other people's works to additions and alterations. Interpretation is also all fun.</value>
+  </data>
+  <data name="t6a3" xml:space="preserve">
+    <value>Static's activities are organizing. It even occurs in situations such as when it checks in thought whether a virtuoso plays exactly as the composer notes, or when a worker gives a metal block exactly the shape that the designer draws. If you also take into account that statism is a class of character, and therefore that there are deviations in the form of shades of exostatism and endostatism from mathematical statism in the meaning of zero dynamism (D = 0), it is understandable that Statics have some share in creation (entertainment in limits of decency) and possession (work within the limits of duty). For example, it is creation when the concert listener completes the information provided by the virtuoso with his own imaginations. Similarly, it is power when the worker makes his own decisions about his specific activities. The share of creation in entertainment and possession in executive work is usually underestimated. It is wrong, because the success of works of art depends mainly on the creation (parainformation - see book chapter 7), and the success of industrial products depends on the possession of the contractors.</value>
+  </data>
+  <data name="t6a4" xml:space="preserve">
+    <value>Endostatic's activity is organizing. At the same time, he publishes information (creation) in the form of decisions defining the necessary actions, and the main role is played by their implementation (possession) thanks to the received sociological power. In the activity of endostatica it is important that his decisions are only a supplement to the decision of the principal, so it is possession dependent on someone else's possession ("possession from someone else's nomination"). For translation, an officer has the right to order his subordinates in a battle, but he received this right from the one who ordered the war. Any game is also organizing.</value>
+  </data>
+  <data name="t6a5" xml:space="preserve">
+    <value>The activity of endodynamic is solely the possession, i.e. making decisions that do not require obtaining the right to decide. Power is about setting goals and forcing them to achieve.
+An excellent illustration of the manifestations of endostatism and endodynamism discussed here can be found in Shakespeare's Macbeth. Witches' prophecies, which have long been the subject of various interpretations of literary essays, are in fact the thoughts of Macbeth himself, constituting a declaration of his endostatic character. Macbeth aspires to power from the nomination, after the levels of promotion: tan Glamis (who he is now), then also Tan Kawdor (who he has the chance to be rewarded for defeating the rebel in his position so far), and finally the king! He was soon nominated for dance by Duncan, but from whom will he be nominated as king? For the endodynamic Lady Macbeth it is clear that power is gained and only a fool would not take the opportunity to murder Duncan. However, this does not match the character of Duncan, who necessarily wants him to be given power by someone, no one knows who, fate: "If fate wants me to be king, let fate crown me without my help." However, fate cannot be seen, because Dunkan announces his son's successor. In this situation, urged by his wife, he  agrees to murder Duncan, but as befits an endostatic's, he would prefer only to organize the case, and in the meantime it must perform a disgusting task personally. Later, he will only organize the killing of many people with other people's hands. Belatedly, Lady Macbeth deciphered his character, saying that he would like to combine "honors and sanctity", i.e. endodynamism with statism. Macbeth has enough endodynamism to want to be a king, but also enough statism to feel fear of breaking the rules: "To be what it is, it is nothing to be, if I could not be without fear." By Lady Macbeth speaks sheer endodynamism: "Well, even if it seems? After all, no one us, the rulers, bring to justice." Not with remorse, she reflexively wiped her hands from no existing traces of blood, and eventually committed suicide, but because of the futility of the crime in view of the understanding that Macbeth's character would remain so and would bring both of them from the throne to the executioner. If she had royal authority, things would have been different, she would have managed Macbeth, making him an efficient helper, and in the worst case sending him into the afterlife, after she wouldn't even think of looking at her hands for bloodstains. Endostatic can only be an endodynamic helper, never a boss.</value>
+  </data>
+  <data name="t7t" xml:space="preserve">
+    <value> (o motywacji zachowania). The lower the dynamism factor, the less role is played by impressions and the greater the decisions.</value>
+  </data>
+  <data name="t7a1" xml:space="preserve">
+    <value>Exodynamic reacts to stimuli almost immediately, its behavior is spontaneous, resulting only from sensations, uncontrolled by the warning associations of aversive decisions. Therefore, exodynamics often face the accusation of "illogicality" of conduct and complaints that it is impossible to understand "what they mean". Meanwhile, exodynamic "don't mean anything", only externalize everything he experience in his imagination and almost simultaneously with experience ("inspiration"). The statements of eminent artists are explained in that they felt the "internal compulsion" of creation.</value>
+  </data>
+  <data name="t7a2" xml:space="preserve">
+    <value>Exostatic's behavior is characterized by effectiveness (elegance, esprit). Exostatic reactions, although not immediate as with exodynamics, are quick ("quick orientation", Schlagfertigkeit).</value>
+  </data>
+  <data name="t7a3" xml:space="preserve">
+    <value>In Static behavior, the impact of impressions and impact of decisions are balanced, providing a basis for attachment to rules. Static behavior is characterized by regularity and reliability ("you can rely on it"). Static is guarded against the influence of strong attractive impressions by association of aversive decisions; this, provokes sufficiently strong disapproval, and leads him to the path of loyalty to principles.</value>
+  </data>
+  <data name="t7a4" xml:space="preserve">
+    <value>For endostatic, the associations of aversive decisions are more numerous than those of attractive impressions, so eliminating harmful decisions plays a big role in its behavior. That is why endostatic's behavior is characterized by efficiency and effectiveness in striving to achieve its goal.</value>
+  </data>
+  <data name="t7a5" xml:space="preserve">
+    <value>For endodynamic, associations of aversive decisions are almost exclusive, so impressions do not play a role in his behavior, and harmful decisions are strongly eliminated. That is why endodynamic behavior is purposeful ("self-interest").</value>
+  </data>
+  <data name="t8t" xml:space="preserve">
+    <value> (o różnorodności zachowania). The lower the dynamism coefficient, the smaller the diversity of behavior.</value>
+  </data>
+  <data name="t8a1" xml:space="preserve">
+    <value>Exodynamic's many associations of impressions make people from exodynamic's environment difficult to predict his behavior. At any time there may be such a reaction that they have not encountered before. The variety of exodynamic behavior is not only large, but it is not even known how large. The repertoire of possible exodynamic responses seems to be inexhaustible, it is like a well where the bottom is unknown, the behavior of exodynamic is characterized by depth. Other are fascinated by exodynamic by the fact that he is unknowable to them. You never know what amazing work an outstanding artist will create. A similar fascination surrounds exodynamic women who need to be "re-met" constantly, although their behavior is completely natural, they are "only themselves".</value>
+  </data>
+  <data name="t8a2" xml:space="preserve">
+    <value>The diversity of exostatic behavior is considerable, but it falls within the scope of cognition constituting the style of exostatica, which makes it stand out from the environment. It is not known what exostatic show off, but it is known that it will definitely be in his style.</value>
+  </data>
+  <data name="t8a3" xml:space="preserve">
+    <value>For Static, the diversity of behavior boils down to a repertoire of possibilities allowed by the norm, which is the principle he adheres to. This does not mean that Static gives up part of the diversity of its behavior, so that the norm is done. He has nothing to give up, because this is what he recognizes as a norm that matches the diversity of his behavior. With greater diversity, he would recognize a standard that would fit it. Standards are created by Statics, not the other way. Trying to impose a norm on a man, norm that is supposed to limit the diversity of his behavior will lead not to limit man's diversity, as man will not recognize the norm.</value>
+  </data>
+  <data name="t8a4" xml:space="preserve">
+    <value>The repertoire of endostatic's preservation possibilities is even smaller than that of Static ones, because endostatic is interested in the possibilities that ensure its effectiveness. Other options, even when allowed, are out of the question. The variety of endostatic is determined not by standard but by method. Only as part of the method does endostatic have a variety of ways of using it.</value>
+  </data>
+  <data name="t8a5" xml:space="preserve">
+    <value>The variety of endodynamic behavior boils down to only one possibility: expansion, the desire to accumulate sociological power; the rest do not interest him. Endodynamic's behavior is characterized by uniformity - he would like to subordinate everything and everyone.</value>
+  </data>
+  <data name="t9t" xml:space="preserve">
+    <value> (o przekonaniach). The greater the dynamism, the greater the variability of convictions.</value>
+  </data>
+  <data name="t9a1" xml:space="preserve">
+    <value>The diversity of exodynamic behavior is so great that it does not fit into any beliefs. Exodynamic has no beliefs, and for the same reasons for which it does not recognize any rules. Exodynamic cannot be counted on even constancy of opinions in ordinary, everyday matters. Purchased item can be disliked by exodynamic just after leaving the store. A dish he had just wanted, he can push away without touching it.</value>
+  </data>
+  <data name="t9a2" xml:space="preserve">
+    <value>Exostatic is unstable, i.e. his views on individual matters may change, but their diversity is within his preferences.</value>
+  </data>
+  <data name="t9a3" xml:space="preserve">
+    <value>Static is characterized by stability of views and loyalty to beliefs. Changing beliefs as a departure from the rules is a betrayal in the eyes of Static, and the one who committed it ("renegade") deserves condemnation and contempt. When he changes his beliefs, it is a life-scale experience for him, after a hard struggle with himself, and with Static it is always a change to other beliefs (not a lack of beliefs), and he becomes a particularly passionate follower of new beliefs ("zeal for neophytes").</value>
+  </data>
+  <data name="t9a4" xml:space="preserve">
+    <value>Endostatic is characterized by adaptive beliefs, i.e. he is attached to methods that ensure his effectiveness of actions, not to goals, and therefore can adapt to different beliefs in which his methods are useful. The Praetorian commander, effectively suppressing the riots of the people rebelling against the emperor, did so equally effectively for the next emperor, who was the enemy of the previous one and removed him from power. The change in the Emperor's position did not bother the Praetorian commander - he would be worried only if his methods proved unnecessary for the new emperor.</value>
+  </data>
+  <data name="t9a5" xml:space="preserve">
+    <value>Endodynamic is characterized by the timeserving of beliefs, i.e. he will declare such beliefs that, in the changed situation, allow him to continue to accumulate sociological power (pecunia non olet). In order not to hurt him in the opinion of Static, who do not like the changeability of beliefs, especially in business terms, the endodynamic declares his beliefs in a way that matches the principality of Statics, and at the same time in a general way that he can interpret them as he wishes and change them that anything in his views would change. The pinnacle of endodynamic championship is to change the opposite views, yet still ensure their stability. As Machiavelli said: "The prince should not keep his promises and yet he is supposed to be loyal."</value>
+  </data>
+  <data name="t10t" xml:space="preserve">
+    <value> (o moralności). The greater the dynamism, the lower the moral scruples.</value>
+  </data>
+  <data name="t10r" xml:space="preserve">
+    <value>Moral scruples can be explained as the phenomenon of the fact that when a decision is close (the effector potential Vr increases, but has not yet exceeded the decision potential Vd), then the idea of the contradiction of this decision with moral principles causes aversion and disapproval that can stop the decision (homeostatic potential Vh decreases causing the effector potential Vr to decrease and thus not to exceed the decision potential of Vd). When the aversion is high (strong scruples), the decision is clearly stopped. When the aversion is small (weak scruples), the decision is suppressed, but the appearance of additional attraction can prevail, causing a decision.</value>
+  </data>
+  <data name="t10a1" xml:space="preserve">
+    <value>Exodynamic make a decision when the impressions are attractive, not when the impressions are averse. However, he has no aversive associations of decisions, which means that when a decision is close, it will happen soon (only the disappearance of attractive impressions would stop it). This means that exodynamic has no moral scruples - this is not possible in his correlation processes. Exodynamic always complies with "his own morality", i.e. he considers existence to be an unquestionable good ("loves life"). Because exodynamic dissipates everything (i.e. information and energy), and does not accumulate anything, it does not take anything away from anyone and therefore does not harm anyone, so there would be no reason for moral scruples.</value>
+  </data>
+  <data name="t10a2" xml:space="preserve">
+    <value>Exostatica is characterized by moral aesthetism, in his opinion everything that is beautiful is acceptable, and he considers as beautiful everything what suits his preferences.</value>
+  </data>
+  <data name="t10a3" xml:space="preserve">
+    <value>Static is characterized by moral rigor. Something is considered acceptable only if it falls within the limits set by moral norms.</value>
+  </data>
+  <data name="t10a4" xml:space="preserve">
+    <value>Endostatic is characterized by moral practicality. Endostatic considers acceptable what is effective in achieving its goals.</value>
+  </data>
+  <data name="t10a5" xml:space="preserve">
+    <value>Endodynamic is amoral, does not feel any scruples in the pursuit of its own power, considers all means to this end acceptable ("the end justifies the means").</value>
+  </data>
+  <data name="t11t" xml:space="preserve">
+    <value> (o poczuciu prawa). The greater the dynamism, the weaker the sense of law.</value>
+  </data>
+  <data name="t11r" xml:space="preserve">
+    <value>The fact that legal provisions limit the diversity of human activities and that uniformity of provisions results not only from the legislators' desire to treat people as equal before the law, but also from the inability to foresee all special cases or the reluctance to make the effort to anticipate them leads to conflicts with the law in which the sense of law can be different, depending on the dynamism of the character.</value>
+  </data>
+  <data name="t11a1" xml:space="preserve">
+    <value>For exodynamic, law is the limiting intervention of the outside world in its much more diverse world of imagination, which is mutilated by this intervention. That is why exodynamic treats its life as something that the law cannot reach ("outside the law"). This is how poets who reveal the depth of their psyche, mystics proposing a vision of a perfect world, girls in love.</value>
+  </data>
+  <data name="t11a2" xml:space="preserve">
+    <value>Exostatics have a sense of law, except when the law does not take into account some of their personal characteristics, small from a general point of view, but important for them. Unable to change the law, they try to evade it in such cases ("a recipe should be for a man, not a man for a recipe").</value>
+  </data>
+  <data name="t11a3" xml:space="preserve">
+    <value>Statics are legal, they think the law is right because it is a law, an expression of principles. The mere compliance with the law is for statica a source of satisfaction (dura lex, sed lex), without going into the causes of such or other regulations and the effects of their application. However, with uncompromising obedience to the law, static does not consider such a law to be contrary to his principles. That is why the first Christians did not recognize the rights of Rome, patriotic members of the conquered nation did not recognize the law imposed by the occupier, etc.</value>
+  </data>
+  <data name="t11a4" xml:space="preserve">
+    <value>Endostatics have a sense of law, except where the law does not take into account any particular situation in which its application harms. Because this is contrary to their sense of effectiveness, and the damage would arise, because its correction would come too late, so in such cases endostats are trying to bypass the law ("give up the rule rather than usefulness").</value>
+  </data>
+  <data name="t11a5" xml:space="preserve">
+    <value>Endodynamics treat the law as a tool they feel as disposers, who can freely decide to whom the law is to be applied and to whom not, excluding the application of the law to themselves ("above the law").</value>
+  </data>
+  <data name="t12t" xml:space="preserve">
+    <value> (o wyobrażeniu świata). The greater the dynamism, the further from reality is the image of the world.</value>
+  </data>
+  <data name="t12a1" xml:space="preserve">
+    <value>In his imagination, exodynamic creates his own wonderful world. Although it is an imaginary world, for him it is more "real" than the real world. As for Balzak, who after visiting a sick aunt in the hospital, after hearing the story of her ailments said: "but let's get back to reality" (i.e. to write Human Comedy). Although exodynamics are fantasists living in an imaginary world, only they can create an imaginary world to which the real world somehow begins to be similar. Here in the imaginary times, when "something broke in the Danish state," also imaginary, died in tragic duel imaginary Prince Hamlet. The imaginary Kowalski, an eyewitness to the duel, was very concerned about this. But the real Kowalski was also concerned about Hamlet's tragedy when he watched this in the theater yesterday. The actual Kowalski reacted in the same way as the imaginary Kowalski, he became similar to him.</value>
+  </data>
+  <data name="t12a2" xml:space="preserve">
+    <value>Exostatic imagines the real world but embellished. It is different, however, to imagine the embellished world, and to actually embellish it. In this Exostatic does not go beyond the envelope of his person - he embellishes himself, i.e. his appearance, outfit, way of being.</value>
+  </data>
+  <data name="t12a3" xml:space="preserve">
+    <value>Static does not intend to change the real world, it just wants to know it thoroughly, to make sure that it functions properly, according to inviolable rules. He is pleased that so many physical laws have already been discovered, and he is barely parting with the conviction of their perfect accuracy. Static wants to see everything with its own eyes, touch and check. When the government announces that national income will increase by 5% during the year, Static wants to see this 5% on its payroll. To check the rumor of an increase in meat production, Static looks not at the newspaper but at the butcher's shop. The area of ​​Static discernment has boundaries where his observation and action possibilities end, in fact he covers the area of ​​residence and employment, but he is known to him as close to reality as possible. Anything outside this area is unknown to Static. To remedy this, Static appeals to its belief in rules, which is manifested in the use of templates. On its territory, Static does not identify its neighbor, who is a postman, has a hard-working wife, seven-year-old son and five-year-old daughter, with another neighbor who works in a power plant and is a childless widower. However, whenever the Static falls outside its area, a template appears immediately. For example, a complaint he has lodged with a court will be considered by a Judge who will issue a fair judgment. If the complaint were lodged with another court, the Judge would consider it and issue a fair judgment. Both are the Judge - a template, because outside of his own area, Static can not imagine that his complaint is being examined by a judge - a man who did not get enough sleep, because he played cards until late at night, and is in a bad mood, because at breakfast his wife did excuses him, so he gives the verdict without going into too much detail, sooner - and unlike another judge - a man. Another template is Teacher, Director, Minister etc.</value>
+  </data>
+  <data name="t12a4" xml:space="preserve">
+    <value>Endostatic imagines the real world, but improved. It is different, however, to imagine a world that is streamlined and something else to actually improve it. Because it is difficult to cover a lot of details with imagination, so endostatic does not go beyond the part of the world that it was entrusted with improving. This is more than a Static area, but the details are also less accurate. This can be illustrated by an example from the military: the lieutenant reports that corporal Kowalski has fallen on patrol; the major reports the loss of two officers and 37 privates, without names; the general mentions the loss of 4,000 people, without names and degrees, in rounded numbers.</value>
+  </data>
+  <data name="t12a5" xml:space="preserve">
+    <value>Endodynamic imagines a world that does not exist, but which will exist - a world he has mastered, to which the real world, however, strangely does not want to be similar. The world dominated by Napoleon was to be ruled by his dynasty - it turned out to be only one-man. The world dominated by Hitler was supposed to exist for 1,000 years - 988 years were missing.</value>
+  </data>
+  <data name="t13t" xml:space="preserve">
+    <value> (o odbieraniu informacji). The lower the dynamism coefficient, the more critical treatment of information received.</value>
+  </data>
+  <data name="t13a1" xml:space="preserve">
+    <value>Exodynamic is characterized by credulity, a tendency to succumb to pleasant delusions as to the meaning of the information received.</value>
+  </data>
+  <data name="t13a2" xml:space="preserve">
+    <value>Exostatic is characterized by a cursory reception of information, it highlights information that suits his preferences.</value>
+  </data>
+  <data name="t13a3" xml:space="preserve">
+    <value>Static is characterized by trust, a tendency to literally understand the information received.</value>
+  </data>
+  <data name="t13a4" xml:space="preserve">
+    <value>Endostatic is suspicious, he sees mainly information that matches his fears.</value>
+  </data>
+  <data name="t13a5" xml:space="preserve">
+    <value>Endodynamic is characterized by distrust of the information received, weathering in all deceit.</value>
+  </data>
+  <data name="t14t" xml:space="preserve">
+    <value> (o wspomnieniach). The higher the dynamism factor, the older and more aversive the subject of memories.</value>
+  </data>
+  <data name="t14a1" xml:space="preserve">
+    <value>Exodynamic does not mention the past, but confides to the flow of thoughts. If someone doesn't note them, they'll be gone forever, because exodynamic won't be able to remember them anymore. There are known examples of writers and composers who after the disappearance of an unpublished manuscript could not reproduce it later, as a result of their attempts a new song was created. Because exodynamic's thoughts are a figment of his imagination (which is entire world for him), he also tends to speak them on behalf of the whole world as all-human truths. The girl in love does not talk about the details of her feelings, but declares about love in general ("love is beautiful"). Disappointed, he does not say that Kowalski put her up in the wind, but that "men are mean". "Woman, you miserable powder" - generalizes the poet, although his bitterness pleasures one particular perpetrator.</value>
+  </data>
+  <data name="t14a2" xml:space="preserve">
+    <value>The subject of exostatic memories are recent successes, or more precisely, the recently refreshed impressions of success. This explains that in the memories of even outstanding exostatics (virtuosos, singers), there is so often a disproportion between the triviality of the events mentioned and the significance attributed to them. There you can find out in detail about the storms of applause, received flower baskets, reviews and oral praise, and you can not even mention the fact that at the same time there was a world war. A similar phenomenon can be found in the diaries of schoolgirls, for the same characterological reasons. According to their character, exostatics mainly mention their successes, while they sell briefly or skip failures.</value>
+  </data>
+  <data name="t14a3" xml:space="preserve">
+    <value>Static memories are accounts of facts from a specific time. They are characterized by attention to the accuracy and detail of the relationship. They mention both successes and failures, without exaggerating and diminishing. Staticists emphasize, above all, the longevity of their activities, calculate how many years and where they worked, were at war, survived in marriage, lived, etc. For them, persistence is an expression of compliance with a principle that imposed immutability and which they were able to adapt to for so long. They treat the longevity ("many years of service", "thirty years of service", "twenty-five years of marriage", "living in the capital since birth") as something glorious, regardless of whether it was a series of successes or failures. According to their attachment to the rules, statics in their memories strictly follow the chronology, as time passes "regularly". An example here may be war diaries, in which the authors describe what they did on the first day of the war, the second, the third, etc., and do not fail to note that on another day "nothing important was happening", as in the report on duty. Static does not treat memories of himself as central, it writes about himself as it does about other people, and even if it writes more about himself, it is simply because it knows more about himself. It must be added that Statics rarely write memories because they do not like to expose their person. Being solicited, they reply that there was nothing in their lives that would interest others. Sometimes they are encouraged by press competitions for diaries of specific social groups (professional, regional, etc.).</value>
+  </data>
+  <data name="t14a4" xml:space="preserve">
+    <value>Endostatics mainly mention the difficulties of various actions they had to organize. They describe in detail how they approached them, what they failed to perform or avoid, and why. However, without details, they mention tasks that they easily coped with. They also talk about the circumstances in which they were given the first task and how they managed to deal with it, and about how they were given increasingly difficult tasks. We can mention the memories of military commanders, ministers, ambassadors, industrial managers, etc. Because a team of assistants is needed to conduct any action, endostatics capture their memories as if they were to speak not only on their behalf, but also their colleagues, so they usually use forms "we" ("we have developed a plan", "we proceeded to implement") and expressions such as "our department", "our institution" etc. He remembers his personal matters reluctantly, with embarrassment, briefly and usually only when he thinks it is necessary in connection with the described actions (e.g. that due to illness he was excluded from them for some time).</value>
+  </data>
+  <data name="t14a5" xml:space="preserve">
+    <value>Strong associations of aversive decisions mean that endodynamics recall almost exclusively their failures, remember much better what they lacked than what they achieved. The victorious chiefs write in their memoirs first of all about how close the disasters were, enriched entrepreneurs about how close the bankruptcies were, the millionaires exaggerately emphasize that they started as street newspaper sellers or shoe cleaners. The memoirs of endodynamics are the story of their wrong decisions ("my biggest mistake was ...") and disasters that threatened the construction of their small or large political, industrial, banking empire, etc., and from which they found a way to save (or not and why). Endodynamic writes memories as if as an author he was just an observer of someone else, whose turn of fate he turned out to be himself. For many of them this is even visible in the structure of sentences. Julius Caesar in his Memoirs of the Galician War does not write "I crossed the river" , but "Caesar moved across the river." General de Gaulle wrote about himself in a similar way. The content of memories of endodynamics are events that played a role when they gained wealth, came to power, etc., but there is no question of their internal experiences, feelings. This is in line with writing diaries from the position of an observer who may know the events but not the feelings. Endodynamics are reluctant to write memories, especially when they are published, and often reserve the deadline in which they can be published. As a rule, memories of endodynamics relate to matters that are outdated, definitely closed. By getting to writing memories, endodynamic undertakes his last great work: setting up a monument to the power built, in the hope that if the power itself does not survive, then at least its monument will survive. Besides, not without reason, the pyramids of Egyptian pharaohs testify to (the construction of your own tomb is also a kind of diary).</value>
+  </data>
+  <data name="t15t" xml:space="preserve">
+    <value> (o pamiętaniu uraz). The lower the dynamism factor, the longer the resentment are remembered.</value>
+  </data>
+  <data name="t15a1" xml:space="preserve">
+    <value>Because exodynamic has almost exclusively attractive associations, so experiencing unpleasantness, even minor, is a shock for him, which, however, passes very quickly, for lack of support in aversive associations. That's why exodynamic doesn't remember the injury. A moment later after being hurt by someone, he acts as if nothing had happened. There is nothing deliberate in this ease of forgiveness, his behavior is completely natural. Of course, exodynamic does not go to court for offenses. At a time when duels were fashionable, exodynamics never dueled, and it was not out of cowardice, but because they would not understand why they should do it.</value>
+  </data>
+  <data name="t15a2" xml:space="preserve">
+    <value>Exostatic remembers his injuries briefly, but within this short time he reacts vividly, treating it as a performance intended to draw the attention of his surroundings. Therefore, the exostatic disputes take the form of a spectacle in which each party sees the opportunity to show off, and utters words that are not so much to annoy the opponent as to cause recognition by outsiders ("but cut him off"). In the absence of such viewers, exostatics are prone to prosecute lawsuits, promising there a theater with a larger audience, but before the case goes to the vandalism, emotions will collapse, so the trial is boring and quickly ends to the satisfaction of the parties. However, a great field for the exostatics to show off were the duels that can be seen today in films with the characters of "cloak and sword", and in the theater at performances of Rostand Cyrano de Bergerac's plays. Because it was all about showing off, and for that purpose it did not matter if you are offensive or offended, so also exostatics dueled for any reason, and even provoked duels under any pretext.</value>
+  </data>
+  <data name="t15a3" xml:space="preserve">
+    <value>Static remembers injuries until he receives redress, and he carefully balances what redress he would deem sufficient. Therefore, in lawsuits for insulting, being an offended party attaches great importance to the styling of the apology that the offender is to announce in the press by court judgment. Duels were a matter of social norm for the Static, which was expressed by the "code of honor" detailing the types of images ("I, II, III degree") and rules of conduct of the offended side, offending side and second hand, choice of weapon, determining distance etc. Attaching Static to the rules prevented them from perceiving how frivolous the seriousness with which they treated them. They probably would have treated them to this day if the duels had not been eliminated by endodynamics, from Cardinal Richelieu. For Statics, court rooms remained to compensate for the trauma, where their principality found its pathology in chronic money, but safer than duels.</value>
+  </data>
+  <data name="t15a4" xml:space="preserve">
+    <value>Endostatic reacts to the offense briefly, in one sentence and in a clearly subdued voice, of which the offender is not happy, because endostatic remember injuries for a long time. They will give the offender some time to feel, but in an indirect way, not indicating that it is about a rematch, he can only guess. However, endostats are not vindictive, they just mean that no one spoils the organizational treatment of matters by causing unnecessary aversion, and whoever did it is removed from these matters. Endostatic does not bring an action for insult to the court, believing that regardless of the result he has nothing to gain and one thing to lose, namely, with his inclination to organize other people's actions, he would only be in the courtroom as one of the parties, so in a situation that is not compatible with its character. Endostats had a similar attitude towards duels - instead of putting themselves at risk of a situation from which nothing useful could arise, the influential endostatic would rather try to ensure that his adversary hungry for the duel was quickly sent to war or on a long and long journey.</value>
+  </data>
+  <data name="t15a5" xml:space="preserve">
+    <value>The endodynamic reacts to offense with silence ("sinister"), and he never forgets resentment, because he has only aversive associations. He will not forget to take revenge when the opportunity arises, even if he has to wait for her and that he is patient, so he will probably wait. Of course, endodynamics never sue for such things. They also never dueled - both for fear of their lives and for lack of opportunity, as when guarding their interests, not honorable subtleties, they did not get into a fuss that could lead to duels. If they had a grudge against someone, it wasn't about social blunders, but about harming them in gaining power or property, and when they wanted someone else's death, they hired assassins and finally, why would they duel - in the end you can fight for money but for honor? Duels gave no money, and honor is an endless concept for endodynamic.</value>
+  </data>
+  <data name="t16t" xml:space="preserve">
+    <value> (o obfitości informowania).The lower the dynamism factor, the less information is released.</value>
+  </data>
+  <data name="t16a1" xml:space="preserve">
+    <value>Exodynamic is talkative, says everything that comes to his mind and what he can say.</value>
+  </data>
+  <data name="t16a2" xml:space="preserve">
+    <value>Exostatic decorates the information published with various additions, is talkative, speaks more than he knows.</value>
+  </data>
+  <data name="t16a3" xml:space="preserve">
+    <value>Static informs succinctly, without adding or removing anything, says as much as it knows.</value>
+  </data>
+  <data name="t16a4" xml:space="preserve">
+    <value>Endostatic is laconic, provides only necessary information, speaks less than he knows.</value>
+  </data>
+  <data name="t16a5" xml:space="preserve">
+    <value>The endodynamic tends to remain silent, tries to publish as little information as possible, knows a lot, and says almost nothing.</value>
+  </data>
+  <data name="t17t" xml:space="preserve">
+    <value> (o wierności informowania). The greater the dynamism, the less faithful the information is published.</value>
+  </data>
+  <data name="t17a1" xml:space="preserve">
+    <value>Everything exodynamic says comes from his imagination, not reality. Exodynamic makes up, fantasizes (simulation misinformation).</value>
+  </data>
+  <data name="t17a2" xml:space="preserve">
+    <value>Information about reality exostatic supplements with information from his own imagination, corresponding to his preferences ("depicts reality"), colors, comedianism, "plays" (transinformation enriched by simulation misinformation).</value>
+  </data>
+  <data name="t17a3" xml:space="preserve">
+    <value>Static is truthful, it informs faithfully about reality (transinformation).</value>
+  </data>
+  <data name="t17a4" xml:space="preserve">
+    <value>Endostatic selects Information about reality, some of them are silenced, informs with understatements (transinformation depleted by dissimulatory misinformation).</value>
+  </data>
+  <data name="t17a5" xml:space="preserve">
+    <value>Endodynamic does not disclose information, conceals, hides the actual state of affairs (dissimulatory misinformation).</value>
+  </data>
+  <data name="t18t" xml:space="preserve">
+    <value> (o objawianiu uczuć). The lower the dynamism factor, the less pronounced the manifestation of feelings.</value>
+  </data>
+  <data name="t18r" xml:space="preserve">
+    <value>The term "explicit" refers to the speed, abundance, frequency and intensity of the reaction (Table 15. 1). By "feelings" is meant here all correlation processes, by "revealing" all reactions, e.g. in the form of speech, facial expressions, gestures, etc.</value>
+  </data>
+  <data name="t18a1" xml:space="preserve">
+    <value>Exodynamic is characterized by euphoria, he reveals his feelings very clearly ("with himself").</value>
+  </data>
+  <data name="t18a2" xml:space="preserve">
+    <value>Exostatica is characterized by exaltation, the symptoms of his feelings are emphasized. Exostatic turns out more than he feels.</value>
+  </data>
+  <data name="t18a3" xml:space="preserve">
+    <value>Static is characterized by honesty, suitability of symptoms to feelings, static shows what it feels.</value>
+  </data>
+  <data name="t18a4" xml:space="preserve">
+    <value>Endostatic is characterized by restraint, the symptoms of his feelings are limited. Endostatic turns less than he feels.</value>
+  </data>
+  <data name="t18a5" xml:space="preserve">
+    <value>Endodynamics are characterized by self-control, the symptoms of his feelings are imperceptible. The endodynamic does not show what he feels.</value>
+  </data>
+  <data name="t19t" xml:space="preserve">
+    <value> (o mimice). The lower the dynamism factor, the less expressive the facial expression.</value>
+  </data>
+  <data name="t19r" xml:space="preserve">
+    <value>This theorem is a special case of theorem 15. 18. The facial expression deserves to be singled out due to the fact that the large variety of facial expressions makes it possible to issue a lot of information.</value>
+  </data>
+  <data name="t19a1" xml:space="preserve">
+    <value>Exodynamic's face is poignant ("spiritual"). It is paradoxical that although exodynamic's feelings are manifested so clearly, especially in his face, he still seems puzzling. The explanation for this phenomenon is the same as that given when discussing the "depth" of exodynamicists (theorem 15.8). The face of exodynamic's attracts attention and stimulates contemplation, because it is impossible to decipher it. It's like the face of Venus de Milo, who smiles or doesn't, depending on the viewer's presumptions. Such were the faces of great prophets, poets, film actresses ("vamps") and courtesans ("fatal woman"). "What's in you?" straightforward Statics shouted, desperate tearing at their exodynamic girlfriends and staring at their faces, and finally came to the view that "women are riddles." The Chevalier des Grieux had similar difficulties in understanding Manon Lescaut (Prêvost, Historia Manon Lescaut and Chevalier des Grieux).</value>
+  </data>
+  <data name="t19a2" xml:space="preserve">
+    <value>Exostatic's face is expressive, with features deepening over time as a result of increased reactions.</value>
+  </data>
+  <data name="t19a3" xml:space="preserve">
+    <value>Static's face is open ("without secrets").</value>
+  </data>
+  <data name="t19a4" xml:space="preserve">
+    <value>The endostatic's face is focused, sparing in expression.</value>
+  </data>
+  <data name="t19a5" xml:space="preserve">
+    <value>The face of endodynamic is impenetrable, nothing in it shakes either on the news of success or failure.</value>
+  </data>
+  <data name="t20t" xml:space="preserve">
+    <value> (o decydowaniu). The lower the dynamism factor, the more accurate the decision.</value>
+  </data>
+  <data name="t20r" xml:space="preserve">
+    <value>By the accuracy of decision-making is meant here the number of decision variants, considered taking into account the effects of each option.</value>
+  </data>
+  <data name="t20a1" xml:space="preserve">
+    <value>Exodynamic is characterized by carelessness. He does not consider any variants of decisions or predict their effects. This is explained by the fact that due to frequent and strong approvals, the correlation power immediately becomes so great that its first flow is enough to cause decisions and reactions. Exodynamic is acting impulsively.</value>
+  </data>
+  <data name="t20a2" xml:space="preserve">
+    <value>Exostatic is reckless. Decisions arise from him as a result of choosing from few options. Exostatic makes predictions only for the near future, and as for the further is convinced that there will be results corresponding to his wishes (wishful thinking). If this is not confirmed, exostatic is helpless ("who could have foreseen this?"). Exostatic's conduct is improvised.</value>
+  </data>
+  <data name="t20a3" xml:space="preserve">
+    <value>Static is characterized by straightforwardness. He makes decisions based on some principle (e.g. truthfulness, duty, solidarity, etc.). Similarly, he predicts effects based on some principle, e.g. that the current state will continue (extrapolation principle) or if an event occurs in a certain situation, a similar event will occur in a similar situation (analogy principle), etc. a schedule specifying what and when to do.</value>
+  </data>
+  <data name="t20a4" xml:space="preserve">
+    <value>Endostatic is characterized by foresight. He makes decisions after considering many options, also taking into account adverse effects. As the basis of the endostatic proceeding, he treats a plan presenting organizational relationships between activities.</value>
+  </data>
+  <data name="t20a5" xml:space="preserve">
+    <value>Endodynamic is characterized by cunning and guile. When making decisions, he tries to consider all variants, especially all unsuccessful. The basis of the endodynamic procedure is a program listing goals to be achieved. As a result of rare and weak endorsements, endodynamics tend to answer "no" first or refrain from making decisions about the suggestions, initiatives, requests or suggestions submitted to them, before they are sure that consent will benefit them, or at least not cause them any loss .</value>
+  </data>
+  <data name="t21t" xml:space="preserve">
+    <value> (o poczuciu niebezpieczeństwa). The lower the dynamism factor, the greater the feeling of danger.</value>
+  </data>
+  <data name="t21a1" xml:space="preserve">
+    <value>Exodynamic is characterized by naivety, no sense of danger. Exodynamic is easily exposed because it is unaware of it. This is due to exodynamic's lack of aversive associations of decisions.</value>
+  </data>
+  <data name="t21a2" xml:space="preserve">
+    <value>Exostatic underestimates the danger, so he behaves risky towards him, with bravado, he considers a dangerous situation to be show off.</value>
+  </data>
+  <data name="t21a3" xml:space="preserve">
+    <value>Static shows courage when exposure to danger results from the principle he adheres to, such as duty, punishment, patriotism, etc. Danger assessment does not play a role - Static, sticking to the principle, feels that he is doing the right thing, doing what belongs to him, and that exhausts the matter.</value>
+  </data>
+  <data name="t21a4" xml:space="preserve">
+    <value>Endostatic overestimates the danger, so he behaves cautiously towards him. Against this background, there is the "veterans paradox". When a country joins the war twenty years after the previous one, it would seem that former twenty-year-old soldiers, who are now forty-year veterans, will be very useful, because they have war experience and are still at the age of combat capability. This view was never confirmed in practice, which was attempted to explain by the fact that the veterans perpetuated the feeling of fear acquired in the previous war and made them defective soldiers. Meanwhile, the essence of this phenomenon lies in the fact that after twenty years of reckless exostatics and brave Statics have become cautious endostatics, in which caution is a manifestation of character dynamics.</value>
+  </data>
+  <data name="t21a5" xml:space="preserve">
+    <value>The endodynamic exaggerates the danger, so he feels a panic fear of him and tries to prevent him at all costs. This is due to the number of aversive associations of decisions.</value>
+  </data>
+  <data name="t22t" xml:space="preserve">
+    <value> (o poczuciu czasu). The lower the dynamism factor, the shorter the time seems.</value>
+  </data>
+  <data name="t22r" xml:space="preserve">
+    <value>This is because the lower the dynamism ratio, the lower the frequency of correlation processes (Table 15. 1) compared to the frequency of stimuli appearing from the environment, so there is a feeling that the more things happen in the environment, i.e. that the faster flows.</value>
+  </data>
+  <data name="t22a1" xml:space="preserve">
+    <value>For exodynamics, the frequency of correlation processes is very high, so the frequency of stimuli from the environment is very low, so exodynamics have a sense of time flowing too much too slowly. They are impatient, they hate waiting ("nothing happens", "time stands still"). This applies to attractive sensations, because exodynamics have numerous associations. Exodynamics want to distract immediately and never want to accumulate. Practically, this means that exodynamics want to have a lot of pleasure, and they do not want to undertake any tasks. They want their wishes to be fulfilled immediately and the promises given to them immediately kept.</value>
+  </data>
+  <data name="t22a2" xml:space="preserve">
+    <value>For exostatics, the frequency of correlation processes is lower than for exodynamics, so they do not complain that "nothing is happening" and "taking long time". They are less impatient than the exodynamics, they prefer to wait a bit rather than allow too much rush to ruin their expected attraction. In addition, the advantage of associations between impressions over associations between decisions is also smaller for them, so they do not shirk decision-making, but give priority to experiencing sensations. Exostatics want to distract more and earlier, and accumulate less and later. Practically, this means that they prefer to do the tasks only after entertainment ("first pleasure, then duty"). When the task is to carry out a longer action, exostatic is only interested in its beginning. The fact that something new is starting to change is for him a variety, the rest is not interesting, rather he will be interested in the beginning of some next action.</value>
+  </data>
+  <data name="t22a3" xml:space="preserve">
+    <value>Statics have a normative sense of time, based on a clock and calendar, they want both entertainment and tasks to last as long as announced, established in regulations, etc. Neither do they give priority or postpone it, everything is to be in its own right time. When it comes to an action, static is not interested in its beginning or end, but in its course, expecting that it will proceed according to a set rule (e.g. with a schedule). A typical example are bureaucratic officials who do not care about the justification (start) or the effects of their application (end) in applying the rules. Statics also love punctuality as something valuable by itself (and not as a factor improving organization). And finally, the invention of Static is anniversaries - time has no right to pass in any periods, they must be periods corresponding to the rules of numerical order, expressed in round numbers, such as 10 years, 20 years, 50 years, 100 years, etc. Such "norms" are more important for Static than facts, because of which someone should be honored. Admittedly, this has its good side, as glorious facts happen not to everyone, but decades happen to everyone.</value>
+  </data>
+  <data name="t22a4" xml:space="preserve">
+    <value>Due to the predominance of decision associations over associations of sensations, endostatics give priority to decisions over sensations, and due to the relatively low frequency of correlation processes, it seems to them that time passes quite quickly. Endostatic want to distract less and later, and accumulate more and earlier. Practically, this means that they prefer to do tasks before entertainment ("first duty, then pleasure"). They are quite patient, they prefer to allow delay rather than to perform the task incorrectly. When carrying out any action, they are interested in its end as a test of the effectiveness of the methods used.</value>
+  </data>
+  <data name="t22a5" xml:space="preserve">
+    <value>Because the frequency of correlation processes in endodynamics is very low, they have a sense of time flowing too fast. They don't complain about the wait because it seems short ("how this time is going"). Endodynamics are therefore patient. This mainly applies to decisions because endodynamics have numerous associations. Endodynamics do not want to distract anything, they want to accumulate everything, but without haste. They can develop programs even for generations - for endodynamics these are short periods of time. Staring only at the goal, they do not set strict deadlines - it is important for them to achieve it at all. Endodynamic rulers, intending to seize other people's territory, can wait for years for a favorable situation. Endodynamic are not interested in the beginning, course or end of any action, but only its consequences.</value>
+  </data>
+  <data name="t23t" xml:space="preserve">
+    <value> (o poczuciu terenu). The lower the dynamism factor, the smaller the field appears.</value>
+  </data>
+  <data name="t23r" xml:space="preserve">
+    <value>It is result of fact that the lower the dynamism coefficient, the greater the accumulation of sociological power, and therefore the larger the area is needed as its source.</value>
+  </data>
+  <data name="t23a1" xml:space="preserve">
+    <value>Exodynamic does not accumulate sociological power, so no area is needed. Because all his world is his own imagination, so wherever exodynamic is found, he will remain in his world. This explains that so many artists have created in many countries without settling permanently. With similar ease the tramp wanders "where the eyes will bear". As independent of the terrain, exodynamic has no home anywhere.</value>
+  </data>
+  <data name="t23a2" xml:space="preserve">
+    <value>For exostatic, gathering sociological power plays a smaller role than publishing information. To gain sociological power, exostatic is used to evoke admiration for his outstanding individual features. In addition to the imagination, he needs an individual envelope: appearance, way of being. Practically, this means that in addition to his own body, he needs some accessories, such as cosmetics, costumes, his own tools to show off (such as a violin for a violinist, although, for example, a pianist must necessarily use a piano that he finds at the place of performance). Accessories are easily portable, so exostatic is also easy to move from place to place, while remaining in his world, which is his person with a shell. The area exostatic needs to live in his world is the place where he stands before the audience. He can use this area as long as he is someone who stands out, but if he wanted to use it too long, he would cease to stand out - he would start to repeat himself. He must then leave this area and find himself some other, also for a limited time. An illustration of this is the ease with which artists (actors, singers, virtuosos) move from theater to theater, from stage to stage, from city to city, from country to country, leading a hotel lifestyle. Unlike exodynamics completely independent of the terrain, exostatics are independent of the specific terrain, but they depend on the type of terrain. The composer could compose a piano concert even in Antarctica, but a pianist can only play this concert where the concert hall and listeners are. Exostatic has no home almost anywhere.</value>
+  </data>
+  <data name="t23a3" xml:space="preserve">
+    <value>Static's attachment to principles means that he can live and gain sociological power only where his principles are respected and where he can require them to be observed. This is possible only in a stable, well-known to him area and among well-known people. Therefore, the world of Static is an apartment, but not any apartment, but a house in which order is maintained according to Static's requirements, the same furniture always stands in its place, with the same household at the set time wakes up, gathers for a meal and put to sleep . An extension of this world is a workplace where rules also apply, a place where Static leaves home and from which it returns home. Changing jobs, moving to another city, to another country is an earthquake for Static - in a new place you will have to learn the rules and introduce yours again, you will have to settle in, and it will take a long time to do so. Static is attached to its area. Static is homebody. He has his home where his home is.</value>
+  </data>
+  <data name="t23a4" xml:space="preserve">
+    <value>Home, as Static understands it, is not enough for endostatic. At home, as Static likes it, you can maintain order, but there are no actions to organize there, which suits endostatic. In addition, endostatic wants to gain more sociological power, and for this it is not enough to perform the prescribed activities according to certain rules. That is why the endostatic world is an institution in which ventures are organized and sociological power is available to decide on the actions of people cooperating in these ventures, i.e. to manage them. The home is too small for endostatica, the smaller the larger the institution's area is. When the institution is extensive, one home may not be enough for endostatic. Then he will create a second or third home, and in each of them he will feel "at home" in his own area. Endostatic has many homes.</value>
+  </data>
+  <data name="t23a5" xml:space="preserve">
+    <value>Endodynamic considers as own area that he managed to conquer and which he would like to conquer, and because his desire to accumulate sociological power is boundless, he sees his territory without boundaries. The world of endodynamics is the whole world. Static citizens of a country about which the endodynamic head of another country speaks out by reprimanding or making demands, are outraged at this as breaking the rules, interfering in the affairs of a foreign country. Endodynamic does not understand this - after all, this foreign country is in the world, and the whole world is his, endodynamic's, terrain. However, if someone wanted to make reprimands and make demands on him himself, then something else would be "interference in the affairs of a foreign state." Because there is no shortage of endodynamics in any country, and each of them has already gained some sociological power and wants to acquire even greater, while everyone considers the whole world as their own territory, so also the whole world is the area of ​​constant struggle of endodynamics for sociological power. This should not be equated with the fight of heads of state. If a country is headed by a Static, it does not participate in the fight. However, endodynamic participates in it, which is, for example, the owner of a watch factory, exporting its products to various countries, having its branches there, agencies, etc. It is also understandable that the Static concept of home for endodynamics does not exist. In every place in the world, endodynamics feels on "its" terrain, as long as it is there thanks to its sociological power. Endodynamic has a home everywhere. He is reluctant, however, everywhere, because his exaggerated sense of danger (assertion 15.21) prompts him to surround himself with walls and guards - endodynamics have no permanent home, but no "castle". For example, the one you see in the movie Citizen Kane.</value>
+  </data>
+  <data name="t24t" xml:space="preserve">
+    <value> (o stosunku do panowania). The lower the dynamism factor, the stronger the pursuit of dominance.</value>
+  </data>
+  <data name="t24a1" xml:space="preserve">
+    <value>Exodynamic does not want to control anyone, nor does he want someone to control him, wants to be free, hates violence.</value>
+  </data>
+  <data name="t24a2" xml:space="preserve">
+    <value>Exostatic opposes only the rules of rule preventing him from displaying personal preferences, demonstrates against such rules, arbitrarily avoids them ("recalcitability"), and disturbs violence.</value>
+  </data>
+  <data name="t24a3" xml:space="preserve">
+    <value>Static recognizes reign as a factor in maintaining order, it is disciplined. Static commends violence forcing compliance with obligations, and condemns violence for violation of rights.</value>
+  </data>
+  <data name="t24a4" xml:space="preserve">
+    <value>Endostatic is conducive to reign enabling organization of human activities, helps the use of violence.</value>
+  </data>
+  <data name="t24a5" xml:space="preserve">
+    <value>Endodynamic wants to dominate (autocracy), make others dependent on him and incapacitate them by using violence (oppression).</value>
+  </data>
+  <data name="t25t" xml:space="preserve">
+    <value> (o stosunku do organizacji). The lower the dynamism coefficient, the greater scope of pursuit of organization.</value>
+  </data>
+  <data name="t25a1" xml:space="preserve">
+    <value>Exodynamic is unorganized, hates organizing anything, even its own affairs, or subjecting it to organizational rigor. He will do everything willingly, nothing of compulsion.</value>
+  </data>
+  <data name="t25a2" xml:space="preserve">
+    <value>Exostatic feels the need to organize his own affairs so that he does not constrain his preferences, but he would like to be organized by someone else. At the same time, he is sensitive to the organization's shortcomings, easily detects them and eagerly criticizes, accurately formulating ironic remarks and allegations. Occurring ideas of the critics to entrust the organization to himself are only a polemical trick, "taking a break" from the critic, because exostatic sharply resigns from organizational tasks, which, incidentally, is good for them, because exostatic is not suitable for such tasks and would break down the faulty organization completely. At best, he would remove what is a shortcoming for him, and in return introduce many things that would be shortcomings for others. An illustration of this is the attempts to organize events by the actors themselves - instead of taking care of the success of the event together, each of them cares about their own success and of course nothing comes of it.</value>
+  </data>
+  <data name="t25a3" xml:space="preserve">
+    <value>Static values organization as a mainstay of governance. Static wants to see when and where to stay and what to do in both duties and entertainment. In organizing projects, he is best suited for the role of contractor. Static, which due to its duty and diligence was entrusted with managing the work of a group of people to carry out some actions, fails, because the irregularity of individual actions, the need to make decisions about their start and end, etc., violates his attachment to the rules and causes helplessness. Static is, however, irreplaceable as a manager in cases where the tasks of his subordinates and himself are strictly defined, recur, and require compliance with unchanging rules, as it is e.g. in accounting.</value>
+  </data>
+  <data name="t25a4" xml:space="preserve">
+    <value>Endostatic likes organizing just for organizing, it is a typical organizer. He will not set the goal of the venture himself, but he can organize it if someone entrusts it to him for a specific purpose and gives him the necessary permissions. For illustration, we can indicate the figure of an English officer from the movie Bridge on the River Kwai (according to the novel by Pierre Boulle, Le pont sur la riviere Kwai), who, as a Japanese prisoner, excellently organizes the construction of a wooden railway bridge, ineptly started by the Japanese, and after this work he falls into rage at the sight of commandos arrived to destroy this bridge, and in its defense he dies in battle with them (in the novel the bridge survived, in the film it is blown up with a Japanese military train passing over it). He defended the bridge as an effect of his organizational efficiency, although it was also a defense of the goal that the enemy wanted to achieve.</value>
+  </data>
+  <data name="t25a5" xml:space="preserve">
+    <value>Although endodynamic does not organize, it sets the goal of the organization, which increases its scope compared to the scope that would be set by exostatic. Endostatic chooses the scope of organization that can cover its organizational efficiency, while endodynamic does not matter. The goal to achieve is important to him, and if it is a broad goal, the organization must be adapted to it, not the other way around.</value>
+  </data>
+  <data name="t26t" xml:space="preserve">
+    <value> (o stosunku do przyrody). The lower the dynamism factor, the greater the tendency to master nature.</value>
+  </data>
+  <data name="t26a1" xml:space="preserve">
+    <value>Exodynamics extend their love of life to all nature. It is measured by cruelty to everything that lives.</value>
+  </data>
+  <data name="t26a2" xml:space="preserve">
+    <value>For exostatic, nature is a source of beauty and a factor that enhances life (e.g. the jungle) and entertainment (e.g. hunting).</value>
+  </data>
+  <data name="t26a3" xml:space="preserve">
+    <value>Statics are interested in the principles of nature functioning, the laws of nature (and even try to "improve" it when it seems to them not regular enough, e.g. trimming bushes in the shape of balls or cones, giving geometric patterns to flower beds, etc.).</value>
+  </data>
+  <data name="t26a4" xml:space="preserve">
+    <value>Endostatics are interested in nature from the point of view of usability as an area of exploitation, but without destroying nature.</value>
+  </data>
+  <data name="t26a5" xml:space="preserve">
+    <value>Endodynamics is about taming nature, absolutely and boundlessly, if it brings profit (e.g. felling wood until the forest turns into a desert, getting fish oil until the extinction of whales, etc.).</value>
+  </data>
+  <data name="t27t" xml:space="preserve">
+    <value> (o stosunku do posiadania). The lower the dynamism factor, the stronger the drive to increase ownership.</value>
+  </data>
+  <data name="t27a1" xml:space="preserve">
+    <value>Exodynamic is characterized by extravagance. Exodynamic likes to spend money, but doesn't like to get it. If he won the lottery money, because he would "fly between his fingers".</value>
+  </data>
+  <data name="t27a2" xml:space="preserve">
+    <value>Exostatic is characterized by generosity. Exostatic likes spending money more than it does. He earns money out of necessity - he wants to have to spend. If he won the lottery, he would spend it to embellish himself.</value>
+  </data>
+  <data name="t27a3" xml:space="preserve">
+    <value>Static is characterized by economy, striving to maintain ownership. Static cares for a balance between spending and earning money, wants to spend as much as it earns. If he won the lottery, he would try to keep it safe.</value>
+  </data>
+  <data name="t27a4" xml:space="preserve">
+    <value>Endostatic is characterized by stinginess ("a snake in your pocket"). Endostatic likes more to earn money than to spend. He spends money out of necessity - he wants to earn money to have. If he won the lottery money, he would try to secure a favorable deposit.</value>
+  </data>
+  <data name="t27a5" xml:space="preserve">
+    <value>Endodynamics is greedy. The endodynamic likes to get money, and he doesn't like to spend it. If he won the lottery, he would try to create a new source of money.
+In the history of family fortunes there have been such sequences of generations:
+  A) endodynamic acquire,
+  AB) endostatic has developed,
+  B) static maintained,
+  BC) exostatic neglected
+  C) exodynamic has squandered</value>
+  </data>
+  <data name="t28t" xml:space="preserve">
+    <value> (o środkach oddziaływania). The lower the dynamism coefficient, the smaller the information means, and the greater the energy ones.</value>
+  </data>
+  <data name="t28a1" xml:space="preserve">
+    <value>Exodynamic interactions are purely informational and rely on the manifestation of feelings, even without using words (laughter, screaming, crying). There are no energy impacts with exodynamics, they don't even fight in their own defense, and as a result of vulnerability they become victims of violence, martyrs. Typical, often shown in melodramatic movies, are situations when an English woman, such as "oppressed innocence", in the face of the approaching brute, stands still, does not try to defend or run away, and if a brave defender appears and gets into an exhausting fight, she does not tries to help him by cracking the assailant from behind with any hard object, just looks stunned at the course of the fight, with increasing terror when the defender seems to give in to the opponent's advantage.</value>
+  </data>
+  <data name="t28a2" xml:space="preserve">
+    <value>The exostatic interactions are mainly informative and consist in protesting. Energy interactions complement the information interactions and consist in demonstrating (spoiling, destroying) to draw attention to protests. An example of this is when an annoyed wife breaks plates against the floor to emphasize her dissatisfaction with her husband's behavior.</value>
+  </data>
+  <data name="t28a3" xml:space="preserve">
+    <value>Static impacts are both informational and energetic. Information interactions consist in convincing by means considered by Staticis to be correct. Energy interactions rely on the use of repression with penalties considered by Statics to be correct. A typical example of Static impact is a court procedure.</value>
+  </data>
+  <data name="t28a4" xml:space="preserve">
+    <value>The impacts of endostats are mainly energetic and consist in exerting pressure. Information impacts complement energy impacts and involve intimidation. As an example, taking hostages in the occupied territory and announcing that they would be shot if sabotage attacks repeated.</value>
+  </data>
+  <data name="t28a5" xml:space="preserve">
+    <value>The impacts of endodynamics are energetic and involve the use of violence (inflicting suffering, killing). There are no information interactions among endodynamics, they do not justify their rape attacks ("there is no discussion with tyrants"), and even try to make them covertly. For this they do not use their physiological power ("physical strength"), usually small (among others due to the fact that endodynamism appears at a later age), but sociological power, usually large, enabling them to give orders to the minions whose physiological power will be used to do "black work". An example is Hitler, which caused the deaths of millions of people, although he did not personally murder anyone.</value>
+  </data>
+  <data name="t29t" xml:space="preserve">
+    <value> (o nawiązywaniu kontaktów). The lower the dynamism factor, the lower the ability to make contact with other people.</value>
+  </data>
+  <data name="t29a1" xml:space="preserve">
+    <value>Because exodynamic is direct in revealing his feelings, he gets in touch with other people without difficulty ("as if they've known each other since birth"). Therefore, also in erotic matters exodynamic behaves with great naturalness. He doesn't like erotography for three reasons. First of all, it is too poor compared to the great diversity of exodynamic ideas. Secondly, his desire is to inform others about his ideas and not to be informed by them. Thirdly, erotography does not exert an exciting effect on him, i.e. overcoming internal resistance, because exodynamic has no resistance, but on the contrary, his directness of behavior overcomes the resistance of others. Exodynamic does not have a feeling of sexual shame (although he may have a strong feeling of disgust with his partner, but it is completely different). Exodynamically deficient exodynamics flee into mysticism, the "spiritual world" etc.</value>
+  </data>
+  <data name="t29a2" xml:space="preserve">
+    <value>Exostatic is bold, offensive, so making contact with people comes to him easily ("sociability"). However, this is contact with people belonging to a limited group, elite, etc. In erotic matters, exostatic's features are manifested as coquetry, frivolity. Exostatic refers to dismissal as an artificial display of frivolity that he himself has in reality. Sexually deficient exostatics resort to "sublimation", "pure art" etc.</value>
+  </data>
+  <data name="t29a3" xml:space="preserve">
+    <value>Static's contacts with people are based on reciprocity ("partnership"). These are people from the closest circle, adhering to the same principles and in a similar life situation. Static's contacts are therefore family, friendly, neighborly, etc. He is inclined to confess only within certain limits, believing that there are personal matters that should not be spoken of. He also dislikes when someone confiding in him crosses these borders. Similarly, Static is characterized by sexual decency, compliance with moral norms, and treating sex as a task to fulfill ("marital obligations"). static lacks erotic invention, so he thinks that sex needs to be "learned" and for this purpose he reads medical textbooks. Sexually deficient Statics flee to intensified work, education, etc.</value>
+  </data>
+  <data name="t29a4" xml:space="preserve">
+    <value>Endostatica is characterized by shyness towards other people when it comes to revealing feelings, so his contacts with people are difficult. Sometimes years of acquaintance with someone pass before exostatic proves able to confide, and to a limited extent. It also manifests in erotic matters. His attitude towards efficient operation of his comrades, under the influence of aversive associations, decisions, fear of criticism, irony, giving rise to erotic shyness, towards which he tries to expose operability in organizing contacts, but the rest depends on the partner's invention. Endostatic is interested in erotography, because it helps him reduce shyness. Sexually ineffective endostatics become spokesmen for the severity of morals, creating the appearance of justification (that it is the severity of morals that also limits their sexual activity).</value>
+  </data>
+  <data name="t29a5" xml:space="preserve">
+    <value>Endodynamic is characterized by embarrassment and inability to make contacts. The endodynamic feels like armored, he can not imagine that he could tell someone something about himself, "expose his interior." His numerous associations of aversive decisions are a source of constant fear that whatever he says will prove to be an erroneous and harmful decision. That is why the inability to agree on erotic matters endodynamic tries to compensate with its high sociological power, expecting that thanks to it he will be able to persuade an admired sexual partner to initiate an agreement (giving jewelry, providing luxury living conditions) or simply force submission without further formalities (history abounds with facts and legends about tyrants demanding sexual services from handsome women in exchange for sparing their lives and freeing their beloved fiancé or husband). Endodynamic is very fond of erotic scenes because they help him fight his own embarrassment. Sexually inefficient endodynamics become heralds of "eradicating debauchery" by draconian means, creating the appearance of justification (that it is also a ban on debauchery that also prevents sexual activity).</value>
+  </data>
+  <data name="t30t" xml:space="preserve">
+    <value> (o reakcji na krytykę). The lower the dynamism factor, the stronger the response to criticism.</value>
+  </data>
+  <data name="t30r" xml:space="preserve">
+    <value>Criticism is understood as making a just allegation of information or decision being wrong (e.g. false statement, failure to keep promise, etc.)</value>
+  </data>
+  <data name="t30a1" xml:space="preserve">
+    <value>Exodynamic reacts to criticism with surprise ("I said so?"), Behaves disarmingly, ensures that he had the best intentions, moreover, maybe it was, or maybe not. When he is pushed against the wall ("so: was it or was it not?"), he feels unhappy, because he really does not remember, his ideas change too often.</value>
+  </data>
+  <data name="t30a2" xml:space="preserve">
+    <value>Because exostatic tends to criticize others in a way that causes recognition and admiration of the environment, so when he is criticized himself, he is embarrassed ("disconcerted") by the possibility of losing the recognition he sought. Therefore, in order to save the situation, he does not respond to criticism, but frantically searches for accusations that could be made against the critic. In this way, the matter becomes mutual criticism, a verbal duel. This is easy to see, e.g. in polemics of columnists.</value>
+  </data>
+  <data name="t30a3" xml:space="preserve">
+    <value>Static responds to criticism by being ashamed of breaking the rule. "Giving the word" is canon for Static, and "breaking the word" is wickedness. When Static "made a vow", e.g. entering a monastery, if a loved one recovers, then the "vow" had to be fulfilled, even if it was absurd to anyone. Static, who, having talked to a friend, heard from his household that he was "not at home" and later found out that "he was at home", however, considers it a sufficient reason to break up his relationship. Statica's statement of violation of the rule is tantamount to losing good opinion and imposes the necessity of expiation. There are cases where Static sees no possibility of expiation, and therefore believes that the only thing that remains for him is to commit suicide. This was done by an ambassador who on behalf of his government promised military assistance to the accreditation country, but then it turned out that the government had not kept that promise. Characteristically, the matter is such that the ambassador was Static, and in the meantime the position of ambassador can be occupied only by endostatic (not Static, because the ambassador's task is to follow directives, not with rules, or endodynamics, because he would start his own policy instead of politics own government).</value>
+  </data>
+  <data name="t30a4" xml:space="preserve">
+    <value>Endostatic reacts to criticism with a sigh. As a man accustomed to making demands on the people whom he organizes, it is difficult for him to digest that he himself is criticized and demands explanation. Therefore, instead of acknowledging the correctness of the criticism, he tries to treat the critic as a subordinate, "from above".</value>
+  </data>
+  <data name="t30a5" xml:space="preserve">
+    <value>The endodynamic reacts to criticism with rage ("insult to majesty"). It is caused by the fact that aversive associations strongly limit endodynamic choice of decisions (because almost every one causes him aversion and as a result is stopped), and when he finally made a decision, he was shown his error, i.e. that she is also aversive, which the endodynamic itself he didn't notice before. Faced with an allegation of lie or failure to keep his promise, the endodynamics retain a "copper forehead" and only the nozzle desires to get rid of the critic ("silence").</value>
+  </data>
+  <data name="t31t" xml:space="preserve">
+    <value> (o zjednywaniu ludzi). The greater the dynamism, the smaller the role of equity in uniting people.</value>
+  </data>
+  <data name="t31a1" xml:space="preserve">
+    <value>Exodynamic wins others over with delighting them, by adoring them with its charm, just as it is. So he does not have to do anything, convince, refer to a good heart, it is enough that he appears in the field of view of the contractor. This is what mystics attracted followers, and "fatal women" admirers.</value>
+  </data>
+  <data name="t31a2" xml:space="preserve">
+    <value>Exostatic wins people over with his grace, thanks to which they can be liked. Grace is more than just existence, as with exodynamics, it is an effective way of being, a brilliant way of speaking, wit, elegance of clothing, and behavior similar to a performance. This is the influence of demagogues and coquettes.</value>
+  </data>
+  <data name="t31a3" xml:space="preserve">
+    <value>Static gets righteousness by proving that his case is right. A Static client who has a case to deal with in an office refers to the official's sense of justice, cites legal provisions and principles from which he is to derive what is due to him from the office. Static argues, while it considers the reference to the principles it recognizes as an argument.</value>
+  </data>
+  <data name="t31a4" xml:space="preserve">
+    <value>Endostatic wins over people with its operability, by urging them to adopt its point of view as useful. Endostatic's argument is in the form of explaining to the contractor what this utility is about. That's what agitators, advertisers and traveling salesmen do.</value>
+  </data>
+  <data name="t31a5" xml:space="preserve">
+    <value>The endodynamic wins over people with his sociological power, a power through which he can benefit them. The endodynamic does not convince, but only makes a hint that the fulfillment of his wishes to the contractor pays off, and the contractor should translate it into a language that is more understandable. This is how dealing with bribery looks like.</value>
+  </data>
+  <data name="t32t" xml:space="preserve">
+    <value> (o dyskusji). The greater the dynamism, the smaller the role of equity in the discussion.</value>
+  </data>
+  <data name="t32r" xml:space="preserve">
+    <value>By discussion is meant the exchange of information in order to arrive at a consensual view.</value>
+  </data>
+  <data name="t32a1" xml:space="preserve">
+    <value>Discussion between exodynamics is impossible at all - any agreement between them is out of the question, since each of them has their own world of imagination, and in addition their views are constantly changing. One exodynamic can't stand the presence of another. The ancient prophets have always "taught", that is, they had their visions towards the listeners they took over, but never in the presence of other prophets, and they never wanted to be "taught" by them. Only one sun can shine, the ecstasy of the auditorium is indivisible. Instead of discussions, only a monologue can come into play.</value>
+  </data>
+  <data name="t32a2" xml:space="preserve">
+    <value>The discussion between exostatics is that everyone speaks when they want ("let's all talk at once, we will speak sooner") and treat it like a performance. The argument is replaced by a pun, paradox, clever bon mot, ironic Zwischenruf. It is not about convincing the audience, but about admiration and applause. This is what actor gatherings look like.</value>
+  </data>
+  <data name="t32a3" xml:space="preserve">
+    <value>Statics' discussion consists in formulating views with reference to principles intended to prove the validity of these views. It leads to a consensus of views when the participants agree on the same principles - this is how mathematicians discuss. In the event of a divergence of principles, the only result of the discussion is a confrontation of views, in which each participant stays with his or her opinion - this is how discussions of divergent doctrines proceed. Discussion becomes idle banter when the speakers use the same words but assign different meanings to them, pulling them under divergent principles. Everyone talks about the same thing, but everyone about something different, accusing each other of mistaken views - a typical example of this are philosophical disputes. One can also distinguish the "training" discussion, in which the argument is citing "authorities", i.e. the founders of various "schools". Such discussion boils down to quoting their statements and pointing out the inaccuracies of the quotes or their misinterpretation.</value>
+  </data>
+  <data name="t32a4" xml:space="preserve">
+    <value>The discussion of endostatic is that each of them speaks less, and listens more, but not to find out what the speaker is saying, but to find out what is behind it. Endostatic does not divide debaters into those who are right and wrong, but into allies and opponents. Discussing endostats are typical delegates who come to a meeting with the directors of their principals. They would even object to the statement that "two times two is four" if they felt that it was incompatible with the directives received. This is the meeting of international organizations.</value>
+  </data>
+  <data name="t32a5" xml:space="preserve">
+    <value>Endodynamic discussions mean that nobody says anything. And it is no wonder, because endodynamics want to gather information, not spend. The only thing that the endodynamic would have to say is the disclosure that it aims to increase its sociological power (power, property), but why speak it, since the other endodynamics know this very well and have the same intentions. What they may not know yet are only details, specific data, in which each of them currently sees their own interest. However, no one is eager to provide information on this topic, because just disclosing your own interest may prove to be this interest. So if the endodynamics gather at all, it is only because you want to learn something about someone else's interests, you have to say something about your own. Of course, as little as possible, which is why these "silent discussions" consist of beating around the bush, few generalities, allusions, etc., and end up finding a discrepancy or agreement of interests. This is how "summit meetings" go. Noteworthy are the meetings of endodynamics, one of whom is the head of the other. He must pull them by language, e.g. by requiring them to speak in turn. He will get laconic and ambiguous answers, from which he will try to deduce whether or not one is intending to replace him as boss. Sam speaks at the end or not at all. "Listen and say nothing" - instructed the witches of Macbeth how to be a king.</value>
+  </data>
+  <data name="t33t" xml:space="preserve">
+    <value> (o prezentach). The lower the dynamism factor, the lower the tendency to give and receive gifts.</value>
+  </data>
+  <data name="t33a1" xml:space="preserve">
+    <value>With exodynamics, giving gifts goes so far that it actually becomes a giving away, on any pretext. A movie star dissatisfied with a new expensive dress, which suddenly ceases to please her, can offer her to the first girl on the shore, e.g. a hotel maid. Also, taking gifts does not make an exaggeration, they just blur their feeling that something is someone's property. As in the operetta by Jan Strauss Bat's Revenge, where the exodynamic maid in the absence of the housewife dresses most peacefully in her dresses and goes to the ball. Typical are also situations when a deprived senior actor, who was given a benefit in this connection, immediately invites his colleagues to a drunkard, on which he spends all his money. Exodynamic can also demand presents without embarrassment, e.g. ask a stranger at a bar to buy him vodka.</value>
+  </data>
+  <data name="t33a2" xml:space="preserve">
+    <value>Exostatics are happy to give and take small gifts when the opportunity arises, even if only apparent. They choose gifts that are not so useful as they are tasteful, and they want such impressions.</value>
+  </data>
+  <data name="t33a3" xml:space="preserve">
+    <value>Staticics give presents to whom it is appropriate to give them, and take them from whom to take. They follow the rules that determine what is suitable for a gift and what is not, depending on the person giving, the person taking and the situation. Staticics themselves have worked out these rules. They specified exactly what kind of flowers are suitable for gifts, what colors, in what quantity, in what packaging. Giving and accepting gifts is a Static satisfaction of doing the rules. Therefore, giving in return is also a great concern for Static users. When they receive a gift, they don't forget to give theirs in good time. When their gift was reciprocated with a larger gift, they are worried that they have obviously made a blunder in giving a smaller gift than it should, and vice versa.</value>
+  </data>
+  <data name="t33a4" xml:space="preserve">
+    <value>Endostatics are not very willing to give and take gifts. They give presents to the deliberately chosen people, usually useful and quite valuable, but they want the recipient to appreciate it. This is how they treat the gifts they receive. When endostatic, as the head of an institution, is to receive a gift from subordinates, he pays attention to the fact that the handing should take place in a form that clearly indicates that there is a gift from subordinates to the manager. Subordinates, not subordinate! Therefore, it is common that a present comes with a delegation of at least several people (by no means one person), and one of its members gives an appropriate speech, but it leaves no hierarchical doubt about who is who. A one-man delegation is out of the question because it would create the appearance of equality, "one for one," and endostats don't like to forget what level of hierarchy they are in.</value>
+  </data>
+  <data name="t33a5" xml:space="preserve">
+    <value>Endodynamics don't like giving presents, and when they do, it's because they see it as an advantage or it's a form of payment for services previously obtained. There are examples of millionaires allocating high subsidies to charity, but not forgetting to deduct this amount from taxation. When establishing a scientific foundation, they demand that she bear their name, because it makes a good impression helping in business. Endodynamics do not give selflessly.
+Brilliantly put it Shaw in the proceedings of the entrepreneur Burgess. Here is a fragment of the dialogue between him and his son-in-law, Pastor Morell:
+Burgess: Three years ago I didn't get a contract because of you. And when under the influence of natural agitation I wrote you some unpleasant words, you set my daughter against me. But I forgive you, James
+Morell: What shamelessness!
+Burgess: Is it fitting for a priest to say that? Especially to you?
+Morell: No, it's not fitting. I used the wrong word. I should have said, to hell with such shamelessness. So Saint Paul and every honest priest would tell you. Do you think I forgot your offer for the supply of clothing to the shelter?
+Burgess: I acted in the interest of payers, James. It was the lowest offer. You can't deny it.
+Morell: Yes, the lowest, because seamstresses paid lower wages than other employers, hunger wages, worse than hunger wages. How dare you, man, come here and offer me forgiveness ...
+Burgess: Easy, James, easy, easy! You are unnecessarily nervous. I admitted I was wrong.
+Morell: You confessed? I don't know anything about it.
+Burgess: Of course I admitted it. I admit it now. I apologize for the letter I wrote to you. Is that not enough?
+Morell: It's nothing. Have you increased salaries?
+Burgess: Yes.
+Morell: What ?!
+Burgess: I have become exemplary employers. I don't hire women anymore. I installed the machines. No worker gets less than six pence per hour, and skilled workers get union rates.
+Morell: Be possible! Well, there is greater joy in heaven because of one converted sinner ... My dear Burgess, I am asking you to forgive me for thinking badly about you. And now, don't you feel better after such a change? Confess you are happier. You can see that you are happier.
+Burgess: Maybe. I think so, if you can see it. In any case, the municipality has signed a contract. That damn bunch of nosy fools didn't want to talk to me until I started paying decent wages.
+Morell: So that's why you increased your salary?
+Burgess: Why else would I do that?
+
+The poverty of ideas of endodynamics means that after deciding to give a gift, endodynamics do not think about the choice of its type, but simply give money (check).
+Endodynamics also do not like to accept gifts given on the initiative of the donor, because they do not want them to be put in a position of the weaker, in need of help. However, they can take unscrupulous gifts that force themselves to the weaker in order to emphasize their addiction to each other. That is why vassals brought gifts to their feudal lords.</value>
+  </data>
+  <data name="t34t" xml:space="preserve">
+    <value> (o stroju). The lower the dynamism factor, the less care of your own appearance.</value>
+  </data>
+  <data name="t34a1" xml:space="preserve">
+    <value>Exodynamics, as people carrying their whole world within themselves and wanting to share it with everyone, would prefer to walk naked. They undress not only in intimate but also in public situations (in which it is completely acceptable or with minor restrictions), e.g. on the beach, in beauty contests, when posing for painters and sculptors (models), in ballet (dancers) , when appearing in movie erotic scenes, in strip-tease scenes, etc. In essence, the tendency to expose the body, in the conviction of its beauty, is the same manifestation of exodynamism as the tendency to expose your imagination in the conviction of its beauty. Each exodynamic reveals what seems to him the most beautiful.</value>
+  </data>
+  <data name="t34a2" xml:space="preserve">
+    <value>Exostatics are not convinced of their beauty, they just want to look attractive, and because nature did not all and unequaled grace, so some need to hide, while others artificially emphasize - and so the matter of dress appears. Exostatics want to stand out with their individual elegance, attire that draws attention to their originality, even if it was to rely only on extravagance (once black capes of young poets, long hair of today's guitarists, etc.). Movie stars ordering costumes reserve their performance in one copy only ("model"). For an outfit that has become fashionable ("popularized"), exostats lose interest and look for something new.</value>
+  </data>
+  <data name="t34a3" xml:space="preserve">
+    <value>For Static, clothing, the outfit, like everything else, must comply with the established rules, regulation. A Static costume is a uniform in the most general sense of the word - it can be a uniform, suit, costume, etc., applicable in a given environment or widely accepted as the prevailing fashion. Unlike the exostatic, which is terrified that someone else could dress the same as they do, Static hurts when someone breaks out of the universal uniformity of the costumes.</value>
+  </data>
+  <data name="t34a4" xml:space="preserve">
+    <value>Endostatics only follow the general principles that an outfit should follow. They have no interest in details, and not wanting to look wonderful, they stop at universal details that will survive any fashion changes. To avoid deciding on the style of each new clothing, they make sure that they have solid, good-quality clothing that is durable. So they will be able to wear them long before the problem of clothes appears again. They are indifferent to the details that reveal their hierarchical rank. That is why Napoleon generals and marshals paraded with all badges and orders, while Napoleon himself wore a simple gray cap.</value>
+  </data>
+  <data name="t34a5" xml:space="preserve">
+    <value>Endodynamics don't attach any importance to their clothes. They want clothes not to absorb them, only to be comfortable. They would walk in it all their lives if someone else did not take care of their wardrobe, and it does not help much, because even new clothes straight from under the needle wear so that it looks like old and neglected. Only out of great necessity they give in to the rigors of clothing, but for their own coronation it is impossible to come by anything. Of course, they don't recognize any fashion. Which doesn't bother me, for example, that as owners of big fashion houses they can earn a lot - on fashion for others.</value>
+  </data>
+  <data name="t35t" xml:space="preserve">
+    <value> (o ceremonialności). The lower the dynamism factor, the more ceremonial is required.</value>
+  </data>
+  <data name="t35a1" xml:space="preserve">
+    <value>Exodynamic behaves naturally and expects the same from others, does not feel the need for ceremonies, rituals, conventions. An example would be the behavior of artistic bohemia, dressing casually, visiting without invitation at incredible times of the day and night, etc. The lack of manners drove his aristocratic mother to the despair of the unceremonious professor Higgins (Shaw, Pygmalion). Exodynamic feels good in the atmosphere of worship, but does nothing to evoke them.</value>
+  </data>
+  <data name="t35a2" xml:space="preserve">
+    <value>Exostatic recognizes a stylish ceremonial, expressed in elegance with individual accents, but does not require it from others. On the contrary, he would like to stand out from others. For example, a virtuoso performing on stage in a tuxedo does not expect that all the men in the audience or even members of the orchestra will be in the tuxedo. He would also like to distinguish himself from other virtuosos, but the matter is more difficult because they are bound by the same ceremonial. The only thing that remains for him is to stand out with a great tailcoat, elegance of wearing it. Artists (pianists, singers) are in a better position, because although everyone puts on a long dress, there can be many individual details. Exostatics like to listen to compliments, of which stormy applause is especially nice to them - but this is not a ceremony, compliments may or may not be depending on the complementary decisions.</value>
+  </data>
+  <data name="t35a3" xml:space="preserve">
+    <value>Statics, with their attachment to the rules, do not like to leave room for freedom, so the social ceremony has become a real obsession with them. Generations of Statics have worked out savoir vivre, specifying who to say hello to, who to talk to, who to talk to, and thousands of other things. Even minor violations of this code grow into a series of events that may disturb family, friendly and neighborly relations. Compliments did not enter the static ceremonies, but there were conventional courtesies (thanks, congratulations, condolences, etc.) whose neglect or being late is a ceremonial fault.</value>
+  </data>
+  <data name="t35a4" xml:space="preserve">
+    <value>However, one should not think that Statics have exhausted all possibilities. They were outdone by endostatics, who created a hierarchical ceremonial, which also had to emphasize who is who. Officers' corps have long been a mainstay of such ceremonies, with particular formalization of styling, reporting, etc., even outside the service, e.g. in an officer's casino, where it was not allowed to talk when the commandant told old jokes. The hierarchical ceremony, although less rigid, also exists outside the army, e.g. in universities, hospitals, offices. It should be added that endostatic attaches importance to honoring it also in situations not covered by the ceremonial.</value>
+  </data>
+  <data name="t35a5" xml:space="preserve">
+    <value>The peak achievement, however, was the court ceremony ("etiquette") created by endodynamic monarchs. They themselves were unceremonious, but they required their subordinates to be revised in forms defined in the smallest details. Mastering the art of making a court bow required long-lasting exercise. Let us add that forcing the mastery, the endodynamics do not pay attention to the masterminds, but to those who do not want to be them. It is dictated by his associations of aversive decisions.</value>
+  </data>
+</root>

@@ -1,17 +1,19 @@
 ﻿' The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
+Imports Windows.Storage
+Imports Windows.UI.Popups
 ''' <summary>
 ''' An empty page that can be used on its own or navigated to within a Frame.
 ''' </summary>
 Public NotInheritable Class MainPage
     Inherits Page
 
-    Dim iPytanie = 0
+    Dim iPytanie As Integer = 0
     Dim aiOdpowiedzi(40) As Integer
 
     Private Async Sub Strona_Loaded(sender As Object, e As RoutedEventArgs)
         iPytanie = 0
-        For i = 1 To 35
+        For i As Integer = 1 To 35
             aiOdpowiedzi(i) = 0
         Next
 
@@ -34,15 +36,20 @@ Public NotInheritable Class MainPage
 
     End Sub
 
+
     Private Sub bDalej_Click(sender As Object, e As RoutedEventArgs) Handles bDalej.Click
 
         If iPytanie > 35 Then Exit Sub
 
+        uiProgress.Value = iPytanie
+
         ZabierzOdpowiedz()
 
         If iPytanie > 34 Then
+            uiMenu.Visibility = Visibility.Visible
             PokazWynik()
         Else
+            uiMenu.Visibility = Visibility.Collapsed
             ZmianaPytania(iPytanie + 1)
         End If
 
@@ -180,7 +187,7 @@ Public NotInheritable Class MainPage
     End Sub
 
     Private Sub ZabierzOdpowiedz()
-        Dim iOdp = 0
+        Dim iOdp As Integer = 0
         If cbEgzoDyn.IsChecked Then iOdp = 1
         If cbEgzoStat.IsChecked Then iOdp = 2
         If cbStatyk.IsChecked Then iOdp = 3
@@ -194,7 +201,7 @@ Public NotInheritable Class MainPage
         aiOdpowiedzi(iPytanie) = iOdp
 
         Dim iSumy(6) As Integer
-        For i = 1 To 35
+        For i As Integer = 1 To 35
             iSumy(aiOdpowiedzi(i)) = iSumy(aiOdpowiedzi(i)) + 1
         Next
 
@@ -205,6 +212,117 @@ Public NotInheritable Class MainPage
         grEndoDyn.Height = New GridLength(iSumy(5))
 
     End Sub
+
+    Private Function Numer2Dynamizm(iNo As Integer) As String
+        Select Case iNo
+            Case 1
+                Return "egzodynamik"
+            Case 2
+                Return "egzostatyk"
+            Case 3
+                Return "statyk"
+            Case 4
+                Return "endostatyk"
+            Case 5
+                Return "endodynamik"
+            Case Else
+                Return "ERROR"
+        End Select
+    End Function
+    Private Function PoliczIleDynamizmu(iNo As Integer) As Integer
+        Dim iRet As Integer = 0
+        For i As Integer = 1 To 35
+            If aiOdpowiedzi(i) = iNo Then iRet += 1
+        Next
+        Return iRet
+    End Function
+    Private Function SredniDynamizm() As Double
+        Dim iSuma As Double = 0
+        Dim iCnt As Integer = 0
+
+        For i As Integer = 1 To 35
+            If aiOdpowiedzi(i) > 0 Then iCnt += 1
+            iSuma += aiOdpowiedzi(i)
+        Next
+
+        Return iSuma / iCnt
+    End Function
+    Private Function SredniDynamizmBezSmieci() As Double
+        Dim aDynamizm(6) As Integer
+
+        For i As Integer = 1 To 5
+            aDynamizm(i) = 0
+        Next
+
+        For i As Integer = 1 To 35
+            aDynamizm(aiOdpowiedzi(i)) += 1
+        Next
+
+        ' uciecie smieci od dołu i od góry
+        For i As Integer = 1 To 5
+            If aDynamizm(i) > 4 Then Exit For
+            aDynamizm(i) = 0
+        Next
+
+        For i As Integer = 5 To 1 Step -1
+            If aDynamizm(i) > 4 Then Exit For
+            aDynamizm(i) = 0
+        Next
+
+        Dim iCnt As Integer = 0
+        Dim iSuma As Double = 0
+        For i As Integer = 1 To 5
+            iCnt += aDynamizm(i)
+            iSuma += i * aDynamizm(i)
+        Next
+
+        Return iSuma / iCnt
+
+    End Function
+    Private Async Function ZapiszWynik() As Task
+        Dim oFold As StorageFolder = ApplicationData.Current.LocalFolder
+
+        Dim sTxt As String = ""
+
+        sTxt = tbTeza.Text & " (" & SredniDynamizm().ToString("f2") &
+        "/" & SredniDynamizmBezSmieci.ToString("f2") & ")" & vbCrLf & vbCrLf
+
+        sTxt = sTxt & "Rozklad odpowiedzi:" & vbCrLf
+        For i As Integer = 1 To 5
+            sTxt = sTxt & Numer2Dynamizm(i) & ":" & vbTab & PoliczIleDynamizmu(i) & vbCrLf
+        Next
+
+        sTxt = sTxt & vbCrLf & "Poszczególne odpowiedzi:" & vbCrLf
+
+        For i As Integer = 1 To 35
+            sTxt = sTxt & i.ToString & ": " & Numer2Dynamizm(aiOdpowiedzi(i)) & vbCrLf
+        Next
+
+        Dim sFileName As String = Date.Now.ToString("yyyyMMdd-HHmmss")
+        Dim oFile As StorageFile = Await oFold.CreateFileAsync("lista.txt", CreationCollisionOption.OpenIfExists)
+        Await FileIO.AppendTextAsync(oFile, sFileName & vbCrLf)
+
+        oFile = Await oFold.CreateFileAsync(sFileName & ".txt")
+        Await FileIO.AppendTextAsync(oFile, sTxt)
+
+        If Not Await App.AskYN("Czy chcesz wysłać rezultat?") Then Exit Function
+
+        Dim oMsg As Email.EmailMessage = New Windows.ApplicationModel.Email.EmailMessage()
+        oMsg.Subject = "Mój dynamizm charakteru"
+
+        sTxt = "Załączam rezultat dzisiejszego testu dynamizmu charakteru" & vbCrLf & vbCrLf &
+            "Data: " & Date.Now & vbCrLf & vbCrLf &
+            sTxt
+
+        oMsg.Body = sTxt
+
+        ' załączniki działają tylko w default windows mail app
+        'Dim oStream = Windows.Storage.Streams.RandomAccessStreamReference.CreateFromFile(oFile)
+        'Dim oAttch = New Email.EmailAttachment("rezultat.txt", oStream)
+        'oMsg.Attachments.Add(oAttch)
+
+        Await Email.EmailManager.ShowComposeNewEmailAsync(oMsg)
+    End Function
 
 
     Private Sub PokazWynik()
@@ -221,10 +339,10 @@ Public NotInheritable Class MainPage
         tbEndoDyn.Text = ""
 
         Dim iSumy(6) As Integer
-        Dim iNonZero = 0
-        Dim sTxt = ""
+        Dim iNonZero As Integer = 0
+        Dim sTxt As String = ""
 
-        For i = 1 To 35
+        For i As Integer = 1 To 35
             iSumy(aiOdpowiedzi(i)) = iSumy(aiOdpowiedzi(i)) + 1
             If aiOdpowiedzi(i) = 0 Then
                 sTxt = "    Nie odpowiedziałeś na wszystkie pytania, a więc wyniki są niewiarygodne."
@@ -233,10 +351,10 @@ Public NotInheritable Class MainPage
             End If
         Next
 
-        Dim iMax = 0
-        Dim iTyp = 0
-        Dim bOk = False
-        For i = 1 To 5
+        Dim iMax As Integer = 0
+        Dim iTyp As Integer = 0
+        Dim bOk As Boolean = False
+        For i As Integer = 1 To 5
             If iSumy(i) > iNonZero * 0.4 Then bOk = True
             If iSumy(i) > iMax Then
                 iMax = iSumy(i)
@@ -266,7 +384,7 @@ Public NotInheritable Class MainPage
                 tbEndoStat.Text = "    Najlepszym partnerem w miłości będzie dla Ciebie endostatyk."
             Case 3  ' B
                 tbTeza.Text = "Rezultat: statyk"
-                tbEgzoStat.Text = "    Prawdopodobnie masz od 36 do 65 lat."
+                tbEgzoStat.Text = "    Prawdopodobnie masz od 36 do 60 lat."
                 tbStatyk.Text = "    W terminologii Erica Berne (analizie transakcyjnej) stanowisz wzorcowy przykład Dorosłego."
                 tbEndoStat.Text = "    Najlepszym partnerem w miłości będzie dla Ciebie inny statyk."
             Case 4  ' AB
@@ -282,8 +400,56 @@ Public NotInheritable Class MainPage
         End Select
 
 
-        bDalej.Content = " "
-        bDalej.IsEnabled = False
+        ' bDalej.Content = " "
+        ' bDalej.IsEnabled = False
+        bDalej.Visibility = Visibility.Collapsed
+        uiProgress.Visibility = Visibility.Collapsed
+        bWstecz.Visibility = Visibility.Collapsed
+
+        ZapiszWynik()
     End Sub
 
+    Private Sub uiTapStatyk_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles tbStatyk.Tapped
+        If cbStatyk.IsChecked Then
+            bDalej_Click(sender, e)
+        Else
+            cbStatyk.IsChecked = True
+        End If
+    End Sub
+
+    Private Sub uiTapEgzoDyn_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles tbEgzoDyn.Tapped
+        If cbEgzoDyn.IsChecked Then
+            bDalej_Click(sender, e)
+        Else
+            cbEgzoDyn.IsChecked = True
+        End If
+    End Sub
+
+    Private Sub uiTapEgzoStat_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles tbEgzoStat.Tapped
+        If cbEgzoStat.IsChecked Then
+            bDalej_Click(sender, e)
+        Else
+            cbEgzoStat.IsChecked = True
+        End If
+    End Sub
+
+    Private Sub uiTapEndoStat_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles tbEndoStat.Tapped
+        If cbEndoStat.IsChecked Then
+            bDalej_Click(sender, e)
+        Else
+            cbEndoStat.IsChecked = True
+        End If
+    End Sub
+
+    Private Sub uiTapEndoDyn_Tapped(sender As Object, e As TappedRoutedEventArgs) Handles tbEndoDyn.Tapped
+        If cbEndoDyn.IsChecked Then
+            bDalej_Click(sender, e)
+        Else
+            cbEndoDyn.IsChecked = True
+        End If
+    End Sub
+
+    Private Sub uiKomparator_Click(sender As Object, e As RoutedEventArgs)
+        Me.Frame.Navigate(GetType(KomparatorBrowse))
+    End Sub
 End Class

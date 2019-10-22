@@ -1,0 +1,46 @@
+Rezultat: statyk (3,32/3,39)
+
+Rozklad odpowiedzi:
+egzodynamik: 1
+egzostatyk: 0
+statyk: 20
+endostatyk: 13
+endodynamik: 0
+
+Poszczególne odpowiedzi:
+1: statyk
+2: statyk
+3: statyk
+4: statyk
+5: statyk
+6: statyk
+7: endostatyk
+8: statyk
+9: statyk
+10: endostatyk
+11: endostatyk
+12: endostatyk
+13: endostatyk
+14: statyk
+15: endostatyk
+16: statyk
+17: statyk
+18: statyk
+19: statyk
+20: endostatyk
+21: statyk
+22: endostatyk
+23: endostatyk
+24: statyk
+25: endostatyk
+26: statyk
+27: statyk
+28: statyk
+29: statyk
+30: statyk
+31: statyk
+32: endostatyk
+33: endostatyk
+34: endostatyk
+35: egzodynamik
+

@@ -1,0 +1,45 @@
+Rezultat: statyk (3,20/3,38)
+
+Rozklad odpowiedzi:
+egzodynamik: 1
+egzostatyk: 4
+statyk: 18
+endostatyk: 11
+endodynamik: 1
+
+Poszczególne odpowiedzi:
+1: statyk
+2: endodynamik
+3: statyk
+4: statyk
+5: egzodynamik
+6: endostatyk
+7: statyk
+8: endostatyk
+9: statyk
+10: statyk
+11: endostatyk
+12: statyk
+13: egzostatyk
+14: statyk
+15: egzostatyk
+16: statyk
+17: endostatyk
+18: statyk
+19: egzostatyk
+20: endostatyk
+21: statyk
+22: endostatyk
+23: endostatyk
+24: statyk
+25: endostatyk
+26: endostatyk
+27: statyk
+28: statyk
+29: statyk
+30: statyk
+31: statyk
+32: endostatyk
+33: statyk
+34: endostatyk
+35: egzostatyk 

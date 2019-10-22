@@ -1,0 +1,46 @@
+17:34 5/10/2019
+
+Rozklad odpowiedzi:
+egzodynamik: 10
+egzostatyk:  19
+statyk:       5
+endostatyk:   1
+endodynamik:  0 
+
+Poszczegolne odpowiedzi:
+1: egzostatyk
+2: egzostatyk
+3: egzostatyk
+4: egzostatyk
+5: endostatyk
+6: egzostatyk
+7: egzodynamik
+8: egzodynamik
+9: statyk 
+10: egzodynamik
+11: egzostatyk
+12: egzostatyk
+13: egzostatyk
+14: egzodynamik
+15: statyk 
+16: egzostatyk
+17: statyk 
+18: egzodynamik
+19: egzostatyk
+20: statyk 
+21: egzostatyk
+22: egzostatyk
+23: egzodynamik
+24: egzostatyk
+25: egzostatyk
+26: egzodynamik
+27: egzostatyk
+28: statyk 
+29: egzodynamik
+30: egzodynamik
+31: egzostatyk
+32: egzostatyk
+33: egzostatyk
+34: egzostatyk
+35: egzodynamik
+

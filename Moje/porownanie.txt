@@ -1,0 +1,139 @@
+Zmiany od wersji sklepowej:
+1. doubleclick na opisie jako zaznaczenie i Dalej>
+2. progress bar
+3. zapis rezultatu do pliku
+4. mo¿liwoœæ wys³ania rezultatu
+
+
+
+Konfiguracje:
+Word, strona 150 i nastepne.
+"Obecnie zajmiemy siê bli¿ej sympatiami i afektami ze wzglêdu na konfiguracje charakterologiczne."
+
+C - C 	OPIS
+C - BC  [srednia C-B C-C]
+C - B 	OPIS
+C - AB 
+C - A 	OPIS
+
+BC - BC OPIS
+BC - B 	
+BC - AB OPIS, OPIS
+BC - A 
+
+B - B 	OPIS, OPIS
+B - AB 
+B - A 	OPIS
+
+AB - AB OPIS
+AB - A 
+
+A - A OPIS
+
+
+C=egzodynamik
+B=statyk
+A=endodynamik
+
+funkcja przeliczPokaz()
+ for i=1 to 15
+	aRezultat(i) = 0
+ for i=1 to 35
+	aRezultat( zamienPorownanie(i1,i2) ) ++
+
+ r1=znajdzMax(aRezultat)
+ r2=znajdzDrugieMax(aRezultat)
+ if aRezultat(r1) - 5 < aRezultat(r2) error("za mala roznica")
+
+ znajdzTekst(r1)
+ znajdzTekst(r1+20lat)
+ znajdzTekst(r1+40lat)
+ znajdzTekst(r1+60lat)
+
+ znajdzSymbol(r1)
+..
+
+ i w efekcie ekran powinien pokazac:
+ Konfiguracja charakterologiczna
+
+ W skrócie: <symbol(r1)><symbol(r1+20)><symbol(r1+40)><symbol(r1+60)>
+Symbole: przyjaŸñ, adoracja-protekcja, mi³oœæ, mi³oœæ+przyjaŸñ, mi³oœæ+adoracja
+
+przyjazn: 
+C – C
+BC – BC
+B – B x2
+AB – AB
+A – A
+
+adoracja:
+C – B
+BC – AB x2
+B – A
+
+milosc:
+C – A
+BC – AB x2
+B – B x2
+
+
+C - BC = C-B / C-C = AD / PRZ
+BC - B = B-B / C-B = MI+PRZ / AD
+B - AB = B-A / B-B = AD / MI+PRZ (jak wyzej)
+AB - A = A-A / B-A = PRZ / AD
+C - AB = C-A / C-B = MI / AD
+BC - A = B-A / C-A = AD / MI (jak wyzej)
+
+Czyli mamy 9 roznych:
+PRZ
+PRZ+MI
+AD
+AD+MI
+MI
+AD/PRZ
+MI+PRZ/AD
+PRZ/AD
+MI/AD
+
+
+C -C  -> BC-BC -> B -B  -> BA-BA
+C -BC -> BC-B  -> B -BA -> BA-A
+C -B  -> BC-BA -> B -A  -> BA-A
+C -AB -> BC-A  -> B -A  -> BA-A
+C -A  -> BC-A  -> B -A  -> BA-A
+BC-BC -> B -B  -> BA-BA -> A-A
+BC-B  -> B -BA -> BA-A  -> A-A
+BC-AB -> B -A  -> BA-A  -> A-A
+BC-A  -> B -A  -> BA-A  -> A-A
+B -B  -> BA-BA -> A -A  -> A-A
+B -AB -> BA-A  -> A -A  -> A-A
+B -A  -> BA-A  -> A -A  -> A-A
+AB-AB -> A -A  -> A -A  -> A-A
+AB-A  -> A -A  -> A -A  -> A-A
+A -A  -> A -A  -> A -A  -> A-A
+
+Ale to nie tak, bo niby "przyjazn" (C-C), ale "malzenstwo sie rozpadnie".
+
+
+// mozna tez wyciagnac to, z czym bedzie problem - tzn. w ktorych punktach bedzie najtrudniej sie dogadac
+
+
+ale te¿ poœrednie miêdzy nimi
+
+
+funkcja(linijka1, linijka2)
+ i1=wytnijOdpowiedz(linijka1)	// 1: 1 -> 1
+ i2=wytnijOdpowiedz(linijka2)
+
+ If i2 < i1 then swap(i1,i2)
+ select case i1
+	case 1:
+		select case i2:
+			case 1: return 1 //C-C
+			case 2: return 2 //C-BC
+...
+	case 2:
+		select case i2:
+			case 2: return 6 // BC-BC
+
+ 

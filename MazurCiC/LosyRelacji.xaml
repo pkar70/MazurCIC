@@ -1,0 +1,191 @@
+﻿<Page
+    x:Class="MazurCiC.LosyRelacji"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MazurCiC"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="uiPage_Loaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="O waszej relacji..." FontSize="26" HorizontalAlignment="Center" Margin="10,10,10,30" />
+        <TextBlock x:Name="uiNaRok" Text="Stan na dzisiaj" Grid.Row="1" FontSize="20" HorizontalAlignment="Center" Margin="10,10,10,30" />
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp00" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="C-C" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="2" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp01" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="C-BC" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="3" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp02" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="C-B" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="4" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp03" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="C-AB" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="5" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp04" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="C-A" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="6" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp05" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="BC-BC" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="7" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp06" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="BC-B" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="8" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp07" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="BC-BA" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="9" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp08" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="BC-A" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="10" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp09" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="B-B" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="11" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp10" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="B-AB" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="12" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp11" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="B-A" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="13" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp12" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="BA-BA" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="14" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp13" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="BA-A" VerticalAlignment="Bottom"/>
+            </Grid>
+
+            <Grid Grid.Column="15" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="uiTyp14" Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="LightSkyBlue"/>
+                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" Text="A-A" VerticalAlignment="Bottom"/>
+            </Grid>
+
+
+        </Grid>
+        <TextBox x:Name="uiOpis" IsReadOnly="True" Grid.Row="3" Margin="10,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap"  />
+
+        <Button x:Name="uiBMinus" Content="2007" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Left" />
+        <Button Content="Koniec" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Center" Click="uiKoniec_Click"  />
+        <Button x:Name="uiBPlus" Content="2027" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Right" />
+    </Grid>
+</Page>
