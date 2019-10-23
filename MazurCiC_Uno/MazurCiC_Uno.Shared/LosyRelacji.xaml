@@ -184,8 +184,8 @@
         </Grid>
         <TextBox Name="uiOpis" IsReadOnly="True" Grid.Row="3" Margin="10,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap"  />
 
-        <Button Name="uiBMinus" Content="2007" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Left" />
+        <Button Name="uiBMinus" Content="2007" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Left" Click="uiMinus_Click" />
         <Button x:Uid="uiKoniec" Content="Koniec" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Center" Click="uiKoniec_Click"  />
-        <Button Name="uiBPlus" Content="2027" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Right" />
+        <Button Name="uiBPlus" Content="2027" Grid.Row="4" Margin="10,10,10,10" HorizontalAlignment="Right" Click="uiPlus_Click"/>
     </Grid>
 </Page>

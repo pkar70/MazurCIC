@@ -30,26 +30,33 @@ namespace MazurCiC
         {
             if (sIn.Length < 100)
             {
-                p.k.DialogBox("Błąd: za krótkie dane " + sMsg);
+                p.k.DialogBox(p.k.GetLangString("errDataShort") + sMsg);
                 return "";
             }
 
-            sIn = sIn + "\n";
+            sIn += "\n";
 
-            int iInd = sIn.IndexOf("Poszczegolne odpowiedzi:");
-            if (iInd < 5)
-                iInd = sIn.IndexOf("Poszczególne odpowiedzi:");
-            if (iInd < 5)
+            int iInd=1;
+            if (p.k.GetLangString("_lang") == "PL")
             {
-                p.k.DialogBox("Błąd: nieprawidłowe dane " + sMsg);
-                return "";
+                iInd = sIn.IndexOf("Poszczegolne odpowiedzi:");
+                if (iInd < 5)
+                    iInd = sIn.IndexOf("Poszczególne odpowiedzi:");
+                // nie ma błędu - jak Polak dostanie z USA odpowiedzi, to nie bedzie tego tekstu
+                // ale samo przeskoczenie iInd jest.
+                //if (iInd < 5)
+                //{
+                //    p.k.DialogBox(p.k.GetLangString("errDataNoPoszczeg") + sMsg);
+                //    return "";
+                //}
+                if (iInd < 5) iInd = 5; // jakby po poprzednim bylo -1...
             }
 
             string sOut = sIn.Substring(iInd);
             iInd = sOut.IndexOf("1: ");
             if (iInd < 2)
             {
-                p.k.DialogBox("Błąd: brak odpowiedzi (dane " + sMsg + ")");
+                p.k.DialogBox(p.k.GetLangString("errDataNoAnswers") + sMsg + ")");
                 return "";
             }
             return sOut.Substring(iInd);
@@ -57,17 +64,22 @@ namespace MazurCiC
 
         private int Nazwa2Numer(string sTyp)
         {
-            switch (sTyp.Trim())
+            switch (sTyp.Trim().ToLower())
             {
                 case "egzodynamik":
+                case "exodynamic":
                         return 1;
                 case "egzostatyk":
+                case "exostatic":
                         return 2;
                 case "statyk":
+                case "static":
                         return 3;
                 case "endostatyk":
+                case "endostatic":
                         return 4;
                 case "endodynamik":
+                case "endodynamic":
                         return 5;
             }
 
@@ -76,8 +88,12 @@ namespace MazurCiC
 
         private void uiPorownaj_Click(object sender, RoutedEventArgs e)
         {
-            string sTxt1 = WytnijSamePunkty(uiText1.Text, "Twoje");
-            string sTxt2 = WytnijSamePunkty(uiText2.Text, "drugiej osoby");
+            string sMsgTwoje = p.k.GetLangString("msgBrowseTwoje");
+            string sMsgDrugi = p.k.GetLangString("msgBrowseDrugiej");
+
+
+            string sTxt1 = WytnijSamePunkty(uiText1.Text, sMsgTwoje);
+            string sTxt2 = WytnijSamePunkty(uiText2.Text, sMsgDrugi);
             if (string.IsNullOrEmpty(sTxt1))
                 return;
             if (string.IsNullOrEmpty(sTxt2))
@@ -99,7 +115,7 @@ namespace MazurCiC
                 sTmp = i.ToString() + ": ";
                 if (sTxt1.IndexOf(sTmp) != 0 | sTxt2.IndexOf(sTmp) != 0)
                 {
-                    p.k.DialogBox("Błąd: brak punktu " + i.ToString());
+                    p.k.DialogBox(p.k.GetLangString("errDataNoPoint") + " " + i.ToString());
                     bError = true;
                     break;
                 }
@@ -111,7 +127,7 @@ namespace MazurCiC
                     iInd = sTxt1.IndexOf("\n");
                 if (iInd < 2)
                 {
-                    p.k.DialogBox("Błąd: brak odpowiedzi " + i.ToString() + " w Twoich danych");
+                    p.k.DialogBox(p.k.GetLangString("errDataNoThisAnswer") + " " + i.ToString() + " - " + sMsgTwoje);
                     bError = true;
                     break;
                 }
@@ -123,7 +139,7 @@ namespace MazurCiC
                     iInd = sTxt2.IndexOf("\n");
                 if (iInd < 2)
                 {
-                    p.k.DialogBox("Błąd: brak odpowiedzi " + i.ToString() + " w danych drugiej osoby");
+                    p.k.DialogBox("Błąd: brak odpowiedzi " + i.ToString() + " - " + sMsgDrugi);
                     bError = true;
                     break;
                 }
@@ -165,33 +181,71 @@ namespace MazurCiC
             this.Frame.Navigate(typeof(LosyRelacji), sTmp);
         }
 
-        private async void uiPage_Loaded(object sender, RoutedEventArgs e)
+        private async System.Threading.Tasks.Task WczytajCombo(ComboBox oCombo, string sFileName)
         {
-            // wypelnij combobox
-
-            uiCombo1.Items.Clear();
+            oCombo.Items.Clear();
             Windows.Storage.StorageFolder oFold = Windows.Storage.ApplicationData.Current.LocalFolder;
-            Windows.Storage.StorageFile oFile = await oFold.TryGetItemAsync("lista.txt") as Windows.Storage.StorageFile;
+            Windows.Storage.StorageFile oFile = await oFold.TryGetItemAsync(sFileName) as Windows.Storage.StorageFile;
             if (oFile == null)
                 return;
 
             IList<string> oLns = await Windows.Storage.FileIO.ReadLinesAsync(oFile);
             foreach (string oLine in oLns)
-                uiCombo1.Items.Add(oLine);
+                oCombo.Items.Add(oLine);
+        }
+
+        private async void uiPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            // wypelnij combobox
+            await WczytajCombo(uiCombo1, "lista.txt");
+            if (p.k.IsThisMoje())
+            {
+                await WczytajCombo(uiCombo2, "listaInni.txt");
+                uiCombo2.Visibility = Visibility.Visible;
+            }
+        }
+
+
+        private async System.Threading.Tasks.Task WczytajDane(TextBox oTBox, string sFileName)
+        {
+            Windows.Storage.StorageFolder oFold = Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFile oFile = await oFold.TryGetItemAsync(sFileName) as Windows.Storage.StorageFile;
+            if (oFile == null)
+                return;
+
+            // var oStream = await oFile.OpenReadAsync();
+            string sTxt;
+            try
+            {
+                sTxt = await Windows.Storage.FileIO.ReadTextAsync(oFile, Windows.Storage.Streams.UnicodeEncoding.Utf8);
+            }
+            catch
+            {
+                sTxt = p.k.GetLangString("errReadingPlikWynikow");
+            }
+            oTBox.Text = sTxt;
         }
 
         private async void uiCombo1_Changed(object sender, SelectionChangedEventArgs e)
         {
             // zamien combobox na textbox
 
-            string sFile = uiCombo1.SelectedValue + ".txt";
-            Windows.Storage.StorageFolder oFold = Windows.Storage.ApplicationData.Current.LocalFolder;
-            Windows.Storage.StorageFile oFile = await oFold.TryGetItemAsync(sFile) as Windows.Storage.StorageFile;
-            if (oFile == null)
-                return;
+            await WczytajDane(uiText1, uiCombo1.SelectedValue + ".txt");
+            //string sFile = uiCombo1.SelectedValue + ".txt";
+            //Windows.Storage.StorageFolder oFold = Windows.Storage.ApplicationData.Current.LocalFolder;
+            //Windows.Storage.StorageFile oFile = await oFold.TryGetItemAsync(sFile) as Windows.Storage.StorageFile;
+            //if (oFile == null)
+            //    return;
 
-            string sTxt = await Windows.Storage.FileIO.ReadTextAsync(oFile);
-            uiText1.Text = sTxt;
+            //string sTxt = await Windows.Storage.FileIO.ReadTextAsync(oFile);
+            //uiText1.Text = sTxt;
+        }
+
+        private async void uiCombo2_Changed(object sender, SelectionChangedEventArgs e)
+        {
+            string sTmp = uiCombo2.SelectedValue.ToString();
+            if (!sTmp.ToLower().EndsWith(".txt")) sTmp += ".txt";
+            await WczytajDane(uiText2, sTmp);
         }
     }
 }

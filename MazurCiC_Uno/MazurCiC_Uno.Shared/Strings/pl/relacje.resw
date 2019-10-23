@@ -1,42 +1,213 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<root>	
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>1.3</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="r0" xml:space="preserve">
+    <value>
+Solidarność egzodynamików jest słaba, ponieważ każdy z nich żyje w swoim świecie wyobraźni i tylko o nim chciałby mówić, nie słuchając o cudzych, toteż jedyną podstawą solidarności egzodynamików jest wspólna niechęć do narzucanych im zasad i przemocy. Dlatego dzieci wolą przebywać ze sobą bez udziału dorosłych - czyniąc wyjątek dla dorosłych egzodynamików, nie o wiek bowiem chodzi, lecz o klasę charakteru. Gdy w rodzinie jest jakiś wuj-figlarz, dzieci nie mogą się doczekać następnej jego wizyty. Solidarność egzodynamików łatwo się załamuje, gdy jeden z nich jest wyróżniany ("beniaminek").
+Podobnie przyjaźnie egzodynamików zawiązują się dla izolacji od ludzi o innym dynamizmie.
+Spotyka się je najczęściej między egozdynamicznymi dziewczętami, których wielkie podobieństwo charakterów ułatwia im zrozumienie się (w porównaniu z brakiem zrozumienia ze strony innych osób), skłaniając je do ciągłego przebywania ze sobą i wzajemnych zwierzeń. Jednakże gdy pojawi się chłopiec, który zainteresuje się jedną z przyjaciółek, przyjaźń ich pryska natychmiast.
+Małżeństwo egzodynamików sprawia wrażenie, że jest to małżeństwo dwojga dzieci. Atmosfera zmienia się w nim pod wpływem byle kaprysu. Zarobione pieniądze rozchodzą się nie wiadomo kiedy. W mieszkaniu panuje rozgardiasz. O byle co powstają zatargi i mijają równie szybko, jak powstały. Pociągu erotycznego egzodynamicy do siebie nie mają, ale do zbliżeń często między nimi dochodzi, oboje bowiem szukają silnych przeżyć, a ponieważ nie odczuwają zahamowań, więc szybko dochodzą do porozumienia, nie tracąc czasu na stopniowe dawkowanie wrażeń i wzajemne ośmielanie się. Nie ma u nich wspólnego przeżywania seksu, każdemu chodzi tylko o własne przeżycia, partner jest tylko narzędziem, ale krzywda mu się nie dzieje, bo i on traktuje sprawę tak samo. Symetria taka nie tylko nie utrwala małżeństwa, lecz przeciwnie, przyczynia się do jego rozkładu, jako że repertuar podniet erotycznych ze strony partnera jest ograniczony, zaczynają się powtarzać, następuje nasycenie, dla urozmaicenia więc trzeba sobie poszukać nowego partnera, co też egzodynamicy robią bez żadnych skrupułów. O zamiarze odejścia zawiadamiają się krótko i węzłowato, bez aluzyjnych wstępów, zresztą nie byłyby potrzebne, gdyż druga strona nie będzie rozpaczać, a nawet któregoś dnia mogłaby postąpić podobnie. Typowym przykładem są małżeństwa między gwiazdami filmowymi, znane z łatwości i częstości rozwodów, co w opinii statyków jest przejawem rozwiązłości środowiska, a w rzeczywistości ma podłoże charakterologiczne.
+Dla egzodynamika rozwód to nie żaden dramat, to tylko przetasowanie partnerów. Jeżeli ma to posmak skandalu, to tym lepiej, bo się coś nowego dzieje, zainteresowanie otoczenia skupia się na bohaterach rozwodu, znajdują się oni w centrum uwagi, na czym egzodynamikom tak bardzo zależy, że chętnie nawet wyolbrzymiają sensacyjność i skandaliczność całego ewenementu, aby zachęcić prasę do jego rozdmuchania.
+Małżeństwa egzodynamików przeważnie nie chcą mieć dzieci, egzodynamicy bowiem nie lubią się nikim opiekować, to raczej oni sami potrzebują opieki.
+Rozkładowym czynnikiem w małżeństwie egzodynamików jest także pragnienie ściągania uwagi wyłącznie na siebie - małżeństwo ich to nie duet, lecz dwoje solistów życiowych. Dopóki powodzenie obojga jest jednakowe, utrzymuje się równowaga, ale gdy zostanie zachwiana, jeden egzodynamiczny partner nie chce pozostawać w cieniu drugiego, i małżeństwo ich musi się rozpaść. Nakłanianie ich do cierpliwości, wyrozumiałości itp. jest zupełnie bezcelowe.
+	</value>
+    <comment>C-C</comment>
+  </data>
+  <data name="r1" xml:space="preserve">
+    <value>
+Poddańczość egzodynamików wobec statyków występuje wtedy, gdy egzodynamicy przyswajają sobie zasady od statyków, na przykład dzieci od rodziców, uczniowie od nauczycieli. Towarzyszy temu opiekuńczość statyków wobec egzodynamików, na przykład rodziców wobec dzieci, nauczycieli wobec uczniów. Warunkiem występowania takich sympatii jest, żeby postępowanie jednego partnera stwarzało sytuację zgodną z charakterem drugiego, na przykład, żeby wpajanie zasad dzieciom zmierzało do zwiększenia atrakcyjności ich zainteresowań, a nie do ich zakazywania.
+Podobne związki zachodzą między afektami: adoracja u egzodynamiczego pupila u statycznego protektora oraz protekcja u statyczego protektora dla egzodynamiczego pupila, np. w sztuce (uczeń i mistrz), sporcie (uczeń i trener) itp.
+O małżeństwie egzodynamika ze statyczką można powiedzieć, że jest małżeństwem fircyka z domatorką. Mąż dba o swój wygląd i w poszukiwaniu władczej kobiety, na której mógłby wywrzeć silne wrażenie, znika co jakiś czas z domu na donżuańskie eskapady, z żona oczekuje na jego powrót, zajmując się domowymi porządkami. Po jego powrocie żona apeluje do jego rozsądku i poczucia przyzwoitości, perswaduje mu, żeby się zmienił, chociażby przez wzgląd na dzieci, na opinię itp. Mąż, zmęczony i syty wrażeń, nic z tego wszystkiego nie słucha, gdyż jego jedynym pragnieniem w tej sytuacji jest dobrze się wyspać. Na drugi dzień zachowuje się tak, jak gdyby nic nie zaszło - aż do następnego razu. Do amorów ma on kochanki poza domem, a w domu żonę do prania mu bielizny i gotowania obiadów.
+Małżeństwo egzodynamika ze statyczką jest nieudane, ale stan ten poprawia się z czasem. Statyczna żona stając się endostatyczką zaczyna lepiej panować nad sytuacją, co jej przychodzi tym łatwiej, że mąż tymczasem przekształca się w egzostatyka i zaczyna odkrywać, że żony nie doceniał. Mogą oni stać się dobrym małżeństwem, jeżeli znacznie wcześniej nie okaże się, że mąż z którejś eskapady nie wróci więcej do domu.
+Natomiast o małżeństwie statyka z egzodynamiczką można powiedzieć, że jest to małżeństwo, w którym żona "dusi się" przy mężu. Żona chce błyszczeć, pragnie atrakcji, trybu życia, w którym jej uroda i elegancja byłyby przedmiotem zainteresowania, wyrywa się więc z domu mężowskiego, który jej tego wszystkiego nie zapewnia - klasyczna "kobieta niezrozumiana". A rzeczywiście mąż przy najlepszych nawet chęciach mąż nie może zrozumieć, "o co jej właściwie chodzi", skoro zapewnił jej dom, określoną pozycję socjalną i spokojne, zrównoważone, ustabilizowane życie. Jako człowiek pracowity, oszczędny i przyzwoity uważa on, że nic więcej nie można od niego wymagać. Żona przyznaje mu te zalety, a mimo to czuje się nieszczęśliwa, niewyżyta, "coś ją ponosi".
+Literatura zawiera mnóstwo przykładów takich par: pan i pani Bovary (Pani Bovary Flauberta), kawaler des Grieux i Manon Lescaut (Historia Manon Lescaut i kawalera des Grieux Prévosta), don José i Carmen (opera Carmen Bizeta) i in.
+Jakkolwiek małżeństwa statyków z egzodynamiczkami są nie udane, to jednak z upływem czasu stan ten się poprawia, statyk bowiem staje się po latach endostatykiem, egzodynamiczka zaś egzostatyczką, a to już jest kontrastowa konfiguracja charakterologiczna, dzięki czemu małżeństwo może się stać udane, jeśli tylko przetrwa do tego czasu.
+	</value>
+    <comment>C-BC, C-B</comment>
+  </data>
+  <data name="r10" xml:space="preserve">
+    <value>
+Poddańczość u statyków i opiekuńczość u endodynamików są sympatiami występującymi w związku z przygotowaniem statyka do sukcesji po endodynamiku, gdy nadejdzie na to pora.
+Na podobnym tle mogą również występować afekty adoracji i protekcji.
+W małżeństwie statyka z endodynamiczką przedsiębiorcza żona wyżywa się w działalności poza domem, którym zajmuje się z upodobaniem statyczny mąż, zresztą nie zyskujący sobie przez to uznania żony, wyrażającej się o nim lekceważąco, że się do niczego innego nie nadaje. Nierzadko spotykają go też przykrości ze strony sąsiadów i znajomych, wytykających mu "babskie" zajęcia i uważających go za pantoflarza. Stroną rządzącą jest oczywiście żona, zwłaszcza gdy to ona zarabia na utrzymanie domu. Gdy stroną zarobkującą jest mąż, żona stale mu wytyka, że zadowala się pracą na niskim stanowisku i mało zarabia, podczas gdy tylu innych o podobnych kwalifikacjach dawno już awansowało, kupiło sobie samochody, ma zasobnie urządzone mieszkanie itp., i ponagla go do zrobienia jakiejś kariery, a ponieważ nic z tego nie wychodzi, więc uważa go za niedołęgę, nie krępując się z wyrażaniem tego poglądu w obecności innych osób. Mąż znosi to potulnie, nie znajdując repliki, zdaje bowiem sobie sprawę, że to, co żona mówi, jest zgodne z rzeczywistością. Nie rozumie on tylko, że nie ma w tym żadnej jego winy, nikt bowiem nie może "wyskoczyć ze swej skóry", tj. zmienić własnego charakteru. Podobną postawę, jak wobec żony, zajmuje mąż wobec otoczenia - gdy trzeba załatwić jakąś sprawę w urzędzie, zwłaszcza u osób na wyższych stanowiskach, czuje się onieśmielony i zwleka pod rozmaitymi pretekstami, np. że to jest niepotrzebne albo niemożliwe, albo bezskuteczne, a w końcu do załatwienia sprawy wypycha żonę, która zresztą załatwi ją dobrze.
+W małżeństwie endodynamika ze statyczką odgrywają rolę różnice poczucia terenu (tablica 15. 2). Gdy przedsiębiorczy mąż jest zajęty myślami, jak pokonać trudności pojawiające się w jego zamierzeniach, żona domatorka najchętniej porozmawiałaby o tym, że dziecko spóźniło się do szkoły albo rozdarło pończochę. Wspinanie się męża po szczeblach kariery żona uważa za niepotrzebne i nie warte tylu zabiegów, przecież "dobrze nam z tym co mamy". Na odwrót, gdy żona podkreśla swoje poświęcenie, z jakim wykonuje uciążliwe prace domowe, mąż dziwi się, że wkłada ona tyle serca w sprawy pozbawione większego znaczenia. Żona jednak narzeka na prace domowe wcale nie dlatego, żeby się ich pozbyć, lecz żeby uwydatnić ich ważność lekceważącemu je mężowi. Gdy w celu zlikwidowania tego tematu mąż zaleci zatrudnienie służącej, żona odpowie, że brakuje na to pieniędzy, bo utrzymanie domu drogo kosztuje. Gdy mąż dołoży na to osobne pieniądze, żona odpowie, że znalezienie służącej jest niemożliwe. Nawet gdy służąca się znajdzie, w niczym nie zmieni to sytuacji, żona będzie się nadal zapracowywać dowodząc, że nikt nie wykona pracy tak jak ona sama. Mąż nie rozumie, dlaczego żona się zapracowuje, a żona nie rozumie, dlaczego mąż nie docenia jej pracy. Mąż nie rozumie, dlaczego żona nie cieszy się jego sukcesami, a żona nie rozumie, dlaczego mu na nich zależy. Podobno (według Zweiga), kiedy Cromwell został dyktatorem, żona jego wolała pozostać w ich dotychczasowym dworku, w którym "było nam tak dobrze", niż przenieść się do pałacu w Londynie, na co Cromwell miał odpowiedzieć: "w takim razie zostań w swoim małym szczęściu, skoro nie dorosłaś do wielkiego".
+Małżeństwa endodynamik - statyczka są nie tylko nieudane, ale z upływem czasu stan ten się jeszcze się pogarsza. Niemniej są to małżeństwa dość trwałe, statyczna żona bowiem spełnia w życiu endodynamicznego męża cenną dla niego funkcję: uwalnia go od troski o sprawy, w których statycy są niezastąpieni, jak np. prowadzenie domu, utrzymywanie w nim ładu, dbałość o wychowanie dzieci, itp. Dlatego też endodynamiczny mąż postara się raczej o egzodynamiczną kochankę niż dopuści do rozwodu, który zdezorganizowałby mu funkcjonujący sprawnie mechanizm w pewnej strefie jego życia.
+	</value>
+    <comment>B-AB, B-A</comment>
+  </data>
+  <data name="r12" xml:space="preserve">
+    <value>
+Podstawą solidarności endostatyków jest statyczny odcień ich charakteru sprawiający, że podporządkowują się oni potrzebie tworzenia organizacji do osiągania wyznaczonych im celów. Natomiast do odchyleń od solidarności skłania endostatyków pragnienie zdobycia dla siebie wyższego stanowiska lub odgrywania większej roli. Typowym tego przykładem jest ograniczona solidarność członków grup kierowniczych.
+Przyjaźń endostatyków przybiera zwykle postać spółki. Odcień statyczny ich charteru zapewnia im rzetelność współdziałania, a odcień endodynamiczny przejawia się jako przedsiębiorczość.
+Podobnie też małżeństwo można by określić jako "małżeńską spółkę" dwojga zapobiegliwych osób, które za swoje wspólne zadanie uważają stworzenie sobie dobrobytu i uzyskanie większego znaczenia. Często małżeństwa endostatyków są oparte na wspólnocie zawodowej, jak np. małżeństwa lekarskie, adwokackie, sklepikarskie itp. Z upływem lat, w miarę jak endostatycy stają się endodynamikami, współdziałanie małżonków zaczyna się psuć, wzajemne zaufanie maleje, pojawia się skłonność do decydowania bez uzgadniania z partnerem, dochodzi do zatargów, a potem do rozdzielania źródeł zarobkowania. Z upływem czasu małżeństwo endostatyków może się tylko pogarszać.
+	</value>
+    <comment>AB-AB</comment>
+  </data>
+  <data name="r13" xml:space="preserve">
+    <value>
+Solidarność endodynamików jest słaba. Każdemu z nich zależy jedynie na własnej mocy socjologicznej i tylko lęk przed jej utratą skłania ich do solidarności między sobą, przeciw konkurentom.
+Przyjaźń między endodynamikami zawiązuje się niełatwo, i co najwyżej tylko w początkowym okresie zdobywania mocy socjologicznej. Po jej zdobyciu kończy się przyjaźń, a zaczyna rywalizacja. Tam gdzie moc socjologiczna jest niepodzielna, np. władza, o jej opanowaniu musi rozstrzygnąć walka między byłymi wspólnikami. Taki był koniec przyjaźni Cezara i Pompejusza.
+Małżeństwo endodynamików to niemal traktat międzypaństwowy: każda strona pilnuje kurczowo swoich interesów, dąży do podporządkowania sobie drugiej strony, a co najmniej do uniemożliwienia jej zdobycia przewagi. Jest to nieustanna rywalizacja o władzę. Najczęściej też małżonkowie już przy zawieraniu małżeństwa zabezpieczają swój wkład majątkowy za pomocą intercyzy, a w czasie trwania małżeństwa pilnują bacznie swojego stanu posiadania.
+O wzajemnym pociągu erotycznym w takich małżeństwach nie może być nawet mowy. Dzieci rodzą się w wyniku decyzji, np. żeby mieć spadkobierców władzy lub majątku. Małżeństwa endodynamików są najbardziej nieudane, jak tylko sobie można wyobrazić, zwłaszcza że z upływem czasu nic się nie naprawi, a wszystko pogorszy. Pragnienie postawienia na swoim, robienie na złość, mściwość itp., sprawiają, że małżeństwo endodynamików staje się koszmarem, jego rozpad jest nieuchronny. Niekoniecznie jednak małżeństwa takie kończą się rozwodem, gdyż jeżeli były zawarte dla interesu, np. w celu połączenia dwóch dynastii, skoligacenia dwóch arystokratycznych rodów, przekształcenia spółki w przedsiębiorstwo rodzinne itp., to rozwód mógłby spowodować tak rozległe szkody, że spotkałby się ze sprzeciwem wszystkich osób, których interesy byłyby zagrożone. Już samo to, że rozwód miałby posmak skandalu, mogłoby spowodować daleko idące straty. W tym stanie rzeczy wyrachowanie endodynamików zniechęca ich do formalnego zrywania małżeństwa, chyba w ostateczności. Do tego należy dodać takie względy, jak np. że małżonek występujący o rozwód został by uznany w opinii otoczenia za stronę słabszą, tego zaś endodynamicy nie znoszą. Poza tym gdyby jednak strona wystąpiła z inicjatywą rozwodu, druga strona zaprotestowałaby przeciwko temu z samej przekory i robiłaby niekończące się trudności. Wszystko to sprawia, że przeważnie małżeństwo endodynamików rozpada się raczej tylko wewnętrznie przy formalnych pozorach jego trwania. Ustala się z czasem tryb życia, w którym małżonkowie istnieją niezależnie od siebie, nie rozmawiają ze sobą, nawet się wzajemnie nie zauważają. Stosunkowo najszczęśliwsze jest rozwiązanie, gdy między małżonkami dojdzie do porozumienia, że nie uważają się już za małżeństwo, nie mają do siebie żadnych pretensji, nie będą sobie robić żadnych przykrości, a zachowają całkowitą swobodę osobistego postępowania, nie wyłączając spraw erotycznych.
+	</value>
+    <comment>AB-A, A-A</comment>
+  </data>
+  <data name="r3" xml:space="preserve">
+    <value>
+Okoliczność, że zwykle egzodynamizm występuje we wczesnym okresie życia, endodynamizm zaś w późnym, jest przyczyną, że sympatie oparte na przeciwieństwie klas charakteru powstają między młodymi kobietami i starszymi mężczyznami oraz młodymi mężczyznami i starszymi kobietami. O schadzkach ministrów z podniecającymi call girls ogół statyków dowiaduje się ze zgrozą jako o "skandalu towarzyskim", a co najmniej ze zdziwieniem ("tacy poważni politycy z takimi dziwkami, kto by to pomyślał"), a tymczasem są to sprawy mające wyraźne tło charakterologiczne. Endodynamik, ze swoją nieśmiałością erotyczną, nie ma kwalifikacji na donżuana, wobec kobiet odczuwa skrępowanie, a najmniejsza z ich strony złośliwa uwaga na temat jego męskiej sprawności (do czego mają skłonności ich endostatyczne, a tym bardziej endodynamiczne żony) ścina lodem jego miłosne zapały. Potrzebuje on więcej kobiet zdolnych do rozbrojenia go z jego pancerza, bezwstydnych, wyuzdanych, prowokacyjnych, i oczywiście szuka ich tam, gdzie je znaleźć może. Objaśnianie takich sytuacji tym, że tylko bogaci mężczyźni mogą sobie pozwolić na urodziwe i dlatego kosztowne utrzymanki sprzedające się za pieniądze, biżuterię lub wystawne kolacje w nocnych klubach, jest punktem widzenia statyków, nie rozumiejących, że nikt tam nikogo nie "kupuje" ani nikt się nie "sprzedaje", lecz tylko każda strona szuka tego, czego potrzebuje, zgodnie z taką samą prawidłowością charakterologiczną jak ta, która statykom i statyczkom każe szukać statycznych partnerów. Nie w wieku ani w pieniądzach sprawa, lecz w charakterach, bo np. statyczkom wcale nie zależy na kosztownościach, ani nocnych lokalach, a endodynamiczki same potrafią robić interesy i zarabiać sporo pieniędzy, aby je wydawać na egzodynamicznych, a więc młodych "gigolaków" i "playboyów". Takie sprawy mogą sprawiać szokujące wrażenie tylko dlatego, że statyków jest bardzo wielu i wobec tego wydaje się im, że reprezentują "zdrowie moralne" społeczeństwa, natomiast dorośli egzodynamicy i niezbyt starzy endodynamicy są bardzo nieliczni, a stąd pozór, że stanowią "margines" społeczny. Co najwyżej można by oceniać ich postępowanie w zależności od tego, czy mają niski czy wysoki poziom charakteru, ale taki punkt widzenia odnosi się również do statyków. Warto również dodać, że omawiany rodzaj przywiązania występuje np. między egzodynamiczną córką i endodynamicznym ojcem, który spełnia jej kaprysy i obdarza drogimi prezentami, chociaż nie ma to podłoża erotycznego (bądź ma nie uświadomione lub kamuflowane).
+W miłości między egzodynamikami i endodynamikami strona egzodynamiczna wnosi "urodę życia", różnorodność, której brakuje endodynamikom, a strona endodynamiczna wnosi potęgę, która zapewnia bezpieczeństwo bezbronnym egzodynamikom i pozwala im "kwitnąć". W historii zapisało się wiele miłości między endodynamicznymi kurtyzanami i endodynamiczymi władcami, obecnie zaś prasa często rozgłasza romanse sławnych aktorek (tylko egzodynamiczne aktorki stają się sławne) z potentatami finansowymi i politycznymi (tylko endodynamicy stają się potentatami). Rzadsze (ale tylko dlatego, że rzadziej zdarzają się osobnicy o takich charakterach) bywały miłości młodych faworytów i "czarujących mężczyzn" do endodynamicznych władczyń i kobiet interesu (business woman).
+Małżeństwa między egzodynamikami i endododynamikami są zaprzeczeniem domatorstwa. "Dom" jest tylko punktem oparcia, adresem, bazą wypadową do życia poza domem - dla endodynamicznego męża tam, gdzie jest źródło jego potęgi, a dla egzodynamiczej żony tam, gdzie może ona błyszczeć. Oboje nie stosują się do żadnych reguł, nie zobowiązują się względem siebie do punktualności, niekoniecznie schodzą się na obiad. Żona nie interesuje się, skąd mąż czerpie dochody, ani on nie interesuje się, jakimi zabiegami podtrzymuje ona swoją urodę. Zaniedbany wygląd zaskoczyłby męża równie silnie, jak ją zaskoczyłby u niego brak pieniędzy. Małżeństwa takie są bardzo spójne. Spójność ich jednak nie ma nic wspólnego ze wzajemnymi zobowiązaniami prawnymi wynikającymi z zawarcia małżeństwa. Wiąże ich ze sobą to, że są sobie charakterologicznie niezbędni. Równowagę w małżeństwie zapewnia im przeciwieństwo charakterów, podobnie jak lina ciągniona w przeciwne strony pozostaje w miejscu, gdy siły są sobie równe. Gdyby jeden partner na takim małżeństwie pozwolił sobie na jakiś odskok, drugi nie biegałby za nim, nie zaklinałby w imię miłości, nie powoływałby się na zobowiązania wierności, lecz postąpiłby podobnie jak pierwszy, i równowaga zostałaby przywrócona.
+	</value>
+    <comment>C-AB, C-A</comment>
+  </data>
+  <data name="r5" xml:space="preserve">
+    <value>
+Podstawą solidarności egzostatyków jest statyczny odcień ich charakteru sprawiający, że podporządkowują się przynajmniej jakiejś ogólnej zasadzie, jak np. styl panujący w środowisku, wspólnota zawodowa itp. Natomiast do odchyleń od solidarności skłania egzostatyków pragnienie wyróżniania się ze środowiska, chęć popisywania się, podkreślanie własnej indywidualności. Ponieważ egzostatyzm występuje w okresie życia poprzedzającym wiek średni i u ludzi o upodobaniach artystycznych, więc też typowym przykładem solidarności egzostatyków jest koleżeństwo spotykane u starszej młodzieży, muzyków orkiestrowych, chórzystów, statystów teatralnych itp.
+Przyjaźnie egzostatyków nie zrywają się za lada podmuchem, jak u egzodynamików, ale nie są też zbyt trwałe - zazwyczaj wygasają wraz z ustaniem kontaktu zawodowego lub środowiskowego.
+Małżeństwo egzostatyków można określić jako "małżeństwo studenckie" - jest urozmaicone, ale źle zorganizowane. Potykając się o liczne braki i bezradność wobec nieprzemyślanych wydarzeń, małżeństwo egzostatyków jest wystawione na próby, których może nie przetrwać, gdy któraś strona się załamie ("mam tego dość"). Jeżeli jednak nie rozpadnie się we wczesnym okresie, to ma coraz większe szanse, żeby stać się małżeństwem zupełnie szczęśliwym, gdyż z upływem czasu egzostatycy stają się statykami, tworząc konfigurację charakterologiczną małżeństwa udanego.
+	</value>
+    <comment>BC-BC</comment>
+  </data>
+  <data name="r6" xml:space="preserve">
+    <value>
+Statystyczna częstość sprawia, że egzostatyczka uchodzi za typ "prawdziwej kobiety", wiernej, uczciwej, lojalnej (odcień statyczny), a zarazem pełnej wdzięku, nieco lekkomyślnej, nadającej życiu "barwę" (odcień egzodynamiczny), a endostatyk uchodzi za typ "prawdziwego mężczyzny", wiernego, uczciwego, lojalnego (odcień statyczny), a zarazem dzielnego, przewidującego, mającego uzdolnienia organizacyjne (odcień endodynamiczny). Wspólność cech statycznych i przeciwieństwo pozostałych cech stwarzają podstawę do wzajemnego zainteresowania i przywiązania.
+Nic dziwnego, że miłość "prawdziwego mężczyzny" i "prawdziwej kobiety" stała się wzorcowa w literaturze powieściowej, a zwłaszcza w filmowych westernach.
+Podobnie wzorcowe jest małżeństwo pary endostatyk - egzostatyczka. Zakładają dom, wspólnie w nim pracują, wychowują dzieci na porządnych obywateli, przy czym endostatyczny mąż bierze na siebie ochronę żony i dzieci przed niebezpieczeństwem i troskę o utrzymanie, żona zaś zdobi mu życie i wnosi element tkliwości.
+Jest to szczęśliwe życie dla obojga, ale zbyt mało interesujące dla literatury, toteż tematem rozlicznych powieści jest raczej okres wstępny, gdy on i ona się poznali i pokochali, ale rozmaite przeciwności losu albo intrygi rywali i rywalek kazały im przeżyć sporo przygód i zwalczać piętrzące się trudności, zanim niezłomna para stanęła na ślubnym kobiercu. Tym ewenementem kończyły się powieści, chociaż życie dopiero się zaczynało.
+Rzadsza jest konfiguracja odwrotna: egzostatyk - endostatyczka. Stroną organizującą jest kobieta, a stroną popisującą mężczyzna. Dla ilustracji można przytoczyć z literatury takie pary jak Cyrano i Roksana (Rostand, Cyrano de Bergerac), Higgins i Eliza (Shaw,Pigmalio), Kmicić i Oleńka (Sienkiewicz, Potop).
+Jest godne uwagi, że pary typu egzostatyk - endostatyczka były bardzo modne w średniowieczu. Ówczesne endostatyczki to zimne (na pozór), dumne, nieprzystępne księżniczki na wydaniu, tęskniące do mogących je rozruszać egzostatyków, których wybierały sobie spośród trubadurów komponujących dla nich tkliwe pieśni miłosne albo spośród rycerzy popisujących się przed nimi sprawnością na turniejach.
+O ile w konfiguracji C - B egzostatyk może mieć sympatię do statyka za to, że nauczył go zasad, a w konfiguracji B - A statyk może mieć sympatię do endodynamika za to, że nauczył go z przyswojonych zasad korzystać, to konfiguracja AC - AB nie sprzyja powstawaniu poddańczości ani jednego, ani drugiego rodzaju. Wynika to stąd, że zarówno u egzostatyka, jak i u endostatyka występuje odcień statyczny, natomiast różnica między nimi polega na odcieniu egzodynamicznym u egzostatyka oraz odcieniu endostatycznym u endostatyka. Znaczy to, że endostatyk będzie usiłował przerabiać dynamizm egzostatyka na przeciwny, a egzostatyk będzie się temu opierał. Przykładem może tu być sytuacja, gdy ojciec uprawiający np. zawód inżyniera usiłuje nakłaniać do obrania tego zawodu swojego syna mającego upodobania artystyczne, czego rezultatem jest tylko rozdrażnienie obu, zamiast sympatii poddańczych i opiekuńczych.
+Tym bardziej nie wchodzi w grę adoracja i protekcja.
+Natomiast wchodzi w grę przywiązanie i miłość, gdyż klasy charakteru BC i AC są zarazem przeciwne - była o tym mowa w związku z konfiguracjami przeciwnych klas charakteru.
+	</value>
+    <comment>BC-B, B-AB</comment>
+  </data>
+  <data name="r8" xml:space="preserve">
+    <value>
+Solidarność statyków jest silna, statycy bowiem popierają innych statyków wyznających takie same zasady, oraz zrzeszają się w organizacjach opartych na takich zasadach, i służących do ich utwierdzania.
+Przyjaźnie statyków są szczególnie silne i trwałe, co wynika z takich cech statyków, jak wierność, szczerość, rzetelność i przywiązanie do długotrwałości. Sprawiają one, że nawet po wieloletniej przerwie w kontaktach zaprzyjaźnionych statyków przyjaźń ich utrzymuje się bez zmian.
+Małżeństwa statyków są szczególnie udane, opierają się bowiem nie tylko na przyjaźni, ale i na miłości, o czym będzie mowa w związku z konfiguracjami przeciwnych klas charakteru.
+Jest to taka sama konfiguracja charakterów, jak przy omawianiu solidarności statyków, ale z taką różnicą, że solidarność między statykami wynika z jednakowości ich klas charakteru, natomiast przywiązanie między statykami wynika z przeciwieństwa klas charakteru. W pierwszej chwili może się wydawać dziwne, w jaki sposób jednakowe klasy charakteru miałyby stanowić przeciwieństwo. Sprawa ta staje się zrozumiała, jeżeli wziąć pod uwagę, że dynamizm dodatni i dynamizm ujemny stanowią przeciwieństwo bez względu na to, czy są to dynamizmy jednakowo duże czy jednakowo małe. Egzodynamizm (C), jako duży dynamizm dodatni, jest przeciwieństwem endodynamizmu (A), jako tak samo dużego dynamizmu ujemnego. Zmniejszając się dynamizm dodatni dochodzi do egzostatyzmu (BC), którego przeciwieństwem jest endostatyzm (AB) otrzymywany przez zmniejszenie dynamizmu ujemnego. Przeciwieństwo dynamizmów zostanie zachowane przy dalszym się ich zmniejszaniu - dynamizm dodatni i dynamizm ujemny będą się zbliżać coraz bardziej do dynamizmu zerowego (statyzmu), aż w końcu powstanie omawiana tu sytuacja, gdy dynamizm dodatni stał się statyzmem, a także dynamizm ujemny stał się statyzmem. W odróżnieniu od solidarności statyków wynikającej stąd, że statyk potrzebuje innych statyków do zwiększenia łącznej mocy, przywiązanie statyka do innych statyków wynika z potrzeby znalezienia ludzi o dynamizmie przeciwnym, ale dla charakteru statycznego przeciwieństwem jest właśnie charakter statyczny. Podobnie też jak egzodynamik znajduje to, czego mu potrzeba w endodynamiku, a egzostatyk w endostatyku, i na odwrót, tak samo statyk znajduje to, czego mu potrzeba w swoim przeciwieństwie, tj. właśnie w statyku.
+Do miłości statyk wnosi wierność, szczerość, ufność itp., a to właśnie znajduje w drugim statyku.
+Wynika stąd rozwiązanie problemu, który dotychczas wielu ludzi na próżno usiłowało rozwiązać, a mianowicie, czy dobór małżeński powinien być oparty na jednakowości, czy na przeciwieństwie charakterów. Abstrahując od tego, że stawiano tak sprawę bez określenia, co się rozumie przez charakter, nie zdołano tego problemu rozwiązać, ponieważ zwolennicy zarówno jednego, jak i drugiego poglądu mogli na jego poparcie przytoczyć wiele przekonujących przykładów praktycznych. Tymczasem jasne jest, że właściwym rozwiązaniem jest postulowanie przeciwieństwa klas charakteru, a dotychczasowe wątpliwości wynikały z nieporozumienia polegającego na tym, że udane małżeństwo statyków traktowano jako argument na rzecz jednakowości charakterów, nie domyślając się, że jest to argument na rzecz ich przeciwieństwa. Jest to bowiem taki szczególny przypadek przeciwieństwa, w którym zachodzi zarazem jednakowość.
+Małżeństwo statyków ma więc trzy istotne cechy. Jedną z nich jest zgodność klas charakteru, co nadaje małżeństwu cechy przyjaźni. Drugą cechę stanowi okoliczność, że są to zarazem klasy przeciwne, stanowią więc podstawę miłości. Trzecią wreszcie cechę stanowi okoliczność, że statycy są pryncypialni, a w związku z tym za podstawę trwania małżeństwa uważają nie trwanie uczuć, lecz przyrzeczenie wierności złożone przy ślubie. Dlatego też w razie niewierności partnera statyk przybiera postawę sędziego, nie rozumiejąc, że niewierność zaczyna się nie od zdrady, lecz już od gotowości do niej i że być może sam się do powstania tej gotowości przyczynił przez poleganie na przyrzeczeniach zamiast na podtrzymywaniu uczuć. Przeważnie jednak życie statycznych małżeństw jest stabilne i spokojne, bez niespodzianek. Wzorowe postacie do takiego małżeństwa to Herman i Dorota (Goethe, Herman i Dorota).
+	</value>
+    <comment>BC-A, B-B</comment>
+  </data>
 </root>

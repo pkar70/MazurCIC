@@ -30,11 +30,11 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Text="Pierwsza osoba" x:Uid="uiFirstPerson" Margin="10,10,10,10" HorizontalAlignment="Center" />
-                <ComboBox Name="uiCombo1" Grid.Row="1" Margin="10,10,10,10" HorizontalAlignment="Center" />
+                <ComboBox Name="uiCombo1" Grid.Row="1" Margin="10,10,10,10" HorizontalAlignment="Center" SelectionChanged="uiCombo1_Changed" />
                 <TextBox x:Uid="uiFirstData" PlaceholderText="(wybierz plik z wynikami z ComboBox powyżej)" Name="uiText1" IsReadOnly="True" Grid.Row="2" Margin="10,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True" />
 
                 <TextBlock Text="Druga osoba" x:Uid="uiSecondPerson" Grid.Column="1" Margin="10,10,10,10" HorizontalAlignment="Center" />
-                <!-- <ComboBox x:Name="uiCombo2" Grid.Column="1" Grid.Row="1" Margin="10,10,10,10" HorizontalAlignment="Center" /> -->
+                <ComboBox x:Name="uiCombo2" Grid.Column="1" Grid.Row="1" Margin="10,10,10,10" HorizontalAlignment="Center" Visibility="Collapsed" SelectionChanged="uiCombo2_Changed" /> 
                 <TextBox x:Uid="uiSecondData" PlaceholderText="(wklej wyniki otrzymane np. w email)" Name="uiText2" Grid.Column="1" Grid.Row="2" Margin="10,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True" />
             </Grid>
 

@@ -144,9 +144,6 @@
   <data name="emailSubject" xml:space="preserve">
     <value>Mój dynamizm charakteru</value>
   </data>
-  <data name="err10BezTwierdzen" xml:space="preserve">
-    <value>Nie widzę pliku z treścią, a przecież był w Install!</value>
-  </data>
   <data name="msgDalejDalej" xml:space="preserve">
     <value>Dalej&gt;</value>
   </data>
@@ -175,7 +172,7 @@
     <value>Brak wyniku!</value>
   </data>
   <data name="msgPoszczOdpowiedzi" xml:space="preserve">
-    <value>Poszczególne odpowiedzi:</value>
+    <value>Poszczegolne odpowiedzi:</value>
   </data>
   <data name="msgRozkladOdpowiedzi" xml:space="preserve">
     <value>Rozklad odpowiedzi</value>
@@ -270,9 +267,6 @@
   <data name="msgBetterLandscape" xml:space="preserve">
     <value>Prawdopodobnie w trybie Landscape będzie wygodniej korzystać z aplikacji.</value>
   </data>
-  <data name="t1t" xml:space="preserve">
-    <value>(o ukierunkowaniu życia). Im mniejszy jest współczynnik dynamizmu, tym mniejsze jest rozpraszanie, a tym większe jest gromadzenie.</value>
-  </data>
   <data name="uiFirstData.PlaceholderText" xml:space="preserve">
     <value>(wybierz plik z wynikami z ComboBox powyżej)</value>
   </data>
@@ -299,5 +293,44 @@
   </data>
   <data name="bDalej.Content" xml:space="preserve">
     <value>Dalej&gt;</value>
+  </data>
+  <data name="errDataNoAnswers" xml:space="preserve">
+    <value>Błąd: brak odpowiedzi (dane</value>
+  </data>
+  <data name="errDataNoPoint" xml:space="preserve">
+    <value>Błąd: brak punktu</value>
+  </data>
+  <data name="errDataNoPoszczeg" xml:space="preserve">
+    <value>Błąd: nieprawidłowe dane</value>
+  </data>
+  <data name="errDataNoThisAnswer" xml:space="preserve">
+    <value>Błąd: brak odpowiedzi</value>
+  </data>
+  <data name="errDataShort" xml:space="preserve">
+    <value>Błąd: za krótkie dane</value>
+  </data>
+  <data name="msgBrowseDrugiej" xml:space="preserve">
+    <value>drugiej osoby</value>
+  </data>
+  <data name="msgBrowseTwoje" xml:space="preserve">
+    <value>Twoje</value>
+  </data>
+  <data name="msgLosyBetween" xml:space="preserve">
+    <value>Relacja jest pośrednia między dwoma opisami:</value>
+  </data>
+  <data name="msgLosyOraz" xml:space="preserve">
+    <value>oraz</value>
+  </data>
+  <data name="msgLosyPrognozaNa" xml:space="preserve">
+    <value>Prognoza na</value>
+  </data>
+  <data name="msgLosyToday" xml:space="preserve">
+    <value>Stan na dzisiaj</value>
+  </data>
+  <data name="manifestAppName" xml:space="preserve">
+    <value>Dynamizm charakteru</value>
+  </data>
+  <data name="errReadingPlikWynikow" xml:space="preserve">
+    <value>Błąd odczytu pliku z danymi</value>
   </data>
 </root>

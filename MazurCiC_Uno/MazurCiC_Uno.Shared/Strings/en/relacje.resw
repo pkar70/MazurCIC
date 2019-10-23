@@ -1,42 +1,212 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<root>	
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>1.3</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="r0" xml:space="preserve">
+    <value>
+Solidarity of exodynamics is weak, because each of them lives in their own world of imagination and only wants to talk about it without listening to others, so the only basis for solidarity of exodynamics is a common dislike of the rules and violence imposed on them. Therefore, children prefer to be together without the participation of adults - making an exception for adult exodynamics, because it is not about age, but about the class of character. When there is an uncle-prankster in the family, the children are looking forward to his next visit. The solidarity of exodynamics breaks down easily when one of them is distinguished ("Benjamin").
+Similarly, exodynamic friendships are made for isolation from people with different dynamism.
+They are most often found among egozdynamic girls, whose great similarity of characters makes it easier for them to understand each other (compared to the lack of understanding on the part of other people), encouraging them to constantly be with each other and mutual confessions. However, when a boy appears who is interested in one of friends, their friendship breaks down immediately.
+The marriage of exodynamics gives the impression that it is a marriage of two children. The atmosphere changes in it under the influence of any whim. Earned money goes out and it is not known when. There is a lot of mess in the apartment. Anything that arises and they pass as quickly as they arose. There is no erotic attraction for exodynamics, but they often come close to each other, because they both look for strong experiences, and because they do not feel inhibitions, they quickly come to an agreement, without wasting time on gradual dosing of sensations and mutual daring. They have no common experience of sex, everyone is only about their own experiences, the partner is only a tool, but the harm is not happening to him, because he treats the matter in the same way. Such symmetry not only does not perpetuate the marriage, but on the contrary, contributes to its decay, since the repertoire of erotic stimuli on the part of the partner is limited, they begin to repeat, saturation occurs, for variety, so you need to look for a new partner, which exodynamics do without any scruples. They announce their intention to leave short and knotty, without allusive admissions, and they would not be needed, because the other party will not despair, and even one day she could do the same. A typical example are marriages between movie stars, known for the ease and frequency of divorces, which in the opinion of statists is a manifestation of the promiscuity of the environment, and in fact it has a characterological basis.
+For exodynamics, divorce is not a drama, it is just shuffling partners. If it has the aftertaste of scandal, it is all the better because something new is happening, the interest of the environment is focused on the heroes of divorce, they are in the center of attention, which exodynamics care so much that they eagerly exaggerate the sensationality and scandal of the whole event to encourage press to blow it up.
+Exodynamics' marriages usually do not want to have children, because exodynamics do not like to look after anyone, rather they themselves need care.
+A decisive factor in the marriage of exodynamics is also the desire to draw attention only to themselves - their marriage is not a duo, but two life soloists. As long as the success of both is balanced, but when it is disturbed, one exodynamic partner does not want to remain in the shadow of the other, and their marriage must fall apart. Encouraging them to be patient, forgiving etc. is pointless.
+	</value>
+    <comment>C-C</comment>
+  </data>
+  <data name="r1" xml:space="preserve">
+    <value>
+The exhilaration of exodynamics towards statics occurs when exodynamics adopt principles from statics, for example, children from parents, students from teachers. This is accompanied by the protection of statics towards exodynamics, for example parents towards children, teachers towards students. The condition for such sympathies is that the conduct of one partner creates a situation consistent with the nature of the other, for example, that instilling the rules of children aims to increase the attractiveness of their interests, and not to prohibit them.
+Similar relationships exist between affects: adoration in an exodynamic pet in a static protector and protection in a static protector for an exodynamic pet, e.g. in art (student and master), sport (student and trainer), etc.
+The marriage of exodynamics with a statute can be said to be a marriage between fircyka and a homeowner. The husband takes care of his appearance and in search of an imperious woman, on whom he could make a strong impression, disappears from home from time to time to Donjuk escapades, with the wife awaits his return, dealing with household chores. After his return, the wife appeals to his reason and sense of decency, persuades him to change, even for the sake of children, opinion, etc. The husband, tired and full of impressions, does not listen to all of this, because his only desire in this situation it's good to sleep well. On the second day, he behaves as if nothing had happened - until the next time. He has lovers outside, and at home a wife for washing his underwear and cooking dinners.
+An exodynamic marriage with a small table is unsuccessful, but this condition improves over time. A static wife, becoming an endostatic, begins to better control the situation, which comes to her the easier that in the meantime her husband transforms into an exostatic and begins to discover that he underestimated his wife. They can become a good marriage unless it turns out much sooner that the husband from one of the escapades does not return home again.
+On the other hand, a statistician with an exodynamic marriage can be said to be a marriage in which the wife "suffocates" next to her husband. The wife wants to shine, she wants an attraction, a lifestyle in which her beauty and elegance would be the subject of interest, so she breaks out of her husband's home, which does not provide all this for her - the classic "misunderstood woman". And in fact the husband, even with the best intentions, the husband cannot understand "what she means", since he provided her with a home, a certain social position and a peaceful, balanced, stable life. As a hard-working, economical and decent man, he believes that nothing more can be expected of him. His wife gives him these advantages, and yet she feels unhappy, unkempt, "something bears her".
+The literature contains a lot of examples of such couples: Mr. and Mrs. Bovary (Mrs. Bovary Flaubert), bachelor des Grieux and Manon Lescaut (History of Manon Lescaut and bachelor des Grieux Prévosta), don José and Carmen (opera Carmen Bizet) and others.
+Although marriage of statics with exodynamics is unsuccessful, this condition improves over time, as the statics becomes an endostatic after years, the exodynamics become an exostatic, and this is a contrasting characterological configuration, so that a marriage can become successful if it only survives until then.
+	</value>
+    <comment>C-BC, C-B</comment>
+  </data>
+  <data name="r10" xml:space="preserve">
+    <value>
+Entrepreneurship in statics and care in endodynamics are sympathies in connection with the preparation of the statics for succession after endodynamics when the time comes.
+Affects of adoration and protection may also appear on a similar background.
+In marriage statics with endodynamics, an enterprising wife feeds on activities outside the home, which is enjoyed by a static husband, who, moreover, does not gain the recognition of his wife, expressing him disdainfully that he is unsuitable for anything else. He is often met with annoyances from neighbors and acquaintances, who point out his "girlish" activities and consider him a henpecker. The ruling party is of course the wife, especially when she earns her living expenses. When the earning side is a husband, his wife constantly points out that he is satisfied with work in a low position and earns little, while so many others with similar qualifications have long been promoted, bought cars, has a well-furnished apartment, etc., and urged him to do some career, and because nothing comes of it, so he considers him a frail, not embarrassed to express this view in the presence of other people. The husband endures this meekly, not finding a replica, because he realizes that what the wife is saying is true. He does not understand that it is not his fault, because no one can "jump out of his skin", ie change his own character. The husband has a similar attitude towards his wife - when you need to settle some matter in the office, especially in senior positions, he feels intimidated and delays under various pretexts, e.g. that it is unnecessary or impossible or ineffective, and finally to settle the case, he pushes his wife out, who, moreover, does her good.
+In marriage, endodynamics with a small table play a role in the differences in sense of terrain (Table 15. 2). When an enterprising husband is busy thinking about how to overcome the difficulties that appear in his intentions, the housewife's wife would gladly talk about the fact that the child was late for school or torn the stocking. Climbing the husband's ladder up the career ladder is unnecessary and not worth as much treatment, after all "we are good with what we have". Conversely, when the wife emphasizes her dedication with which she performs tedious housework, the husband is surprised that she puts so much heart into matters of little importance. The wife, however, complains about housework not at all to get rid of them, but to emphasize their importance to the neglecting husband. When, in order to eliminate this topic, the husband recommends employing a maid, the wife replies that there is not enough money for this, because maintaining the house is expensive. When the husband adds separate money for it, the wife responds that finding a maid is impossible. Even when the servant finds himself, this will not change the situation, the wife will continue to work hard, proving that no one will do the job as she does. The husband does not understand why the wife works and the wife does not understand why the husband underestimates her work. The husband does not understand why the wife does not enjoy his successes, and the wife does not understand why he cares about them. Apparently (according to Zweig), when Cromwell became a dictator, his wife preferred to stay in their current manor house, in which "we were so good", than to move to the palace in London, to which Cromwell was to answer: "then stay in your little happiness since you have not grown up much. "
+Endodynamic marriages - the ship are not only unsuccessful, but over time this condition is getting worse. However, these marriages are quite long-lasting, because the static wife fulfills a valuable function in her husband's life: he frees him from worrying about matters in which statics are irreplaceable, such as running a home, maintaining order, caring for raising children, etc. Therefore, the endodynamic husband will try to get an exodynamic lover rather than allow a divorce that would disorganize his functioning mechanism in a certain zone of his life.
+	</value>
+    <comment>B-AB, B-A</comment>
+  </data>
+  <data name="r12" xml:space="preserve">
+    <value>
+The foundation of solidarity endostats is a static shade of their character that makes them subordinate to the need to create organizations to achieve their goals. However, deviations from solidarity are prompted by endostats who desire to gain a higher position or play a greater role. A typical example of this is the limited solidarity of management group members.
+Friendship of endostats usually takes the form of a company. The static shade of their charter provides them with reliable cooperation, and the endodynamic shade is manifested as entrepreneurship.
+Similarly, marriage could be described as a "marriage company" of two foresight persons who consider their common task to create prosperity and gain greater significance. Often, marriages of endostats are based on a professional community, such as medical, lawyer, shopkeeper, etc. Over the years, as endostats become endodynamics, cooperation between spouses begins to deteriorate, mutual trust decreases, there is a tendency to decide without agreeing with partner, there are disputes, and then the sources of earnings are separated. Over time, the marriage of endostats can only get worse.
+	</value>
+    <comment>AB-AB</comment>
+  </data>
+  <data name="r13" xml:space="preserve">
+    <value>
+Endodynamic solidarity is weak. Each of them depends only on their own sociological power and only fear of losing them leads them to solidarity with each other, against competitors.
+Friendship between endodynamics is not easy, and only at the beginning of sociological power. After gaining it, friendship ends and competition begins. Where sociological power is indivisible, e.g. power, its control must be decided by a struggle between former partners. This was the end of the friendship between Caesar and Pompey.
+The marriage of endodynamics is almost an inter-state treaty: each side is guarding its interests, it seeks to subordinate the other, and at least to prevent it from gaining an advantage. It is a constant competition for power. Most often, the spouses, when entering into marriage, secure their property contribution by means of intercourse, and during their marriage they watch over their property.
+One cannot even speak of mutual erotic attraction in such marriages. Children are born as a result of decisions, e.g. to have heirs to power or property. Endodynamic marriages are the most unsuccessful as you can imagine, especially as nothing gets better over time and everything gets worse. The desire to stand up, do anger, revenge, etc., make the marriage of endodynamics a nightmare, its breakup is inevitable. However, such marriages do not necessarily end in divorce, because if they were concluded for business purposes, e.g. to merge two dynasties, to link two aristocratic families, to transform the company into a family enterprise, etc., the divorce could cause such widespread damage that it would be opposed by all persons whose interests would be at risk. Just the fact that a divorce would have a taste of scandal could cause far-reaching losses. In this state of affairs, the calculation of endodynamics discourages them from formally breaking their marriage, perhaps as a last resort. To this should be added such considerations as, for example, that the spouse applying for divorce would be considered in the opinion of the environment as the weaker side, and endodynamics do not hate it. In addition, if the party were to divorce, the other party would protest against it out of spite and endless difficulties. All this means that usually the marriage of endodynamics rather falls apart only internally with the formal appearance of its duration. Over time, a lifestyle is established in which the spouses exist independently of each other, do not talk to each other, do not even notice each other. The solution is relatively the happiest when the spouses agree that they no longer consider themselves marriage, they have no claim to each other, they will not hurt themselves, and they will retain complete freedom of personal conduct, including erotic matters.
+	</value>
+    <comment>AB-A, A-A</comment>
+  </data>
+  <data name="r3" xml:space="preserve">
+    <value>
+The fact that exodynamism usually occurs early in life and endodynamism later in life is the reason that sympathies based on character class contrast arise between young women and older men, and young men and older women. About the meeting of ministers with exciting call girls, statists generally learn with horror as a "social scandal", or at least in surprise ("such serious politicians with such whores who would have thought it"), and meanwhile these are matters with a clear characterological background . The endodynamic, with his erotic shyness, is not qualified for donjuana, he feels embarrassed towards women, and the smallest of them on their part malignant remark about his male fitness (what their endostatic tendencies, and even more endodynamic his wife tend to) cuts down his love enthusiasm with ice. He needs more women capable of disarming his armor, shameless, promiscuous, provocative, and of course he is looking for them where he can find them. Explaining such situations is that only rich men can afford beautiful and therefore expensive keepers selling for money, jewelry or sumptuous dinners in nightclubs is the point of view of statists who do not understand that no one is "buying" anyone or nobody it does not "sell", but only each side searches for what it needs, in accordance with the same characterological regularity as the one that asks stats and stats to look for static partners. It is not a matter of age or money, but of character, because, for example, ships do not care about valuables or nightlife, and endodynamics themselves can do business and earn a lot of money to spend it on exodynamic, and so young, gigolacs and "playboys." Such matters can give a shocking impression only because there are a lot of statics and therefore they think that they represent the "moral health" of society, while adults exodynamics and not very old endodynamics are very few, and therefore appear to be a "social margin" . At most, their behavior could be assessed depending on whether they are of low or high character level, but this point of view also applies to statics. It is also worth adding that the discussed type of attachment occurs, for example, between an exodynamic daughter and an endodynamic father who fulfills her whims and gives expensive gifts, although this is not erotic (or unaware or camouflaged).
+In love between exodynamics and endodynamics, the exodynamic side brings "beauty of life", diversity that endodynamics lack, and the endodynamic side brings power that provides security to defenseless exodynamics and allows them to "flourish". There is a lot of love in history between endodynamic courtesans and endodynamic rulers, and nowadays the press often announces the affairs of famous actresses (only exodynamic actresses become famous) with financial and political tycoons (only endodynamics become tycoons). Rarer (but only because individuals with such characters are rarer) there were love of young favorites and "charming men" to endodynamic rulers and business women.
+Marriages between exodynamics and endododynamics are a denial of domesticity. "Home" is only a point of support, an address, a starting point for living outside the home - for an endodynamic husband where his source of power is, and for an exodynamic wife where she can shine. They both don't follow any rules, they don't commit to each other on time, they don't necessarily go to dinner. The wife is not interested in where her husband earns his income, nor is he interested in what treatments she maintains her beauty. A neglected appearance would surprise her husband as much as she would be surprised by the lack of money. Such marriages are very consistent. Their coherence, however, has nothing to do with mutual legal obligations arising from entering into marriage. Ties them together that they are characteristically necessary. Their marriage equals the opposite of character, just as the rope pulled in opposite directions stays in place when the forces are equal. If one partner in such a marriage allowed himself a rebound, the other would not run after him, would not swear in the name of love, would not rely on the commitment of loyalty, but would act like the first, and the balance would be restored.
+	</value>
+    <comment>C-AB, C-A</comment>
+  </data>
+  <data name="r5" xml:space="preserve">
+    <value>
+The basis for solidarity of exostats is the static shade of their character that makes them comply with at least some general principle, such as the style prevailing in the environment, professional community, etc. However, deviations from solidarity are prompted by the desire for standing out from the environment, willingness to show off, emphasizing their individuality . Because exostatism occurs in the pre-middle life period and in people with artistic preferences, so also a typical example of exostatic solidarity is camaraderie found in older youth, orchestral musicians, choristers, theater extras, etc.
+Friendships of exostats do not break away in any blast, as in exodynamics, but they are also not very lasting - they usually expire with the cessation of professional or environmental contact.
+The marriage of exostats can be described as a "student marriage" - it is varied, but poorly organized. Stumbling over numerous deficiencies and helplessness in the face of ill-considered events, the marriage of exostats is put to the test that may not survive when either side breaks down ("I'm sick of it"). However, if it does not fall apart in the early period, then it has a greater chance to become a completely happy marriage, as over time exostatics become statics, creating the characterological configuration of a successful marriage.	</value>
+    <comment>BC-BC</comment>
+  </data>
+  <data name="r6" xml:space="preserve">
+    <value>
+The statistical frequency means that the exostatics is considered to be the type of "real woman", faithful, honest, loyal (static shade), and at the same time full of grace, somewhat reckless, giving life "color" (exodynamic shade), and the endostat is considered the type of "real man ", faithful, honest, loyal (static shade), and at the same time brave, predictive, having organizational talents (endodynamic shade). The commonality of static features and the opposite of the other features create the basis for mutual interest and attachment.
+It is no wonder that the love of "real man" and "real woman" has become exemplary in fiction literature, and especially in film westerns.
+Similarly exemplary is the marriage of an endostatist - an exostatist. They set up a home, work together, raise children as decent citizens, while the endostatic husband takes on the protection of his wife and children from danger and care for livelihood, while the wife decorates his life and brings an element of tenderness.
+It is a happy life for both, but too little interesting for literature, so the subject of numerous novels is rather the introductory period, when he and she met and fell in love, but various adversities or the intrigues of rivals and rivals forced them to experience a lot of adventures and fight the accumulating difficulties before the steadfast couple stood on the rug. Novels ended with this sensation, although life was just beginning.
+The reverse configuration is less common: exostat - endostat. The organizing page is a woman and the party showing a man. For illustration, pairs such as Cyrano and Roksana (Rostand, Cyrano de Bergerac), Higgins and Eliza (Shaw, Pigmalio), Kmicić and Oleńka (Sienkiewicz, Potop) can be cited from the literature.
+It is noteworthy that pairs of exostatic-endostatics were very fashionable in the Middle Ages. The then-endostatics are cold (seemingly), proud, inaccessible princesses in the edition, longing for the exostats who could move them, whom they chose from among troubadours composing tender love songs for them or from knights showing off their agility before tournaments.
+While in the C - B configuration, the exostat can be sympathetic to the statist for having taught him principles, and in the B - A configuration, the statik may have sympathy for the endodynamic for teaching him the principles to use, the AC - AB configuration is not conducive the emergence of neither one nor the other kind. This is because both the exostatic and endostatic have a static shade, while the difference between them is the exodynamic shade of the exostat and the endostatic shade of the endostat. This means that the endostat will try to convert the dynamics of the exostat into the opposite, and the exostat will resist it. An example would be the situation when a father practicing, for example, the profession of engineer, tries to persuade his son with artistic preferences to take up this profession, the result of which is only to irritate both instead of sympathizing and caring sympathies.
+All the more adoration and protection are out of the question.
+On the other hand, attachment and love are at stake, because the BC and AC character classes are opposite at the same time - this was mentioned in connection with the configurations of opposite character classes.
+	</value>
+    <comment>BC-B, B-AB</comment>
+  </data>
+  <data name="r8" xml:space="preserve">
+    <value>
+The solidarity of statics is strong, as statisticians support other statics who adhere to the same principles, and associate in organizations based on such principles and serve to confirm them.
+Friendship of statics is particularly strong and durable, which results from such characteristics of statics as loyalty, honesty, reliability and attachment to longevity. They cause that even after many years of interruption in contacts between friendly statics, their friendship remains unchanged.
+Static marriages are particularly successful, because they are based not only on friendship, but also on love, which will be discussed in connection with configurations of opposite classes of character.
+This is the same character configuration as when discussing the solidarity of statics, but with the difference that solidarity between statics results from the uniformity of their character classes, while attachment between statics results from the opposite of character classes. At first it may seem strange how uniform classes of character would be the opposite. This matter becomes understandable, given that positive dynamism and negative dynamism are the opposite, irrespective of whether they are equally large or equally small dynamisms. Exodynamism (C), as a large positive dynamism, is the opposite of endodynamism (A), as an equally large negative dynamism. Decreasing positive dynamism leads to exostatism (BC), which is the opposite of endostatism (AB) obtained by reducing negative dynamism. The opposite of dynamisms will be maintained with their further reduction - positive dynamics and negative dynamism will be getting closer and closer to zero dynamism (statism), until finally the situation discussed here will arise, when positive dynamism has become static and also negative dynamism has become static. Unlike the solidarity of statics resulting from the fact that a statist needs other statics to increase their total power, the statist's attachment to other statics results from the need to find people with opposite dynamism, but static is the opposite of static. Similarly to the exodynamic, he finds what he needs in endodynamics, and the exostaticist in the endostat, and vice versa, the statist finds what he needs in his contrast, i.e. in the statics.
+The love brings faithfulness, honesty, trust etc. to love, which is what he finds in the second statics.
+The result is a solution to a problem that so far many people have tried in vain to solve, namely whether marriage selection should be based on uniformity or on the contrary of characters. Aside from the fact that this case was presented without specifying what is meant by character, this problem could not be solved, because supporters of both views could support numerous convincing practical examples. However, it is clear that the right solution is to postulate the opposite of character classes, and the doubts to date have arisen from the misunderstanding that the successful marriage of statics was treated as an argument for uniformity of characters, without guessing that it was an argument for their opposite. It is a special case of the opposite, in which at the same time there is uniformity.
+Thus, the marriage of statics has three important characteristics. One of them is the compatibility of character classes, which gives the marriage the features of friendship. The second feature is the fact that they are at the same time opposing classes, so they form the basis of love. Finally, the third feature is the fact that statics are principled, and therefore consider the basis of the marriage not the persistence of feelings, but the promise of loyalty made at the wedding. Therefore, in the event of a partner's infidelity, the statist assumes the attitude of a judge, not understanding that infidelity begins not with betrayal, but with readiness for it and that he may have contributed to this readiness by relying on promises instead of maintaining feelings. Mostly, however, the life of static marriages is stable and peaceful, with no surprises. Exemplary characters for such a marriage are Herman and Dorothea (Goethe, Herman and Dorothea).
+	</value>
+    <comment>BC-A, B-B</comment>
+  </data>
 </root>

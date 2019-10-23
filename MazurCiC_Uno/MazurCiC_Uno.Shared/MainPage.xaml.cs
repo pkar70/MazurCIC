@@ -1,6 +1,7 @@
 ﻿
 /*
 
+STORE 10.1910
 
 * migracja do C#/Uno
 * migracja do pkarmodule (namespace/class p.k.)
@@ -10,9 +11,10 @@
 * dla nie UWP pokazuje info na początku - że wersja Windows jest bogatsza
 * UWP/IsThisMoje - wymuszenie PL, nawet jak start nie jest w PL [w UWP, bo w Uno to nie dziala]
 * przetłumaczenie pytań na angielski (głównie googletranslator)
-* teksty z KomparatorBrowse do strings.resw
+* teksty z KomparatorBrowse do strings.resw (xaml i .cs)
 * teksty z LosyRelacji do strings.resw [ale nie same relacje!]
 * przy cofaniu - cofa ProgressBar
+* przeniesienie tekstów losów relacji z txt do resw
 
 STRIPPEDDOWN nonUWP:
 * nie ma pliku z odpowiedziami pamiętanego (Uno bez StorageFile, bez AppendStringAsync)
@@ -395,8 +397,8 @@ namespace MazurCiC
 
             string sPoszczOdp = p.k.GetLangString("msgPoszczOdpowiedzi"); // Poszczególne odpowiedzi:\n";
             sTxt = sTxt + "\n" + sPoszczOdp + "\n";
-            if (sPoszczOdp != "Poszczególne odpowiedzi:")
-                sTxt += "\nPoszczególne odpowiedzi:\n";   // wersja polska byc musi, bo porównywarka tego szuka
+            //if (sPoszczOdp != "Poszczególne odpowiedzi:")
+            //    sTxt += "\nPoszczególne odpowiedzi:\n";   // wersja polska byc musi, bo porównywarka tego szuka
 
             for (int i = 1; i <= 35; i++)
                 sTxt = sTxt + i.ToString() + ": " + Numer2Dynamizm(aiOdpowiedzi[i]) + "\n";
@@ -409,10 +411,10 @@ namespace MazurCiC
             //Stream oStream = await oFile.OpenStreamForWriteAsync();
             //oStream.Seek(0, SeekOrigin.End);
             //oStream.WriteAsync();
-            await Windows.Storage.FileIO.AppendTextAsync(oFile, sFileName + "\n");
+            await Windows.Storage.FileIO.AppendTextAsync(oFile, sFileName + "\n", Windows.Storage.Streams.UnicodeEncoding.Utf8);
 
             oFile = await oFold.CreateFileAsync(sFileName + ".txt");
-            await Windows.Storage.FileIO.AppendTextAsync(oFile, sTxt);
+            await Windows.Storage.FileIO.AppendTextAsync(oFile, sTxt, Windows.Storage.Streams.UnicodeEncoding.Utf8);
 
             if (!await p.k.DialogBoxResYN("askWantSend")) // Czy chcesz wysłać rezultat?"))
                 return;

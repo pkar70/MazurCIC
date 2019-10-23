@@ -142,10 +142,7 @@
     <value>I kindly attach result of my todays test of character's dynamism</value>
   </data>
   <data name="emailSubject" xml:space="preserve">
-    <value>My character's dynamism</value>
-  </data>
-  <data name="err10BezTwierdzen" xml:space="preserve">
-    <value>Nie widzę pliku z treścią, a przecież był w Install!</value>
+    <value>Dynamism of my character</value>
   </data>
   <data name="msgDalejDalej" xml:space="preserve">
     <value>Next&gt;</value>
@@ -296,5 +293,44 @@
   </data>
   <data name="bDalej.Content" xml:space="preserve">
     <value>Next&gt;</value>
+  </data>
+  <data name="errDataNoAnswers" xml:space="preserve">
+    <value>Error: no answers?</value>
+  </data>
+  <data name="errDataNoPoint" xml:space="preserve">
+    <value>Error: no answer</value>
+  </data>
+  <data name="errDataNoPoszczeg" xml:space="preserve">
+    <value>Error: incorrect data</value>
+  </data>
+  <data name="errDataNoThisAnswer" xml:space="preserve">
+    <value>Error: no answer</value>
+  </data>
+  <data name="errDataShort" xml:space="preserve">
+    <value>Error: too short data</value>
+  </data>
+  <data name="msgBrowseDrugiej" xml:space="preserve">
+    <value>(other person)</value>
+  </data>
+  <data name="msgBrowseTwoje" xml:space="preserve">
+    <value>(yours)</value>
+  </data>
+  <data name="msgLosyBetween" xml:space="preserve">
+    <value>Relation is something between</value>
+  </data>
+  <data name="msgLosyOraz" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="msgLosyPrognozaNa" xml:space="preserve">
+    <value>Prognosis for</value>
+  </data>
+  <data name="msgLosyToday" xml:space="preserve">
+    <value>Today status</value>
+  </data>
+  <data name="manifestAppName" xml:space="preserve">
+    <value>Character dynamism</value>
+  </data>
+  <data name="errReadingPlikWynikow" xml:space="preserve">
+    <value>Error reading file</value>
   </data>
 </root>

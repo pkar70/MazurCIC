@@ -32,31 +32,65 @@ namespace MazurCiC
 
         private string WezOpis(int iTyp)
         {
-            StreamReader oFile = File.OpenText(@"Assets\opisyRelacji.txt");
-
-            string sSrch = "<h4>" + iTyp.ToString() + "</h4>";
-            string sLine = "";
-
-            while (!oFile.EndOfStream)
+            switch(iTyp)
             {
-                sLine = oFile.ReadLine();
-                if (sLine.IndexOf(sSrch) == 0)
-                    break;
+                case 0:
+                    return p.k.GetLangString("/relacje/r0");
+                case 1:
+                case 2:
+                    return p.k.GetLangString("/relacje/r1");
+                case 3:
+                case 4:
+                    return p.k.GetLangString("/relacje/r3");
+                case 5:
+                    return p.k.GetLangString("/relacje/r5");
+                case 6:
+                case 7:
+                    return p.k.GetLangString("/relacje/r6");
+                case 8:
+                case 9:
+                    return p.k.GetLangString("/relacje/r8");
+                case 10:
+                case 11:
+                    return p.k.GetLangString("/relacje/r10");
+                case 12:
+                    return p.k.GetLangString("/relacje/r12");
+                case 13:
+                case 14:
+                    return p.k.GetLangString("/relacje/r13");
+
             }
-
-            string sTmp;
-            sTmp = "";
-
-            while (!oFile.EndOfStream)
-            {
-                sLine = oFile.ReadLine();
-                if (sLine.IndexOf("<h4>") == 0)
-                    break;
-                sTmp = sTmp + "\n" + sLine;
-            }
-
-            return sTmp;
+            return "???";
         }
+
+
+        //private string WezOpisPlikTXT(int iTyp)
+        //{
+        //    StreamReader oFile = File.OpenText(@"Assets\opisyRelacji.txt");
+
+        //    string sSrch = "<h4>" + iTyp.ToString() + "</h4>";
+        //    string sLine = "";
+
+        //    while (!oFile.EndOfStream)
+        //    {
+        //        sLine = oFile.ReadLine();
+        //        if (sLine.IndexOf(sSrch) == 0)
+        //            break;
+        //    }
+
+        //    string sTmp;
+        //    sTmp = "";
+
+        //    while (!oFile.EndOfStream)
+        //    {
+        //        sLine = oFile.ReadLine();
+        //        if (sLine.IndexOf("<h4>") == 0)
+        //            break;
+        //        sTmp = sTmp + "\n" + sLine;
+        //    }
+
+        //    return sTmp;
+        //}
 
         private void PokazRelacje()
         {
@@ -180,7 +214,7 @@ namespace MazurCiC
 
             string sTxt;
             if (iTyp == 1 | iTyp == 3 | iTyp == 6 | iTyp == 8 | iTyp == 10 | iTyp == 13)
-                sTxt = "Relacja jest pośrednia między dwoma opisami:\n\n" + WezOpis(iTyp - 1) + "\n\n" + "oraz\n\n" + WezOpis(iTyp + 1);
+                sTxt = p.k.GetLangString("msgLosyBetween") + "\n\n" + WezOpis(iTyp - 1) + "\n\n" + p.k.GetLangString("msgLosyOraz") + "\n\n" + WezOpis(iTyp + 1);
             else
                 sTxt = WezOpis(iTyp);
 
@@ -232,9 +266,9 @@ namespace MazurCiC
             uiBMinus.Content = "<" + (iRok - 20).ToString();
 
             if (miAdd == 0)
-                uiNaRok.Text = "Stan na dzisiaj";
+                uiNaRok.Text = p.k.GetLangString("msgLosyToday"); // "Stan na dzisiaj";
             else
-                uiNaRok.Text = "Prognoza na " + iRok.ToString();
+                uiNaRok.Text = p.k.GetLangString("msgLosyPrognozaNa") + " " + iRok.ToString();
         }
         private void uiMinus_Click(object sender, RoutedEventArgs e)
         {
@@ -280,6 +314,9 @@ namespace MazurCiC
             EnableDisablePlusMinus();
 
             PokazRelacje();
+
+            if (p.k.GetLangString("_lang") != "PL")
+                p.k.DialogBox("Texts are autotranslated by Google, so it can contain some errors");
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
