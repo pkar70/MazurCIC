@@ -51,4 +51,7 @@
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\pl\Resources.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\pl\tezy.resw" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Assets\" />
+  </ItemGroup>
 </Project>

@@ -6,6 +6,8 @@
     <WasmHead>true</WasmHead>
     <DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
     <NoWarn>NU1701</NoWarn>
+    <AssemblyName>MazurCiC</AssemblyName>
+    <RootNamespace>MazurCiC</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="..\MazurCiC_Uno.UWP\Assets\*.png" Link="Assets\%(FileName)%(Extension)" />
@@ -33,8 +35,8 @@
     <!-- Note that for WebAssembly version 1.1.1 of the console logger required -->
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.1" />
-    <PackageReference Include="Uno.UI" Version="1.45.0" />
-    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.244" />
+    <PackageReference Include="Uno.UI" Version="3.0.12" />
+    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.10" />
     <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.0-dev.244" />
   </ItemGroup>
   <Import Project="..\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems" Label="Shared" Condition="Exists('..\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems')" />

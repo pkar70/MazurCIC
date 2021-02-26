@@ -23,7 +23,8 @@ namespace MazurCiC.Droid
     public class Application : Windows.UI.Xaml.NativeApplication
     {
         public Application(IntPtr javaReference, JniHandleOwnership transfer)
-            : base(new App(), javaReference, transfer)
+          //  : base(new App(), javaReference, transfer)    // linia dla starszej wersji
+           : base(() => new App(), javaReference, transfer) // linia dla nowszej wersji
         {
             ConfigureUniversalImageLoader();
         }
@@ -37,7 +38,7 @@ namespace MazurCiC.Droid
 
             ImageLoader.Instance.Init(config);
 
-            ImageSource.DefaultImageLoader = ImageLoader.Instance.LoadImageAsync;
+            ImageSource.DefaultImageLoader = ImageLoader.Instance.LoadImageAsync; // to jest w nowszym
         }
     }
 }

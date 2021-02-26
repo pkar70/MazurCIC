@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MazurCiC_VB", "MazurCiC\MazurCiC_VB.vbproj", "{B6FFB432-EECE-4F73-96B7-D9CA272337AC}"
 EndProject
@@ -13,13 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazurCiC_Uno.iOS", "MazurCi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazurCiC_Uno.UWP", "MazurCiC_Uno\MazurCiC_Uno.UWP\MazurCiC_Uno.UWP.csproj", "{60FA2CF6-2BD8-4C2B-8FBA-48B2E2E483E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazurCiC_Uno.Wasm", "MazurCiC_Uno\MazurCiC_Uno.Wasm\MazurCiC_Uno.Wasm.csproj", "{7C5CA78A-1137-414D-997C-E0B6B50C45EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MazurCiC_Uno.Wasm", "MazurCiC_Uno\MazurCiC_Uno.Wasm\MazurCiC_Uno.Wasm.csproj", "{7C5CA78A-1137-414D-997C-E0B6B50C45EB}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		MazurCiC_Uno\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems*{60fa2cf6-2bd8-4c2b-8fba-48b2e2e483e1}*SharedItemsImports = 4
 		MazurCiC_Uno\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
 		MazurCiC_Uno\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems*{b756d849-4339-4d50-ba71-97a450d33411}*SharedItemsImports = 4
+		MazurCiC_Uno\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems*{c85a25dc-4e9b-41b8-b47e-648d09caa905}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU

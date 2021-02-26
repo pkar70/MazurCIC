@@ -32,7 +32,7 @@ namespace MazurCiC
             ConfigureFilters(Uno.Extensions.LogExtensionPoint.AmbientLoggerFactory);
 
             this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            // this.Suspending += OnSuspending;
         }
 
         /// <summary>
@@ -64,18 +64,21 @@ namespace MazurCiC
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
-                {
-                    //TODO: Load state from previously suspended application
-                }
+                //if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+                //{
+                //    //TODO: Load state from previously suspended application
+                //}
 
                 // Place the frame in the current Window
                 Windows.UI.Xaml.Window.Current.Content = rootFrame;
             }
 
+#if NETFX_CORE
             if (e.PrelaunchActivated == false)
             {
-                if (rootFrame.Content == null)
+#endif
+
+            if (rootFrame.Content == null)
                 {
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
@@ -84,7 +87,9 @@ namespace MazurCiC
                 }
                 // Ensure the current window is active
                 Windows.UI.Xaml.Window.Current.Activate();
+#if NETFX_CORE
             }
+#endif
         }
 
         /// <summary>
@@ -104,12 +109,12 @@ namespace MazurCiC
         /// </summary>
         /// <param name="sender">The source of the suspend request.</param>
         /// <param name="e">Details about the suspend request.</param>
-        private void OnSuspending(object sender, SuspendingEventArgs e)
-        {
-            var deferral = e.SuspendingOperation.GetDeferral();
-            //TODO: Save application state and stop any background activity
-            deferral.Complete();
-        }
+        //private void OnSuspending(object sender, SuspendingEventArgs e)
+        //{
+        //    var deferral = e.SuspendingOperation.GetDeferral();
+        //    //TODO: Save application state and stop any background activity
+        //    deferral.Complete();
+        //}
 
 
         /// <summary>
@@ -177,7 +182,7 @@ namespace MazurCiC
                 (Window.Current.Content as Frame).GoBack();
                 e.Handled = true;
             }
-            catch (Exception ex)
+            catch 
             {
             }
         }

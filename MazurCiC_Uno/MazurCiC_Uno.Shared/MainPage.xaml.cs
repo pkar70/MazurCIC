@@ -1,6 +1,42 @@
 ﻿
 /*
 
+2021.06.19
+ * [Android] przejście na Uno last stable 3.8 (z którego robię własny build dla pozostałych app).
+        Teoretycznie bez zmian, ale chodzi o sprawdzenie czy czegoś nie spieprzyli w Uno
+
+2021.04.03
+* [Android] przejście na Uno last stable 3.6.6 (z którego robię własny build dla pozostałych app).
+        Teoretycznie bez zmian, ale chodzi o sprawdzenie czy czegoś nie spieprzyli w Uno
+
+2021.02.26
+* [Android] przejście na Uno last stable 3.5.1 (z którego robię własny build dla pozostałych app).
+        Teoretycznie bez zmian, ale chodzi o sprawdzenie czy czegoś nie spieprzyli w Uno
+
+2020.10.27
+* [Android] przejście na Uno last stable 3.1.6 (z którego robię własny build dla pozostałych app).
+        Teoretycznie bez zmian, ale chodzi o sprawdzenie czy czegoś nie spieprzyli w Uno
+
+2020.08.27
+* [Android] przejście z Uno.945 (własne) do 3.0.12 (laststable)
+*   bo gogus wymaga aktualizacji do SDK 10, a to dopiero później zrobili w Uno
+* nie działa, próba wycofania się: wyłączam splash, zmiany w main.cs, 
+
+2020.02.12
+ * [Android] przejście na Uno.945 (moja kompilacja) - zaktualizowanie pkModuleShared (np. Uno już ma ClipPut, etc.)
+ * [Android] splashscreen
+ * przywracanie guzików przy Page_Load - jakby był powrót do aplikacji po wyłączeniu guzików
+ * z mainpage usuwam stary kod (plik z pytaniami - sprzed migracji do Resources\tezy.rese)
+
+2019.12.22
+ * rebase Uno (pkar: GetAppVersion, OpenBrowser)
+ * MailManager w Uno - usuwam Xamarin.Essentials
+
+
+* podniesienie trochę tekstów do góry (był błąd! wpisywało wszystko do Row=0, a nie do Row=1!)
+* gdy komentarz jest pusty, to Visibility.Collapsed
+
+
 STORE 10.1910
 
 * migracja do C#/Uno
@@ -65,14 +101,10 @@ namespace MazurCiC
 
             // bo w Uno not implemented
             // musi byc wczesniej, bo inaczej pierwsza strona jest jeszcze po EN
-//#if NETFX_CORE
-//            if(p.k.IsThisMoje()) Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "pl";
-//#endif 
+            //#if NETFX_CORE
+            //            if(p.k.IsThisMoje()) Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "pl";
+            //#endif 
 
-            //if (!File.Exists(@"Assets\tekstyPytan.txt"))
-            //{
-            //    p.k.DialogBoxResError(10, "err10BezTwierdzen"); // "Nie widzę pliku z treścią, a przecież był w Install!");
-            //}
 
             tbTeza.Text = p.k.GetLangString("msgTeza"); // "Sprawdź dynamizm swojego charakteru";
             tbEgzoDyn.Text = "  " + p.k.GetLangString("msgEgzoDyn"); // "  Charakter, a ściślej dynamizm charakteru, każdej osoby zmienia się wraz z wiekiem: zaczynając od egzodynamizmu, poprzez statyzm do endodynamizmu.";
@@ -85,6 +117,12 @@ namespace MazurCiC
             string sTmp = " ";
             if(!p.k.GetPlatform("uwp")) sTmp = "  " + p.k.GetLangString("msgEndoDyn");
             tbEndoDyn.Text = sTmp;
+
+            // powtorne uruchomienie to czasem powrot do strony glownej - więc przywróć guziczki, żeby można było coś zrobić
+            bDalej.Visibility = Visibility.Visible;
+            bWstecz.Visibility = Visibility.Visible;
+            bWstecz.IsEnabled = false;
+            bDalej.Content = p.k.GetLangString("msgDalejDalej"); // "Dalej>";
 
             // do sprawdzenia ktora szerokosc jest podana;
             // jesli <1000, to gdy width<height propozycja obrocenia ekranu
@@ -159,10 +197,6 @@ namespace MazurCiC
 
             iPytanie = iNowe;
 
-            // próba, czy na Android nie trzeba pomijać prefixu pliku
-            //string sStringName = "";
-            //if (p.k.GetPlatform("uwp")) sStringName = "/tezy/";
-            //sStringName = sStringName + "t" + iNowe.ToString();
             string sStringName = "/tezy/" + "t" + iNowe.ToString();
 
             string sTmp = p.k.GetLangString(sStringName + "t");
@@ -179,98 +213,11 @@ namespace MazurCiC
             tbEndoStat.Text = p.k.GetLangString(sStringName + "a4").Trim();
             tbEndoDyn.Text = p.k.GetLangString(sStringName + "a5").Trim();
 
-            //StreamReader oFile;
-            //string sSrch, sLine;
+            if (tbRemark.Text.Length < 2)
+                tbRemark.Visibility = Visibility.Collapsed;
+            else
+                tbRemark.Visibility = Visibility.Visible;
 
-            //oFile = File.OpenText(@"Assets\tekstyPytan.txt");
-            //sSrch = "Twierdzenie 15. " + iNowe.ToString() + " ";
-            //sLine = "";
-
-            //while (!oFile.EndOfStream)
-            //{
-            //    sLine = oFile.ReadLine();
-            //    if (sLine.IndexOf(sSrch) == 0)
-            //        break;
-            //}
-
-            //// Twierdzenie 15. 24 (o stosunku do panowania). Im mniejszy jest współczynnik dynamizmu, tym silniejsze jest dążenie do panowania.
-            //int iInd;
-
-            //iInd = sLine.IndexOf("). ");
-            //tbTeza.Text = sLine.Substring(iInd + 3);
-
-            //// C) Egzodynamik nie chce ...
-            //// BC) Egzostatyk przeciwstawia ...
-            //// B) Statyk uznaje ...
-            //// AB) Endostatyk sprzyja ...
-            //// A) Endodynamik pragnie ...
-            //string sTmp;
-            //sTmp = "";
-
-            //// pomin wszystko do C) 
-
-            //while (!oFile.EndOfStream)
-            //{
-            //    sLine = oFile.ReadLine();
-            //    if (sLine.IndexOf("C) ") == 0)
-            //        break;
-            //}
-
-            //sTmp = sLine.Substring(3);
-            //while (!oFile.EndOfStream)
-            //{
-            //    sLine = oFile.ReadLine();
-            //    if (sLine.IndexOf("BC) ") == 0)
-            //        break;
-            //    sTmp = sTmp + "\n" + sLine;
-            //}
-
-            //tbEgzoDyn.Text = sTmp;
-
-            //sTmp = sLine.Substring(4);
-            //while (!oFile.EndOfStream)
-            //{
-            //    sLine = oFile.ReadLine();
-            //    if (sLine.IndexOf("B) ") == 0)
-            //        break;
-            //    sTmp = sTmp + "\n" + sLine;
-            //}
-
-            //tbEgzoStat.Text = sTmp;
-            //// cbEgzoStat.Content = sTmp
-
-            //sTmp = sLine.Substring(3);
-            //while (!oFile.EndOfStream)
-            //{
-            //    sLine = oFile.ReadLine();
-            //    if (sLine.IndexOf("AB) ") == 0)
-            //        break;
-            //    sTmp = sTmp + "\n" + sLine;
-            //}
-
-            //tbStatyk.Text = sTmp;
-
-            //sTmp = sLine.Substring(4);
-            //while (!oFile.EndOfStream)
-            //{
-            //    sLine = oFile.ReadLine();
-            //    if (sLine.IndexOf("A) ") == 0)
-            //        break;
-            //    sTmp = sTmp + "\n" + sLine;
-            //}
-
-            //tbEndoStat.Text = sTmp;
-
-            //sTmp = sLine.Substring(3);
-            //while (!oFile.EndOfStream)
-            //{
-            //    sLine = oFile.ReadLine();
-            //    if (sLine.IndexOf("Twierdzenie 15") == 0)
-            //        break;
-            //    sTmp = sTmp + "\n" + sLine;
-            //}
-
-            //tbEndoDyn.Text = sTmp.Trim();
         }
 
         private void ZabierzOdpowiedz()
@@ -385,7 +332,6 @@ namespace MazurCiC
         }
         private async System.Threading.Tasks.Task ZapiszWynik()
         {
-            Windows.Storage.StorageFolder oFold = Windows.Storage.ApplicationData.Current.LocalFolder;
 
             string sTxt = "";
 
@@ -403,28 +349,31 @@ namespace MazurCiC
             for (int i = 1; i <= 35; i++)
                 sTxt = sTxt + i.ToString() + ": " + Numer2Dynamizm(aiOdpowiedzi[i]) + "\n";
 
-#if NETFX_CORE
-            // jako że nie ma Windows.Storage.FileIO w Uno, ani prawie w ogóle StorageFile...
+            // zapisuje plik, mimo że Android tego nie wykorzystuje w ogóle
+            Windows.Storage.StorageFolder oFold = Windows.Storage.ApplicationData.Current.LocalFolder;
             string sFileName = DateTime.Now.ToString("yyyyMMdd-HHmmss");
-            Windows.Storage.StorageFile oFile = await oFold.CreateFileAsync("lista.txt", Windows.Storage.CreationCollisionOption.OpenIfExists);
-            // to była próba ominięcia niemania FileIO, ale nawet CreateFile nie ma w Uno
-            //Stream oStream = await oFile.OpenStreamForWriteAsync();
-            //oStream.Seek(0, SeekOrigin.End);
-            //oStream.WriteAsync();
+
+            // plik indeksowy (omijanie niedziałania oFold.Files()
+            Windows.Storage.StorageFile oFile;
+            oFile = await oFold.CreateFileAsync("lista.txt", Windows.Storage.CreationCollisionOption.OpenIfExists);
             await Windows.Storage.FileIO.AppendTextAsync(oFile, sFileName + "\n", Windows.Storage.Streams.UnicodeEncoding.Utf8);
 
+            // plik z danymi
+
             oFile = await oFold.CreateFileAsync(sFileName + ".txt");
+
             await Windows.Storage.FileIO.AppendTextAsync(oFile, sTxt, Windows.Storage.Streams.UnicodeEncoding.Utf8);
 
-            if (!await p.k.DialogBoxResYN("askWantSend")) // Czy chcesz wysłać rezultat?"))
-                return;
-#endif
+            if (p.k.GetPlatform("uwp"))
+            { // na Android - wysyłamy bez pytania, bo nie ma pokazywania zapamiętanych rezultatów
+                if (!await p.k.DialogBoxResYNAsync("askWantSend")) // Czy chcesz wysłać rezultat?"))
+                    return;
+            }
 
-
-
-#if NETFX_CORE
-            Windows.ApplicationModel.Email.EmailMessage oMsg = new Windows.ApplicationModel.Email.EmailMessage();
-            oMsg.Subject = p.k.GetLangString("emailSubject"); // "Mój dynamizm charakteru";
+            Windows.ApplicationModel.Email.EmailMessage oMsg = new Windows.ApplicationModel.Email.EmailMessage
+            {
+                Subject = p.k.GetLangString("emailSubject") // "Mój dynamizm charakteru";
+            };
 
             // Win10.16xxx ma DateTime.Now.ToLongDateString()
             // sTxt = "Załączam rezultat dzisiejszego testu dynamizmu charakteru\n\nData: " + DateTime.Now.ToString("dd.MM.yyyy HH:mm") + "\n\n" + sTxt;
@@ -439,7 +388,7 @@ namespace MazurCiC
 
             await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(oMsg);
 
-#elif __ANDROID__
+#if false
             // https://docs.microsoft.com/en-us/xamarin/essentials/email?tabs=android
             try
             {
@@ -457,7 +406,7 @@ namespace MazurCiC
 #endif
         }
 
-            private void PokazWynik()
+        private void PokazWynik()
         {
             cbEgzoDyn.Visibility = Visibility.Collapsed;
             cbEgzoStat.Visibility = Visibility.Collapsed;
@@ -513,38 +462,6 @@ namespace MazurCiC
                 tbStatyk.Text = "    " + p.k.GetLangString("wynik" + iTyp.ToString() + "l2");
                 tbEndoStat.Text = "    " + p.k.GetLangString("wynik" + iTyp.ToString() + "l3");
             }
-
-            //switch (iTyp)
-            //{
-            //    case 0:
-            //            break;
-            //    case 1:  // C
-            //            tbEgzoStat.Text = "    Prawdopodobnie masz poniżej 16 lat.";
-            //            tbStatyk.Text = "    W terminologii Erica Berne (analizie transakcyjnej) jesteś typowym Dzieckiem.";
-            //            tbEndoStat.Text = "    Najlepszym partnerem w miłości będzie dla Ciebie endodynamik.";
-            //            break;
-            //    case 2: // BC
-            //            tbEgzoStat.Text = "    Prawdopodobnie masz od 16 do 35 lat.";
-            //            tbStatyk.Text = "    W terminologii Erica Berne (analizie transakcyjnej) jesteś Dzieckiem z elementami Dorosłego.";
-            //            tbEndoStat.Text = "    Najlepszym partnerem w miłości będzie dla Ciebie endostatyk.";
-            //            break;
-            //    case 3:  // B
-            //            tbEgzoStat.Text = "    Prawdopodobnie masz od 36 do 60 lat.";
-            //            tbStatyk.Text = "    W terminologii Erica Berne (analizie transakcyjnej) stanowisz wzorcowy przykład Dorosłego.";
-            //            tbEndoStat.Text = "    Najlepszym partnerem w miłości będzie dla Ciebie inny statyk.";
-            //            break;
-            //    case 4:  // AB
-            //            tbEgzoStat.Text = "    Prawdopodobnie masz powyżej 60 lat.";
-            //            tbStatyk.Text = "    W terminologii Erica Berne (analizie transakcyjnej) jesteś Dorosłym z elementami Rodzica.";
-            //            tbEndoStat.Text = "    Najlepszym partnerem w miłości będzie dla Ciebie egzostatyk.";
-            //            break;
-            //    case 5:  // A
-            //            tbEgzoStat.Text = "    Najwyraźniej masz tzw. \"charakter przyspieszony\"...";
-            //            tbStatyk.Text = "    W terminologii Erica Berne (analizie transakcyjnej) stanowisz wzorcowy przykład Rodzica.";
-            //            tbEndoStat.Text = "    Najlepszym partnerem w miłości będzie dla Ciebie egzodynamik.";
-            //            break;
-            //}
-
 
             // bDalej.Content = " "
             // bDalej.IsEnabled = False

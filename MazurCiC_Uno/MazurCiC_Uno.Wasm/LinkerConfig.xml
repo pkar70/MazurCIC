@@ -1,5 +1,5 @@
 ﻿<linker>
-  <assembly fullname="MazurCiC_Uno.Wasm" />
+  <assembly fullname="MazurCiC" />
   <assembly fullname="Uno.UI" />
 
   <assembly fullname="System.Core">

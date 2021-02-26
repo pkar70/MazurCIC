@@ -1,7 +1,7 @@
 ﻿using System;
 using Windows.UI.Xaml;
 
-namespace MazurCiC_Uno.Wasm
+namespace MazurCiC
 {
     public class Program
     {
