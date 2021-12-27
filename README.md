@@ -25,4 +25,4 @@ Primary version.
 
 
 
- For history (in Polish), see MainPage.xaml.cs version.
+ For history (in Polish), see MainPage.xaml.cs file.
