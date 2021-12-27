@@ -13,16 +13,13 @@ Primary version.
  Amazon store, https://www.amazon.com/dp/B087NXN38F/ , or <br />
  Google store, https://play.google.com/store/apps/details?id=pkar.MazurCiC
 
-# online version:
- http://beskid.geo.uj.edu.pl/p/ms/wasm/MazurCiC/
-
 # Differencies between platforms:
  UWP only: characters comparing, prognosis for relation. <br />
  Tylko UWP: porównywanie charakterów dwu osób; prognoza losów relacji
 
 # Privacy policy
- http://beskid.geo.uj.edu.pl/p/ms/dynamizm-privacy.htm
+ https://github.com/pkar70/MazurCIC/wiki/Privacy-policy
 
 
 
- For history (in Polish), see MainPage.xaml.cs file.
+ For history (in Polish), see MainPage.xaml.cs version.
