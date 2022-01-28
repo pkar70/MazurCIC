@@ -64,34 +64,6 @@ namespace MazurCiC
         }
 
 
-        //private string WezOpisPlikTXT(int iTyp)
-        //{
-        //    StreamReader oFile = File.OpenText(@"Assets\opisyRelacji.txt");
-
-        //    string sSrch = "<h4>" + iTyp.ToString() + "</h4>";
-        //    string sLine = "";
-
-        //    while (!oFile.EndOfStream)
-        //    {
-        //        sLine = oFile.ReadLine();
-        //        if (sLine.IndexOf(sSrch) == 0)
-        //            break;
-        //    }
-
-        //    string sTmp;
-        //    sTmp = "";
-
-        //    while (!oFile.EndOfStream)
-        //    {
-        //        sLine = oFile.ReadLine();
-        //        if (sLine.IndexOf("<h4>") == 0)
-        //            break;
-        //        sTmp = sTmp + "\n" + sLine;
-        //    }
-
-        //    return sTmp;
-        //}
-
         private void PokazRelacje()
         {
             int iStep = (int)(miAdd / (double)20);

@@ -115,6 +115,12 @@
   <ItemGroup>
     <Content Include="Resources\drawable\splashscreen.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\VBlibek\VBlibek.vbproj">
+      <Project>{08f8590e-6ac3-4044-a40b-d928ab52efca}</Project>
+      <Name>VBlibek</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems" Label="Shared" Condition="Exists('..\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- This will force the generation of the APK when not buildig inside visual studio -->

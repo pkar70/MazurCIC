@@ -1,6 +1,10 @@
 ﻿
 /*
 
+2022.01.28
+ * VBlibek - do którego przenosze część kodu, jako VB :) komparator.vb
+ * oraz obsługa plików, gdzieniegdzie, z StorageFile na System.IO (dla późniejszego MAUI migration)
+
 2021.06.19
  * [Android] przejście na Uno last stable 3.8 (z którego robię własny build dla pozostałych app).
         Teoretycznie bez zmian, ale chodzi o sprawdzenie czy czegoś nie spieprzyli w Uno

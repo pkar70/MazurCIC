@@ -113,6 +113,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,6 +154,12 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\VBlibek\VBlibek.vbproj">
+      <Project>{08f8590e-6ac3-4044-a40b-d928ab52efca}</Project>
+      <Name>VBlibek</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems" Label="Shared" Condition="Exists('..\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems')" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
