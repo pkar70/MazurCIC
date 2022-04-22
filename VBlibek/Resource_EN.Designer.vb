@@ -44,7 +44,7 @@ Namespace My.Resources
         Friend Shared ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
-                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("VBlibek.Resource_EN", GetType(Resource_EN).GetTypeInfo.Assembly)
+                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("VBlib.Resource_EN", GetType(Resource_EN).GetTypeInfo.Assembly)
                     resourceMan = temp
                 End If
                 Return resourceMan
@@ -75,6 +75,42 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Do you want to send test&apos;s result?.
+        '''</summary>
+        Friend Shared ReadOnly Property askWantSend() As String
+            Get
+                Return ResourceManager.GetString("askWantSend", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to I kindly attach result of my todays test of character&apos;s dynamism.
+        '''</summary>
+        Friend Shared ReadOnly Property emailBodyStart() As String
+            Get
+                Return ResourceManager.GetString("emailBodyStart", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Dynamism of my character.
+        '''</summary>
+        Friend Shared ReadOnly Property emailSubject() As String
+            Get
+                Return ResourceManager.GetString("emailSubject", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Error.
+        '''</summary>
+        Friend Shared ReadOnly Property errAnyError() As String
+            Get
+                Return ResourceManager.GetString("errAnyError", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Error: no answers?.
         '''</summary>
         Friend Shared ReadOnly Property errDataNoAnswers() As String
@@ -89,6 +125,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property errDataNoPoint() As String
             Get
                 Return ResourceManager.GetString("errDataNoPoint", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Error: incorrect data.
+        '''</summary>
+        Friend Shared ReadOnly Property errDataNoPoszczeg() As String
+            Get
+                Return ResourceManager.GetString("errDataNoPoszczeg", resourceCulture)
             End Get
         End Property
         
@@ -111,6 +156,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Error reading file.
+        '''</summary>
+        Friend Shared ReadOnly Property errReadingPlikWynikow() As String
+            Get
+                Return ResourceManager.GetString("errReadingPlikWynikow", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Using app in landscape orientation probably would be more convenient..
+        '''</summary>
+        Friend Shared ReadOnly Property msgBetterLandscape() As String
+            Get
+                Return ResourceManager.GetString("msgBetterLandscape", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to other person.
         '''</summary>
         Friend Shared ReadOnly Property msgBrowseDrugiej() As String
@@ -129,11 +192,467 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Next&gt;.
+        '''</summary>
+        Friend Shared ReadOnly Property msgDalejDalej() As String
+            Get
+                Return ResourceManager.GetString("msgDalejDalej", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Result.
+        '''</summary>
+        Friend Shared ReadOnly Property msgDalejWynik() As String
+            Get
+                Return ResourceManager.GetString("msgDalejWynik", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Too big spread of answers..
+        '''</summary>
+        Friend Shared ReadOnly Property msgDuzyRozrzut() As String
+            Get
+                Return ResourceManager.GetString("msgDuzyRozrzut", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Each person character, or strictly speaking, dynamism of character, changes with age: starting from egzodynamism, through statism, to endodynamism..
+        '''</summary>
+        Friend Shared ReadOnly Property msgEgzoDyn() As String
+            Get
+                Return ResourceManager.GetString("msgEgzoDyn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to This app helps you in self-diagnosis of your character - when you choose answer for questions, at top of app window you would see diagram of dynamism of your character..
+        '''</summary>
+        Friend Shared ReadOnly Property msgEgzoStat() As String
+            Get
+                Return ResourceManager.GetString("msgEgzoStat", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to (comparing of characters of two persons is available on Windows version of app).
+        '''</summary>
+        Friend Shared ReadOnly Property msgEndoDyn() As String
+            Get
+                Return ResourceManager.GetString("msgEndoDyn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to This app is based on &quot;Cybernetics and character&quot; book, written by polish cybernetist prof. Marian Mazur (table 15.2 from book)..
+        '''</summary>
+        Friend Shared ReadOnly Property msgEndoStat() As String
+            Get
+                Return ResourceManager.GetString("msgEndoStat", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Relation is something between.
+        '''</summary>
+        Friend Shared ReadOnly Property msgLosyBetween() As String
+            Get
+                Return ResourceManager.GetString("msgLosyBetween", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to and.
+        '''</summary>
+        Friend Shared ReadOnly Property msgLosyOraz() As String
+            Get
+                Return ResourceManager.GetString("msgLosyOraz", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Prognosis for.
+        '''</summary>
+        Friend Shared ReadOnly Property msgLosyPrognozaNa() As String
+            Get
+                Return ResourceManager.GetString("msgLosyPrognozaNa", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Today status.
+        '''</summary>
+        Friend Shared ReadOnly Property msgLosyToday() As String
+            Get
+                Return ResourceManager.GetString("msgLosyToday", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to As you answer only for some questions, result is not reliable..
+        '''</summary>
+        Friend Shared ReadOnly Property msgMaloOdpowiedzi() As String
+            Get
+                Return ResourceManager.GetString("msgMaloOdpowiedzi", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to No result!.
+        '''</summary>
+        Friend Shared ReadOnly Property msgNoResult() As String
+            Get
+                Return ResourceManager.GetString("msgNoResult", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Your answers:.
+        '''</summary>
+        Friend Shared ReadOnly Property msgPoszczOdpowiedzi() As String
+            Get
+                Return ResourceManager.GetString("msgPoszczOdpowiedzi", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Your answers.
+        '''</summary>
+        Friend Shared ReadOnly Property msgRozkladOdpowiedzi() As String
+            Get
+                Return ResourceManager.GetString("msgRozkladOdpowiedzi", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to If one know dynamism of two person, one can (with great probability!) prognose their relation; e.g. if their marriage would be succesful, or would it disintegrate..
+        '''</summary>
+        Friend Shared ReadOnly Property msgStatyk() As String
+            Get
+                Return ResourceManager.GetString("msgStatyk", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Check dynamics of your character.
+        '''</summary>
+        Friend Shared ReadOnly Property msgTeza() As String
+            Get
+                Return ResourceManager.GetString("msgTeza", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Yes.
         '''</summary>
         Friend Shared ReadOnly Property msgYes() As String
             Get
                 Return ResourceManager.GetString("msgYes", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 
+        '''Solidarity of exodynamics is weak, because each of them lives in their own world of imagination and only wants to talk about it without listening to others, so the only basis for solidarity of exodynamics is a common dislike of the rules and violence imposed on them. Therefore, children prefer to be together without the participation of adults - making an exception for adult exodynamics, because it is not about age, but about the class of character. When there is an uncle-prankster in the family, the chil [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property relacje0() As String
+            Get
+                Return ResourceManager.GetString("relacje0", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 
+        '''The exhilaration of exodynamics towards statics occurs when exodynamics adopt principles from statics, for example, children from parents, students from teachers. This is accompanied by the protection of statics towards exodynamics, for example parents towards children, teachers towards students. The condition for such sympathies is that the conduct of one partner creates a situation consistent with the nature of the other, for example, that instilling the rules of children aims to increase the attractive [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property relacje1() As String
+            Get
+                Return ResourceManager.GetString("relacje1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 
+        '''Entrepreneurship in statics and care in endodynamics are sympathies in connection with the preparation of the statics for succession after endodynamics when the time comes.
+        '''Affects of adoration and protection may also appear on a similar background.
+        '''In marriage statics with endodynamics, an enterprising wife feeds on activities outside the home, which is enjoyed by a static husband, who, moreover, does not gain the recognition of his wife, expressing him disdainfully that he is unsuitable for anything e [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property relacje10() As String
+            Get
+                Return ResourceManager.GetString("relacje10", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 
+        '''The foundation of solidarity endostats is a static shade of their character that makes them subordinate to the need to create organizations to achieve their goals. However, deviations from solidarity are prompted by endostats who desire to gain a higher position or play a greater role. A typical example of this is the limited solidarity of management group members.
+        '''Friendship of endostats usually takes the form of a company. The static shade of their charter provides them with reliable cooperation, and t [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property relacje12() As String
+            Get
+                Return ResourceManager.GetString("relacje12", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 
+        '''Endodynamic solidarity is weak. Each of them depends only on their own sociological power and only fear of losing them leads them to solidarity with each other, against competitors.
+        '''Friendship between endodynamics is not easy, and only at the beginning of sociological power. After gaining it, friendship ends and competition begins. Where sociological power is indivisible, e.g. power, its control must be decided by a struggle between former partners. This was the end of the friendship between Caesar and P [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property relacje13() As String
+            Get
+                Return ResourceManager.GetString("relacje13", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 
+        '''The fact that exodynamism usually occurs early in life and endodynamism later in life is the reason that sympathies based on character class contrast arise between young women and older men, and young men and older women. About the meeting of ministers with exciting call girls, statists generally learn with horror as a &quot;social scandal&quot;, or at least in surprise (&quot;such serious politicians with such whores who would have thought it&quot;), and meanwhile these are matters with a clear characterological background  [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property relacje3() As String
+            Get
+                Return ResourceManager.GetString("relacje3", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 
+        '''The basis for solidarity of exostats is the static shade of their character that makes them comply with at least some general principle, such as the style prevailing in the environment, professional community, etc. However, deviations from solidarity are prompted by the desire for standing out from the environment, willingness to show off, emphasizing their individuality . Because exostatism occurs in the pre-middle life period and in people with artistic preferences, so also a typical example of exostati [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property relacje5() As String
+            Get
+                Return ResourceManager.GetString("relacje5", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 
+        '''The statistical frequency means that the exostatics is considered to be the type of &quot;real woman&quot;, faithful, honest, loyal (static shade), and at the same time full of grace, somewhat reckless, giving life &quot;color&quot; (exodynamic shade), and the endostat is considered the type of &quot;real man &quot;, faithful, honest, loyal (static shade), and at the same time brave, predictive, having organizational talents (endodynamic shade). The commonality of static features and the opposite of the other features create the basis [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property relacje6() As String
+            Get
+                Return ResourceManager.GetString("relacje6", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 
+        '''The solidarity of statics is strong, as statisticians support other statics who adhere to the same principles, and associate in organizations based on such principles and serve to confirm them.
+        '''Friendship of statics is particularly strong and durable, which results from such characteristics of statics as loyalty, honesty, reliability and attachment to longevity. They cause that even after many years of interruption in contacts between friendly statics, their friendship remains unchanged.
+        '''Static marriage [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property relacje8() As String
+            Get
+                Return ResourceManager.GetString("relacje8", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to No.
+        '''</summary>
+        Friend Shared ReadOnly Property resDlgNo() As String
+            Get
+                Return ResourceManager.GetString("resDlgNo", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Yes.
+        '''</summary>
+        Friend Shared ReadOnly Property resDlgYes() As String
+            Get
+                Return ResourceManager.GetString("resDlgYes", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to egzodynamic.
+        '''</summary>
+        Friend Shared ReadOnly Property typEgzodynamik() As String
+            Get
+                Return ResourceManager.GetString("typEgzodynamik", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to egzostatic.
+        '''</summary>
+        Friend Shared ReadOnly Property typEgzostatyk() As String
+            Get
+                Return ResourceManager.GetString("typEgzostatyk", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to endodynamic.
+        '''</summary>
+        Friend Shared ReadOnly Property typEndodynamik() As String
+            Get
+                Return ResourceManager.GetString("typEndodynamik", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to endostatic.
+        '''</summary>
+        Friend Shared ReadOnly Property typEndostatyk() As String
+            Get
+                Return ResourceManager.GetString("typEndostatyk", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to static.
+        '''</summary>
+        Friend Shared ReadOnly Property typStatyk() As String
+            Get
+                Return ResourceManager.GetString("typStatyk", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Result:.
+        '''</summary>
+        Friend Shared ReadOnly Property wynik00() As String
+            Get
+                Return ResourceManager.GetString("wynik00", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Probably you have less than 16 years..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik1l1() As String
+            Get
+                Return ResourceManager.GetString("wynik1l1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to In Eric Berne&apos;s terminology (transactional analysis) you are typical Child..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik1l2() As String
+            Get
+                Return ResourceManager.GetString("wynik1l2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Your best partner in love: endodynamic..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik1l3() As String
+            Get
+                Return ResourceManager.GetString("wynik1l3", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Probably you have between 16 and 35 years..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik2l1() As String
+            Get
+                Return ResourceManager.GetString("wynik2l1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to In Eric Berne&apos;s terminology (transactional analysis) you are Child, with some elements of Adult..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik2l2() As String
+            Get
+                Return ResourceManager.GetString("wynik2l2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Your best partner in love: endostatic..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik2l3() As String
+            Get
+                Return ResourceManager.GetString("wynik2l3", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Probably you have between 36 and 60 years..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik3l1() As String
+            Get
+                Return ResourceManager.GetString("wynik3l1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to In Eric Berne&apos;s terminology (transactional analysis) you are model Adult..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik3l2() As String
+            Get
+                Return ResourceManager.GetString("wynik3l2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Your best partner in love: static..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik3l3() As String
+            Get
+                Return ResourceManager.GetString("wynik3l3", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Probably you have more than 60 years..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik4l1() As String
+            Get
+                Return ResourceManager.GetString("wynik4l1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to In Eric Berne&apos;s terminology (transactional analysis) you are Adult, with some elements of Parent..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik4l2() As String
+            Get
+                Return ResourceManager.GetString("wynik4l2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Your best partner in love: egzostatic..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik4l3() As String
+            Get
+                Return ResourceManager.GetString("wynik4l3", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Most probably, you have &apos;accelerated character&apos;....
+        '''</summary>
+        Friend Shared ReadOnly Property wynik5l1() As String
+            Get
+                Return ResourceManager.GetString("wynik5l1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to In Eric Berne&apos;s terminology (transactional analysis) you are typical Parent..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik5l2() As String
+            Get
+                Return ResourceManager.GetString("wynik5l2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Your best partner in love: egzodynamic..
+        '''</summary>
+        Friend Shared ReadOnly Property wynik5l3() As String
+            Get
+                Return ResourceManager.GetString("wynik5l3", resourceCulture)
             End Get
         End Property
     End Class

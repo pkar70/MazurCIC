@@ -13,13 +13,12 @@ using Windows.UI.Xaml.Controls;
 //using Windows.UI.Xaml.Media;
 //using Windows.UI.Xaml.Navigation;
 
+using vb14 = VBlib.pkarlibmodule14;
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MazurCiC
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class KomparatorBrowse : Page
     {
         public KomparatorBrowse()
@@ -30,13 +29,13 @@ namespace MazurCiC
         private void uiPorownaj_Click(object sender, RoutedEventArgs e)
         {
 
-            string sPorownanie = VBlibek.KomparatorBrowse.Porownaj(uiText1.Text, uiText2.Text);
+            string sPorownanie = VBlib.KomparatorBrowse.Porownaj(uiText1.Text, uiText2.Text);
             if (sPorownanie == "")
             {
-                p.k.DialogBox(VBlibek.KomparatorBrowse.sLastError);
+                vb14.DialogBox(VBlib.KomparatorBrowse.sLastError);
                 return;
             }
-            p.k.SetSettingsString("losyRelacjiParam", sPorownanie);
+            // vb14.SetSettingsString("losyRelacjiParam", sPorownanie);
             this.Frame.Navigate(typeof(LosyRelacji), sPorownanie);
         }
 

@@ -21,7 +21,7 @@ namespace MazurCiC
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
-    sealed partial class App : Application
+    partial class App : Application
     {
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -36,43 +36,41 @@ namespace MazurCiC
             // this.Suspending += OnSuspending;
         }
 
-        /// <summary>
-        /// Invoked when the application is launched normally by the end user.  Other entry points
-        /// will be used such as when the application is launched to open a specific file.
-        /// </summary>
-        /// <param name="e">Details about the launch request and process.</param>
+        protected Windows.UI.Xaml.Controls.Frame OnLaunchFragment(Windows.UI.Xaml.Window win)
+        {
+            Windows.UI.Xaml.Controls.Frame mRootFrame = win.Content as Windows.UI.Xaml.Controls.Frame;
+
+            //' Do not repeat app initialization when the Window already has content,
+            //' just ensure that the window is active
+
+            if (mRootFrame is null)
+            {
+                //' Create a Frame to act as the navigation context and navigate to the first page
+                mRootFrame = new Windows.UI.Xaml.Controls.Frame();
+
+                mRootFrame.NavigationFailed += OnNavigationFailed;
+
+                ////' PKAR added wedle https://stackoverflow.com/questions/39262926/uwp-hardware-back-press-work-correctly-in-mobile-but-error-with-pc
+                //mRootFrame.Navigated += OnNavigatedAddBackButton;
+                //Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += OnBackButtonPressed;
+
+                //' Place the frame in the current Window
+                win.Content = mRootFrame;
+
+                p.k.InitLib(null);
+            }
+
+            return mRootFrame;
+        }
+
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-#if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
-            {
-                // this.DebugSettings.EnableFrameRateCounter = true;
-            }
-#endif
 
 #if NETFX_CORE
             if (p.k.IsThisMoje()) Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "pl";
-#endif 
+#endif
 
-            Frame rootFrame = Windows.UI.Xaml.Window.Current.Content as Frame;
-
-            // Do not repeat app initialization when the Window already has content,
-            // just ensure that the window is active
-            if (rootFrame == null)
-            {
-                // Create a Frame to act as the navigation context and navigate to the first page
-                rootFrame = new Frame();
-
-                rootFrame.NavigationFailed += OnNavigationFailed;
-
-                //if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
-                //{
-                //    //TODO: Load state from previously suspended application
-                //}
-
-                // Place the frame in the current Window
-                Windows.UI.Xaml.Window.Current.Content = rootFrame;
-            }
+            Windows.UI.Xaml.Controls.Frame rootFrame = OnLaunchFragment(Windows.UI.Xaml.Window.Current);
 
 #if NETFX_CORE
             if (e.PrelaunchActivated == false)
@@ -102,20 +100,6 @@ namespace MazurCiC
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
-
-        /// <summary>
-        /// Invoked when application execution is being suspended.  Application state is saved
-        /// without knowing whether the application will be terminated or resumed with the contents
-        /// of memory still intact.
-        /// </summary>
-        /// <param name="sender">The source of the suspend request.</param>
-        /// <param name="e">Details about the suspend request.</param>
-        //private void OnSuspending(object sender, SuspendingEventArgs e)
-        //{
-        //    var deferral = e.SuspendingOperation.GetDeferral();
-        //    //TODO: Save application state and stop any background activity
-        //    deferral.Complete();
-        //}
 
 
 #if NETFX_CORE

@@ -216,54 +216,6 @@
   <data name="uiStatyk.Text" xml:space="preserve">
     <value>static</value>
   </data>
-  <data name="wynik00" xml:space="preserve">
-    <value>Result:</value>
-  </data>
-  <data name="wynik1l1" xml:space="preserve">
-    <value>Probably you have less than 16 years.</value>
-  </data>
-  <data name="wynik1l2" xml:space="preserve">
-    <value>In Eric Berne's terminology (transactional analysis) you are typical Child.</value>
-  </data>
-  <data name="wynik1l3" xml:space="preserve">
-    <value>Your best partner in love: endodynamic.</value>
-  </data>
-  <data name="wynik2l1" xml:space="preserve">
-    <value>Probably you have between 16 and 35 years.</value>
-  </data>
-  <data name="wynik2l2" xml:space="preserve">
-    <value>In Eric Berne's terminology (transactional analysis) you are Child, with some elements of Adult.</value>
-  </data>
-  <data name="wynik2l3" xml:space="preserve">
-    <value>Your best partner in love: endostatic.</value>
-  </data>
-  <data name="wynik3l1" xml:space="preserve">
-    <value>Probably you have between 36 and 60 years.</value>
-  </data>
-  <data name="wynik3l2" xml:space="preserve">
-    <value>In Eric Berne's terminology (transactional analysis) you are model Adult.</value>
-  </data>
-  <data name="wynik3l3" xml:space="preserve">
-    <value>Your best partner in love: static.</value>
-  </data>
-  <data name="wynik4l1" xml:space="preserve">
-    <value>Probably you have more than 60 years.</value>
-  </data>
-  <data name="wynik4l2" xml:space="preserve">
-    <value>In Eric Berne's terminology (transactional analysis) you are Adult, with some elements of Parent.</value>
-  </data>
-  <data name="wynik4l3" xml:space="preserve">
-    <value>Your best partner in love: egzostatic.</value>
-  </data>
-  <data name="wynik5l1" xml:space="preserve">
-    <value>Most probably, you have 'accelerated character'...</value>
-  </data>
-  <data name="wynik5l2" xml:space="preserve">
-    <value>In Eric Berne's terminology (transactional analysis) you are typical Parent.</value>
-  </data>
-  <data name="wynik5l3" xml:space="preserve">
-    <value>Your best partner in love: egzodynamic.</value>
-  </data>
   <data name="msgBetterLandscape" xml:space="preserve">
     <value>Using app in landscape orientation probably would be more convenient.</value>
   </data>

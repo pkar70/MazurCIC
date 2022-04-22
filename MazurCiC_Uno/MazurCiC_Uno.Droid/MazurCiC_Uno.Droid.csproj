@@ -42,6 +42,7 @@
     <AndroidPackageFormat>apk</AndroidPackageFormat>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>portable</DebugType>
@@ -76,9 +77,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="4.0.11" />
+    <PackageReference Include="Uno.UI" Version="4.2.6" />
     <PackageReference Include="Uno.UI.Adapter.Microsoft.Extensions.Logging">
-      <Version>4.0.11</Version>
+      <Version>4.1.9</Version>
     </PackageReference>
     <PackageReference Include="Uno.UniversalImageLoader" Version="1.9.35" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
@@ -116,9 +117,9 @@
     <Content Include="Resources\drawable\splashscreen.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\VBlibek\VBlibek.vbproj">
+    <ProjectReference Include="..\..\VBlibek\VBlib.vbproj">
       <Project>{08f8590e-6ac3-4044-a40b-d928ab52efca}</Project>
-      <Name>VBlibek</Name>
+      <Name>VBlib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems" Label="Shared" Condition="Exists('..\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems')" />

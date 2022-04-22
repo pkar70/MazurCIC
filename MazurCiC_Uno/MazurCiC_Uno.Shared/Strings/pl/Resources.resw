@@ -216,54 +216,6 @@
   <data name="uiStatyk.Text" xml:space="preserve">
     <value>statyk</value>
   </data>
-  <data name="wynik00" xml:space="preserve">
-    <value>Rezultat:</value>
-  </data>
-  <data name="wynik1l1" xml:space="preserve">
-    <value>Prawdopodobnie masz poniżej 16 lat.</value>
-  </data>
-  <data name="wynik1l2" xml:space="preserve">
-    <value>W terminologii Erica Berne (analizie transakcyjnej) jesteś typowym Dzieckiem.</value>
-  </data>
-  <data name="wynik1l3" xml:space="preserve">
-    <value>Najlepszym partnerem w miłości będzie dla Ciebie endodynamik.</value>
-  </data>
-  <data name="wynik2l1" xml:space="preserve">
-    <value>Prawdopodobnie masz od 16 do 35 lat.</value>
-  </data>
-  <data name="wynik2l2" xml:space="preserve">
-    <value>W terminologii Erica Berne (analizie transakcyjnej) jesteś Dzieckiem z elementami Dorosłego.</value>
-  </data>
-  <data name="wynik2l3" xml:space="preserve">
-    <value>Najlepszym partnerem w miłości będzie dla Ciebie endostatyk.</value>
-  </data>
-  <data name="wynik3l1" xml:space="preserve">
-    <value>Prawdopodobnie masz od 36 do 60 lat.</value>
-  </data>
-  <data name="wynik3l2" xml:space="preserve">
-    <value>W terminologii Erica Berne (analizie transakcyjnej) stanowisz wzorcowy przykład Dorosłego.</value>
-  </data>
-  <data name="wynik3l3" xml:space="preserve">
-    <value>Najlepszym partnerem w miłości będzie dla Ciebie inny statyk.</value>
-  </data>
-  <data name="wynik4l1" xml:space="preserve">
-    <value>Prawdopodobnie masz powyżej 60 lat.</value>
-  </data>
-  <data name="wynik4l2" xml:space="preserve">
-    <value>W terminologii Erica Berne (analizie transakcyjnej) jesteś Dorosłym z elementami Rodzica.</value>
-  </data>
-  <data name="wynik4l3" xml:space="preserve">
-    <value>Najlepszym partnerem w miłości będzie dla Ciebie egzostatyk.</value>
-  </data>
-  <data name="wynik5l1" xml:space="preserve">
-    <value>Najwyraźniej masz tzw. "charakter przyspieszony"...</value>
-  </data>
-  <data name="wynik5l2" xml:space="preserve">
-    <value>W terminologii Erica Berne (analizie transakcyjnej) stanowisz wzorcowy przykład Rodzica.</value>
-  </data>
-  <data name="wynik5l3" xml:space="preserve">
-    <value>Najlepszym partnerem w miłości będzie dla Ciebie egzodynamik.</value>
-  </data>
   <data name="msgBetterLandscape" xml:space="preserve">
     <value>Prawdopodobnie w trybie Landscape będzie wygodniej korzystać z aplikacji.</value>
   </data>

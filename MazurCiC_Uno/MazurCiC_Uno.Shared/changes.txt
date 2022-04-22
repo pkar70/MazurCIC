@@ -1,0 +1,74 @@
+﻿/*
+
+STORE
+
+2022.04.22
+* jako że nowe Uno (4.2.6), VBlib14 i migracja do niego (tego co już nie ma w pkshared, które jest 'withmodule')
+* VBlib.LosyRelacji oraz MainPage (przeniesienie części kodu)
+* zmiana MinTarger na desktop (rezygnuję z telefonu)
+* poprawka ProgressBar (przy cofaniu)
+
+STORE
+
+2022.01.28
+ * VBlibek - do którego przenosze część kodu, jako VB :) komparator.vb
+ * oraz obsługa plików, gdzieniegdzie, z StorageFile na System.IO (dla późniejszego MAUI migration)
+
+2021.06.19
+ * [Android] przejście na Uno last stable 3.8 (z którego robię własny build dla pozostałych app).
+        Teoretycznie bez zmian, ale chodzi o sprawdzenie czy czegoś nie spieprzyli w Uno
+
+2021.04.03
+* [Android] przejście na Uno last stable 3.6.6 (z którego robię własny build dla pozostałych app).
+        Teoretycznie bez zmian, ale chodzi o sprawdzenie czy czegoś nie spieprzyli w Uno
+
+2021.02.26
+* [Android] przejście na Uno last stable 3.5.1 (z którego robię własny build dla pozostałych app).
+        Teoretycznie bez zmian, ale chodzi o sprawdzenie czy czegoś nie spieprzyli w Uno
+
+2020.10.27
+* [Android] przejście na Uno last stable 3.1.6 (z którego robię własny build dla pozostałych app).
+        Teoretycznie bez zmian, ale chodzi o sprawdzenie czy czegoś nie spieprzyli w Uno
+
+2020.08.27
+* [Android] przejście z Uno.945 (własne) do 3.0.12 (laststable)
+*   bo gogus wymaga aktualizacji do SDK 10, a to dopiero później zrobili w Uno
+* nie działa, próba wycofania się: wyłączam splash, zmiany w main.cs, 
+
+2020.02.12
+ * [Android] przejście na Uno.945 (moja kompilacja) - zaktualizowanie pkModuleShared (np. Uno już ma ClipPut, etc.)
+ * [Android] splashscreen
+ * przywracanie guzików przy Page_Load - jakby był powrót do aplikacji po wyłączeniu guzików
+ * z mainpage usuwam stary kod (plik z pytaniami - sprzed migracji do Resources\tezy.rese)
+
+2019.12.22
+ * rebase Uno (pkar: GetAppVersion, OpenBrowser)
+ * MailManager w Uno - usuwam Xamarin.Essentials
+
+
+* podniesienie trochę tekstów do góry (był błąd! wpisywało wszystko do Row=0, a nie do Row=1!)
+* gdy komentarz jest pusty, to Visibility.Collapsed
+
+
+STORE 10.1910
+
+* migracja do C#/Uno
+* migracja do pkarmodule (namespace/class p.k.)
+* przeniesienie stringów z MainPage.XAML/.cs do Strings\PL (nie z innych stron, bo inne i tak tylko pod Windows)
+* przeniesienie stringów z tekstyPytan.txt do tezy.resw (bo Android nie umie wstawić pliku do appx), a poza tym ułatwienie w translacji późniejszej
+* dodanie komentarza do pytań (niektórych) - było w pliku, ale nie było pokazywane w ogóle.
+* dla nie UWP pokazuje info na początku - że wersja Windows jest bogatsza
+* UWP/IsThisMoje - wymuszenie PL, nawet jak start nie jest w PL [w UWP, bo w Uno to nie dziala]
+* przetłumaczenie pytań na angielski (głównie googletranslator)
+* teksty z KomparatorBrowse do strings.resw (xaml i .cs)
+* teksty z LosyRelacji do strings.resw [ale nie same relacje!]
+* przy cofaniu - cofa ProgressBar
+* przeniesienie tekstów losów relacji z txt do resw
+
+STRIPPEDDOWN nonUWP:
+* nie ma pliku z odpowiedziami pamiętanego (Uno bez StorageFile, bez AppendStringAsync)
+* nie ma porównywarki (to wynika z powyższego, ale także ze świadomej decyzji - "windows lepsze")
+
+Wersja LAST VB: 1.7.1, 2018.09.03
+
+ */
