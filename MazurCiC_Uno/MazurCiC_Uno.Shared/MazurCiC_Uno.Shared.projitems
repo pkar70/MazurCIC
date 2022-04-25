@@ -48,11 +48,10 @@
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\tezy.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\pl\Resources.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\pl\tezy.resw" />
+    <None Include="$(MSBuildThisFileDirectory)_changes.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_tudus.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Assets\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)changes.txt" />
   </ItemGroup>
 </Project>

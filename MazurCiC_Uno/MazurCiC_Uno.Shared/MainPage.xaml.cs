@@ -23,26 +23,20 @@ using vb14 = VBlib.pkarlibmodule14;
 namespace MazurCiC
 {
 
-
     public sealed partial class MainPage : Page
     {
         private VBlib.MainPage inVb = new VBlib.MainPage();
+        private bool _LangPl = false;
 
         public MainPage()
         {
             this.InitializeComponent();
+            _LangPl = vb14.GetLangString("_lang").ToUpperInvariant() == "PL";
         }
-
-        //private int iPytanie = 0;
-        //private int[] aiOdpowiedzi = new int[41];
 
         private void Strona_Loaded(object sender, RoutedEventArgs e)
         {
             inVb.ResetOdpowiedzi();
-
-            //iPytanie = 0;
-            //for (int i = 1; i <= 35; i++)
-            //    aiOdpowiedzi[i] = 0;
 
             // bo w Uno not implemented
             // musi byc wczesniej, bo inaczej pierwsza strona jest jeszcze po EN
@@ -163,13 +157,24 @@ namespace MazurCiC
 
         }
 
-        private static string LocalGetLangString(string sMsg)
+        private string LocalGetLangString(string sMsg)
         {
             if (sMsg == "")
                 return "";
 
             try
             {
+                // force POLISH
+                if (!_LangPl && vb14.GetSettingsString("COMPUTERNAME").Contains("PKAR"))
+                {
+                    string retVal;
+                    // switch to PL
+                    Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "pl";
+                    retVal = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView().GetString(sMsg);
+                    // switch to EN
+                    Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "en";
+                }
+
                 return Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView().GetString(sMsg);
             }
             catch
@@ -210,120 +215,10 @@ namespace MazurCiC
             grEndoDyn.Height = new GridLength(iSumy[5]);
         }
 
-        //private string Numer2Dynamizm(int iNo)
-        //{
-            //switch (iNo)
-            //{
-            //    case 1:
-            //        return vb14.GetLangString("typEgzodynamik"); // "egzodynamik";
-            //    case 2:
-            //            return vb14.GetLangString("typEgzostatyk"); //"egzostatyk";
-            //    case 3:
-            //            return vb14.GetLangString("typStatyk"); //"statyk";
-            //    case 4:
-            //            return vb14.GetLangString("typEndostatyk"); //"endostatyk";
-            //    case 5:
-            //            return vb14.GetLangString("typEndodynamik"); //"endodynamik";
-            //    default:
-            //            return "ERROR";
-        //    }
-
-        //    // wersje EN: exodynamic, exostatic, static, endostatic, endodynamic
-        //}
-        //private int PoliczIleDynamizmu(int iNo)
-        //{
-        //    int iRet = 0;
-        //    for (int i = 1; i <= 35; i++)
-        //    {
-        //        if (aiOdpowiedzi[i] == iNo)
-        //            iRet += 1;
-        //    }
-        //    return iRet;
-        //}
-        //private double SredniDynamizm()
-        //{
-        //    double iSuma = 0;
-        //    int iCnt = 0;
-
-        //    for (int i = 1; i <= 35; i++)
-        //    {
-        //        if (aiOdpowiedzi[i] > 0)
-        //            iCnt += 1;
-        //        iSuma += aiOdpowiedzi[i];
-        //    }
-
-        //    return iSuma / iCnt;
-        //}
-        //private double SredniDynamizmBezSmieci()
-        //{
-        //    var aDynamizm = new int[7];
-
-        //    for (int i = 1; i <= 5; i++)
-        //        aDynamizm[i] = 0;
-
-        //    for (int i = 1; i <= 35; i++)
-        //        aDynamizm[aiOdpowiedzi[i]] += 1;
-
-        //    // uciecie smieci od dołu i od góry
-        //    for (int i = 1; i <= 5; i++)
-        //    {
-        //        if (aDynamizm[i] > 4)
-        //            break;
-        //        aDynamizm[i] = 0;
-        //    }
-
-        //    for (int i = 5; i >= 1; i += -1)
-        //    {
-        //        if (aDynamizm[i] > 4)
-        //            break;
-        //        aDynamizm[i] = 0;
-        //    }
-
-        //    int iCnt = 0;
-        //    double iSuma = 0;
-        //    for (int i = 1; i <= 5; i++)
-        //    {
-        //        iCnt += aDynamizm[i];
-        //        iSuma += i * aDynamizm[i];
-        //    }
-
-        //    return iSuma / iCnt;
-        //}
-        private async System.Threading.Tasks.Task ZapiszWynik()
+        private async System.Threading.Tasks.Task ZapiszWynikAsync()
         {
 
-            // string sTxt = "";
-
             string sTxt = inVb.ZapiszWynik(Windows.Storage.ApplicationData.Current.LocalFolder.Path, tbTeza.Text);
-
-            //sTxt = tbTeza.Text + " (" + SredniDynamizm().ToString("f2") + "/" + SredniDynamizmBezSmieci().ToString("f2") + ")\n\n";
-
-            //sTxt = sTxt + vb14.GetLangString("msgRozkladOdpowiedzi") + "\n"; // "Rozklad odpowiedzi:\n";
-            //for (int i = 1; i <= 5; i++)
-            //    sTxt = sTxt + Numer2Dynamizm(i) + ":\t" + PoliczIleDynamizmu(i).ToString() + "\n";
-
-            //string sPoszczOdp = vb14.GetLangString("msgPoszczOdpowiedzi"); // Poszczególne odpowiedzi:\n";
-            //sTxt = sTxt + "\n" + sPoszczOdp + "\n";
-            ////if (sPoszczOdp != "Poszczególne odpowiedzi:")
-            ////    sTxt += "\nPoszczególne odpowiedzi:\n";   // wersja polska byc musi, bo porównywarka tego szuka
-
-            //for (int i = 1; i <= 35; i++)
-            //    sTxt = sTxt + i.ToString() + ": " + Numer2Dynamizm(aiOdpowiedzi[i]) + "\n";
-
-            //// zapisuje plik, mimo że Android tego nie wykorzystuje w ogóle
-            //Windows.Storage.StorageFolder oFold = Windows.Storage.ApplicationData.Current.LocalFolder;
-            //string sFileName = DateTime.Now.ToString("yyyyMMdd-HHmmss");
-
-            //// plik indeksowy (omijanie niedziałania oFold.Files()
-            //Windows.Storage.StorageFile oFile;
-            //oFile = await oFold.CreateFileAsync("lista.txt", Windows.Storage.CreationCollisionOption.OpenIfExists);
-            //await Windows.Storage.FileIO.AppendTextAsync(oFile, sFileName + "\n", Windows.Storage.Streams.UnicodeEncoding.Utf8);
-
-            //// plik z danymi
-
-            //oFile = await oFold.CreateFileAsync(sFileName + ".txt");
-
-            //await Windows.Storage.FileIO.AppendTextAsync(oFile, sTxt, Windows.Storage.Streams.UnicodeEncoding.Utf8);
 
             if (p.k.GetPlatform("uwp"))
             { // na Android - wysyłamy bez pytania, bo nie ma pokazywania zapamiętanych rezultatów
@@ -414,7 +309,7 @@ namespace MazurCiC
             uiProgress.Visibility = Visibility.Collapsed;
             bWstecz.Visibility = Visibility.Collapsed;
 
-            ZapiszWynik();
+            ZapiszWynikAsync();
         }
 
 
@@ -422,9 +317,36 @@ namespace MazurCiC
         {
             RadioButton oSender = sender as RadioButton;
             if (oSender.IsChecked.HasValue && oSender.IsChecked.Value)
-                bDalej_Click(sender, e);
+                bDalej_Click(null, null);
             else
                 oSender.IsChecked = true;
+        }
+        private void uiAnswerText_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            FrameworkElement oSender = sender as FrameworkElement;
+            switch(oSender.Name)
+            {
+                case "tbEgzoDyn":
+                    cbEgzoDyn.IsChecked = true;
+                    break;
+                case "tbEgzoStat":
+                    cbEgzoStat.IsChecked = true;
+                    break;
+                case "tbStatyk":
+                    cbStatyk.IsChecked = true;
+                    break;
+                case "tbEndoStat":
+                    cbEndoStat.IsChecked = true;
+                    break;
+                case "tbEndoDyn":
+                    cbEndoDyn.IsChecked = true;
+                    break;
+                default:
+                    return; // coś nie tak, nie wiem co włączyć
+
+            }
+
+            bDalej_Click(null, null);
         }
 
         private void uiKomparator_Click(object sender, RoutedEventArgs e)

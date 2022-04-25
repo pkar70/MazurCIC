@@ -1,4 +1,8 @@
-﻿/*
+﻿
+2022.04.24
+* pliki _changes i _tudus
+* wyrzucam wykomentowany kod z App.cs (przeniesiony jest do lib.vb)
+
 
 STORE
 
@@ -71,4 +75,3 @@ STRIPPEDDOWN nonUWP:
 
 Wersja LAST VB: 1.7.1, 2018.09.03
 
- */
