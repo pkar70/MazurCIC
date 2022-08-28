@@ -1,4 +1,8 @@
-﻿
+﻿STORE
+
+2022.05.25
+* dodanie do VBlib deflang, bez czego nie było w Release GetLang w ogóle!
+
 2022.04.24
 * pliki _changes i _tudus
 * wyrzucam wykomentowany kod z App.cs (przeniesiony jest do lib.vb)
