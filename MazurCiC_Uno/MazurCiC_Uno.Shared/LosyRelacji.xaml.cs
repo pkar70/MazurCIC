@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
 using vb14 = VBlib.pkarlibmodule14;
-
+using static p.Extensions;
 
 namespace MazurCiC
 {
