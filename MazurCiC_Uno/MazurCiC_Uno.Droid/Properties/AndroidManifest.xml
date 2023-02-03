@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="pkar.MazurCiC" android:versionCode="22041" android:versionName="11.2204.1" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="31" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="pkar.MazurCiC" android:versionCode="23021" android:versionName="11.2302.1" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="33" />
 	<application android:label="Dynamizm Charakteru" android:icon="@drawable/Icon"></application>
 </manifest>

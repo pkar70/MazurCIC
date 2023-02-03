@@ -156,9 +156,9 @@
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\VBlibek\VBlib14.vbproj">
+    <ProjectReference Include="..\..\VBlibek\VBlib.vbproj">
       <Project>{08f8590e-6ac3-4044-a40b-d928ab52efca}</Project>
-      <Name>VBlib14</Name>
+      <Name>VBlib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems" Label="Shared" Condition="Exists('..\MazurCiC_Uno.Shared\MazurCiC_Uno.Shared.projitems')" />
