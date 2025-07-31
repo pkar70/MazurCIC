@@ -1,17 +1,19 @@
-﻿Public Class KomparatorBrowse
+﻿Imports pkar
+
+Public Class KomparatorBrowse
 
     Public Shared sLastError As String = ""
 
     Private Shared Function WytnijSamePunkty(sFileContent As String, sMsg As String) As String
         If sFileContent.Length < 100 Then
-            sLastError = GetLangString("errDataShort") & sMsg
+            sLastError = Localize.GetResManString("errDataShort") & sMsg
             Return ""
         End If
 
         sFileContent += vbLf
         Dim iInd = 1
 
-        If GetLangString("_lang") Is "PL" Then
+        If Localize.IsCurrentLang("PL") Then
             iInd = sFileContent.IndexOf("Poszczegolne odpowiedzi:")
             If iInd < 5 Then iInd = sFileContent.IndexOf("Poszczególne odpowiedzi:")
             ' nie ma błędu - jak Polak dostanie z USA odpowiedzi, to nie bedzie tego tekstu
@@ -28,7 +30,7 @@
         iInd = sOut.IndexOf("1: ")
 
         If iInd < 2 Then
-            sLastError = GetLangString("errDataNoAnswers") & " (" & sMsg & ")"
+            sLastError = Localize.GetResManString("errDataNoAnswers") & " (" & sMsg & ")"
             Return ""
         End If
 
@@ -53,8 +55,8 @@
     End Function
 
     Public Shared Function Porownaj(sResult1 As String, sResult2 As String) As String
-        Dim sMsgTwoje As String = GetLangString("msgBrowseTwoje")
-        Dim sMsgDrugi As String = GetLangString("msgBrowseDrugiej")
+        Dim sMsgTwoje As String = Localize.GetResManString("msgBrowseTwoje")
+        Dim sMsgDrugi As String = Localize.GetResManString("msgBrowseDrugiej")
 
         Dim sTxt1 = WytnijSamePunkty(sResult1, sMsgTwoje)
         Dim sTxt2 = WytnijSamePunkty(sResult2, sMsgDrugi)
@@ -77,7 +79,7 @@
             sTmp = i.ToString() & ": "
 
             If sTxt1.IndexOf(sTmp) <> 0 Or sTxt2.IndexOf(sTmp) <> 0 Then
-                sLastError = GetLangString("errDataNoPoint") & " " & i
+                sLastError = Localize.GetResManString("errDataNoPoint") & " " & i
                 Return ""
             End If
 
@@ -87,7 +89,7 @@
             If iInd = -1 Then iInd = sTxt1.IndexOf(vbLf)
 
             If iInd < 2 Then
-                sLastError = GetLangString("errDataNoThisAnswer") & " " & i & " - " & sMsgTwoje
+                sLastError = Localize.GetResManString("errDataNoThisAnswer") & " " & i & " - " & sMsgTwoje
                 Return ""
             End If
 
@@ -97,7 +99,7 @@
             If iInd = -1 Then iInd = sTxt2.IndexOf(vbLf)
 
             If iInd < 2 Then
-                sLastError = GetLangString("errDataNoThisAnswer") & " " & i & " - " & sMsgDrugi
+                sLastError = Localize.GetResManString("errDataNoThisAnswer") & " " & i & " - " & sMsgDrugi
                 Return ""
             End If
 

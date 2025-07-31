@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
 using vb14 = VBlib.pkarlibmodule14;
-using static p.Extensions;
+using pkar.Uwp.Ext;
 
 namespace MazurCiC
 {
@@ -29,21 +27,21 @@ namespace MazurCiC
             var aSlupki = inVb.PokazRelacjePart2();
 
             // a teraz przepisanie tego do wielkosci - pewnie by mozna jakas petla...
-            uiTyp00.Height = new GridLength(aSlupki[0]);
-            uiTyp01.Height = new GridLength(aSlupki[1]);
-            uiTyp02.Height = new GridLength(aSlupki[2]);
-            uiTyp03.Height = new GridLength(aSlupki[3]);
-            uiTyp04.Height = new GridLength(aSlupki[4]);
-            uiTyp05.Height = new GridLength(aSlupki[5]);
-            uiTyp06.Height = new GridLength(aSlupki[6]);
-            uiTyp07.Height = new GridLength(aSlupki[7]);
-            uiTyp08.Height = new GridLength(aSlupki[8]);
-            uiTyp09.Height = new GridLength(aSlupki[9]);
-            uiTyp10.Height = new GridLength(aSlupki[10]);
-            uiTyp11.Height = new GridLength(aSlupki[11]);
-            uiTyp12.Height = new GridLength(aSlupki[12]);
-            uiTyp13.Height = new GridLength(aSlupki[13]);
-            uiTyp14.Height = new GridLength(aSlupki[14]);
+            uiTyp00.Wysokosc = aSlupki[0];
+            uiTyp01.Wysokosc = aSlupki[1];
+            uiTyp02.Wysokosc = aSlupki[2];
+            uiTyp03.Wysokosc = aSlupki[3];
+            uiTyp04.Wysokosc = aSlupki[4];
+            uiTyp05.Wysokosc = aSlupki[5];
+            uiTyp06.Wysokosc = aSlupki[6];
+            uiTyp07.Wysokosc = aSlupki[7];
+            uiTyp08.Wysokosc = aSlupki[8];
+            uiTyp09.Wysokosc = aSlupki[9];
+            uiTyp10.Wysokosc = aSlupki[10];
+            uiTyp11.Wysokosc = aSlupki[11];
+            uiTyp12.Wysokosc = aSlupki[12];
+            uiTyp13.Wysokosc = aSlupki[13];
+            uiTyp14.Wysokosc = aSlupki[14];
         }
 
         private void EnableDisablePlusMinus()
@@ -86,8 +84,8 @@ namespace MazurCiC
 
             PokazRelacje();
 
-            if (vb14.GetLangString("_lang") != "PL")
-                vb14.DialogBox("Texts are autotranslated by Google, so it can contain some errors");
+            if (!vb14.LangIsCurrent("pl"))
+                this.MsgBox("Texts are autotranslated by Google, so it can contain some errors");
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

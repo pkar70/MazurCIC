@@ -15,6 +15,8 @@
             CounterLabel.Text = $"Current count: {count}";
 
             SemanticScreenReader.Announce(CounterLabel.Text);
+
+            var cosik = new Label();
         }
     }
 }

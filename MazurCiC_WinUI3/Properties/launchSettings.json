@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MazurCiC_WinUI3 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "MazurCiC_WinUI3 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

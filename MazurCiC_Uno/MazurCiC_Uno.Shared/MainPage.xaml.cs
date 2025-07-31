@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 
 using vb14 = VBlib.pkarlibmodule14;
 using static p.Extensions;
+using pkar.Uwp.Ext;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,12 +27,13 @@ namespace MazurCiC
     public sealed partial class MainPage : Page
     {
         private VBlib.MainPage inVb = new VBlib.MainPage();
-        private bool _LangPl = false;
+        //private bool _LangPl = false;
 
         public MainPage()
         {
             this.InitializeComponent();
-            _LangPl = vb14.GetLangString("_lang").ToUpperInvariant() == "PL";
+            // _LangPl = vb14.GetLangString("_lang").ToUpperInvariant() == "PL";
+
         }
 
         private void Strona_Loaded(object sender, RoutedEventArgs e)
@@ -58,8 +60,8 @@ namespace MazurCiC
             tbEndoDyn.Text = sTmp;
 
             // powtorne uruchomienie to czasem powrot do strony glownej - więc przywróć guziczki, żeby można było coś zrobić
-            bDalej.Visibility = Visibility.Visible;
-            bWstecz.Visibility = Visibility.Visible;
+            bDalej.Show(); // .Visibility = Visibility.Visible;
+            bWstecz.Show();
             bWstecz.IsEnabled = false;
             bDalej.Content = vb14.GetLangString("msgDalejDalej"); // "Dalej>";
 
@@ -85,14 +87,14 @@ namespace MazurCiC
             {
 
 #if NETFX_CORE
-                uiMenu.Visibility = Visibility.Visible;
+                uiMenu.Show(false); // .Visibility = Visibility.Visible;
 #endif
                 PokazWynik();
             }
             else
             {
 #if NETFX_CORE
-                uiMenu.Visibility = Visibility.Collapsed;
+                uiMenu.Show(false); //.Visibility = Visibility.Collapsed;
 #endif
                 ZmianaPytania(inVb.iPytanie + 1);
                 uiProgress.Value = inVb.iPytanie;
@@ -119,12 +121,12 @@ namespace MazurCiC
             else
                 bWstecz.IsEnabled = true;
 
-            cbEgzoDyn.Visibility = Visibility.Visible;
-            cbEgzoStat.Visibility = Visibility.Visible;
-            cbStatyk.Visibility = Visibility.Visible;
-            cbEndoStat.Visibility = Visibility.Visible;
-            cbEndoDyn.Visibility = Visibility.Visible;
-
+            cbEgzoDyn.Show();
+            cbEgzoStat.Show();
+            cbStatyk.Show();
+            cbEndoStat.Show();
+            cbEndoDyn.Show();
+            
             cbEgzoDyn.IsChecked = false;
             cbEgzoStat.IsChecked = false;
             cbStatyk.IsChecked = false;
@@ -150,10 +152,7 @@ namespace MazurCiC
             tbEndoStat.Text = LocalGetLangString(sStringName + "a4").Trim();
             tbEndoDyn.Text = LocalGetLangString(sStringName + "a5").Trim();
 
-            if (tbRemark.Text.Length < 2)
-                tbRemark.Visibility = Visibility.Collapsed;
-            else
-                tbRemark.Visibility = Visibility.Visible;
+                tbRemark.Show(tbRemark.Text.Length >1);
 
         }
 
@@ -164,8 +163,8 @@ namespace MazurCiC
 
             try
             {
-                // force POLISH
-                if (!_LangPl && vb14.GetSettingsString("COMPUTERNAME").Contains("PKAR"))
+                // force POLISH (ale tylko pytań/odpowiedzi!) na moim komputerze
+                if (vb14.GetSettingsString("COMPUTERNAME").Contains("PKAR"))
                 {
                     string retVal;
                     // switch to PL
@@ -208,11 +207,12 @@ namespace MazurCiC
             for (int i = 1; i <= 35; i++)
                 iSumy[inVb.aiOdpowiedzi[i]] = iSumy[inVb.aiOdpowiedzi[i]] + 1;
 
-            grEgzoDyn.Height = new GridLength(iSumy[1]);
-            grEgzoStat.Height = new GridLength(iSumy[2]);
-            grStatyk.Height = new GridLength(iSumy[3]);
-            grEndoStat.Height = new GridLength(iSumy[4]);
-            grEndoDyn.Height = new GridLength(iSumy[5]);
+            // grEgzoDyn.Height = new GridLength(iSumy[1]);
+            grEgzoDyn.Wysokosc = iSumy[1];
+            grEgzoStat.Wysokosc = iSumy[2];
+            grStatyk.Wysokosc = iSumy[3];
+            grEndoStat.Wysokosc = iSumy[4];
+            grEndoDyn.Wysokosc = iSumy[5];
         }
 
         private async System.Threading.Tasks.Task ZapiszWynikAsync()
@@ -248,11 +248,11 @@ namespace MazurCiC
 
         private void PokazWynik()
         {
-            cbEgzoDyn.Visibility = Visibility.Collapsed;
-            cbEgzoStat.Visibility = Visibility.Collapsed;
-            cbStatyk.Visibility = Visibility.Collapsed;
-            cbEndoStat.Visibility = Visibility.Collapsed;
-            cbEndoDyn.Visibility = Visibility.Collapsed;
+            cbEgzoDyn.Show(false);// .Visibility = Visibility.Collapsed;
+            cbEgzoStat.Show(false);
+            cbStatyk.Show(false);
+            cbEndoStat.Show(false);
+            cbEndoDyn.Show(false);
 
             tbEgzoStat.Text = "";
             tbStatyk.Text = "";
@@ -305,9 +305,9 @@ namespace MazurCiC
 
             // bDalej.Content = " "
             // bDalej.IsEnabled = False
-            bDalej.Visibility = Visibility.Collapsed;
-            uiProgress.Visibility = Visibility.Collapsed;
-            bWstecz.Visibility = Visibility.Collapsed;
+            bDalej.Show(false);
+            uiProgress.Show(false);
+            bWstecz.Show(false);
 
             ZapiszWynikAsync();
         }

@@ -1,5 +1,45 @@
 ﻿
 
+
+
+2025.06.19
+
+Ponieważ:
+Sun 15/6/2025 16:10
+Your developer account is at risk of being closed because it's not being used
+Your developer account is not in use. Play Console developer accounts are intended for developers who actively publish and maintain apps.
+Fix this before August 14, 2025 to prevent your account from being closed.
+No to trzeba app jakąś wstawić, żeby nie zamknęli konta.
+
+Aktualna app: MazuzCiC_Uno.Shared , iOS, Droid, UWP oraz vblib.
+
+* poszerzenie VBLIB o ile tylko się da - ale nie da się już nic przerzucić, nawet chyba bez sensu byłoby robić z Delegate
+* nugety aktualne do VBLIB
+* UserControl w UI (UCslupek do MainPage i LosyRelacji)
+
+Xamarin max android 13, ale gogusstore min android 14 - konieczna migracja do przynajmniej Uno 5.
+Kolejne Uno, Uno6 - wyrzuca UWP, już tylko WinUI. Ale WinUI z kolei nie działa na telefonie.
+A więc: telefoniczna wersja zostaje w aktualnym Uno.UWP, na wszelki wypadek. W razie czego do migracji z powrotem do VB, chociaż raczej nie będzie powodu zmieniać czegokolwiek w tej app, skoro działa. A i tak raczej w telefonie nie będę używał.
+Od 5.2 SingleApp.
+
+coś nie mogę dodać reference do vblib (ani w Uno6 nie da się dodać classlibrary, ani z Uno6 reference nie da się zrobić do niej?), więc może najpierw migracja do WinUI3. I potem jakoś migracja z WinUI do Uno?
+
+4) nowa wersja, może nawet nie Uno tylko np. MAUI (ale jak MAUI się wstawia do sklepu Androida?)
+
+NU1202: Package Uno.UI 5.0.19 is not compatible with monoandroid13.0 (MonoAndroid,Version=v13.0). Package Uno.UI 5.0.19 supports:
+  - net7.0 (.NETCoreApp,Version=v7.0)
+  - net7.0-android30.0 (.NETCoreApp,Version=v7.0)
+  - net7.0-ios (.NETCoreApp,Version=v7.0)
+  - net7.0-maccatalyst (.NETCoreApp,Version=v7.0)
+  - net7.0-macos (.NETCoreApp,Version=v7.0)
+  - net8.0 (.NETCoreApp,Version=v8.0)
+  - net8.0-android30.0 (.NETCoreApp,Version=v8.0)
+  - net8.0-ios (.NETCoreApp,Version=v8.0)
+  - net8.0-maccatalyst (.NETCoreApp,Version=v8.0)
+  - net8.0-macos (.NETCoreApp,Version=v8.0)
+  - uap (UAP,Version=v0.0)
+
+
 STORE
 
 2023.02.02

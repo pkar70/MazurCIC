@@ -34,50 +34,11 @@
                 <ColumnDefinition Width="20"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="1" Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition x:Name="grEgzoDyn" Height="0"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="1" Background="LightSkyBlue"/>
-                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" x:Uid="uiEgzodynamik" Text="egzodynamik" VerticalAlignment="Bottom"/>
-            </Grid>
-
-            <Grid Grid.Column="2" Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition x:Name="grEgzoStat" Height="0"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="1" Background="LightSkyBlue"/>
-                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" x:Uid="uiEzgostatyk" Text="egzostatyk" VerticalAlignment="Bottom"/>
-            </Grid>
-
-            <Grid Grid.Column="3" Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition x:Name="grStatyk" Height="0"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="1" Background="LightSkyBlue"/>
-                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" x:Uid="uiStatyk" Text="statyk" VerticalAlignment="Bottom"/>
-            </Grid>
-
-            <Grid Grid.Column="4" Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition x:Name="grEndoStat" Height="0"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="1" Background="LightSkyBlue"/>
-                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" x:Uid="uiEndostatyk" Text="endostatyk" VerticalAlignment="Bottom"/>
-            </Grid>
-
-            <Grid Grid.Column="5" Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition x:Name="grEndoDyn" Height="0"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="1" Background="LightSkyBlue"/>
-                <TextBlock HorizontalAlignment="Center" Grid.RowSpan ="2" x:Uid="uiEndodynamik" Text="endodynamik" VerticalAlignment="Bottom"/>
-            </Grid>
+            <local:UCslupek Grid.Column="1" x:Name="grEgzoDyn" x:Uid="uiEgzodynamik" Text="egzodynamik" Grid.Row="1" />
+            <local:UCslupek Grid.Column="2" x:Name="grEgzoStat" x:Uid="uiEzgostatyk" Text="egzodynamik" Grid.Row="1" />
+            <local:UCslupek Grid.Column="3" x:Name="grStatyk" x:Uid="uiStatyk" Text="egzodynamik" Grid.Row="1" />
+            <local:UCslupek Grid.Column="4" x:Name="grEndoStat" x:Uid="uiEndostatyk" Text="egzodynamik" Grid.Row="1" />
+            <local:UCslupek Grid.Column="5" x:Name="grEndoDyn" x:Uid="uiEndodynamik" Text="egzodynamik" Grid.Row="1" />
 
         </Grid>
         <ScrollViewer Height="Auto" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top" >
